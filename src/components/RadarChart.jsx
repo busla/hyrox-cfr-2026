@@ -106,7 +106,7 @@ export default function RadarChart({ athletes = [] }) {
   )
 
   const selectedAthlete = useMemo(
-    () => athleteOptions.find((a) => a.name === selectedAthleteName),
+    () => athleteOptions.find((a) => (a.display_name || a.name) === selectedAthleteName),
     [athleteOptions, selectedAthleteName]
   )
 
@@ -241,8 +241,8 @@ export default function RadarChart({ athletes = [] }) {
         >
           <option value="">— Veldu íþróttamann —</option>
           {athleteOptions.map((a) => (
-            <option key={`${a.name}-${a.division}`} value={a.name}>
-              {a.name} ({a.division})
+            <option key={`${a.name}-${a.division}`} value={a.display_name || a.name}>
+              {a.display_name || a.name} ({a.division})
             </option>
           ))}
         </select>

@@ -93,8 +93,8 @@ export default function StackedBarChart({ athletes = [] }) {
       .filter((a) => Number(a.total_seconds || 0) > 0)
       .sort((a, b) => Number(a.total_seconds || 0) - Number(b.total_seconds || 0))
       .map((a) => ({
-        name: a.name,
-        short: shortName(a.name),
+        name: a.display_name || a.name,
+        short: shortName(a.display_name || a.name),
         run_total: Number(a.run_total) || 0,
         station_total: Number(a.station_total) || 0,
         total_seconds: Number(a.total_seconds) || 0,

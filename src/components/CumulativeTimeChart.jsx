@@ -96,7 +96,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
       .slice(0, 10)
       .map((a, idx) => ({
         ...a,
-        _key: sanitizeKey(a.name, idx),
+        _key: sanitizeKey(a.display_name || a.name, idx),
         _color: colorFor(a.division, idx),
         _idx: idx,
       }));
@@ -213,7 +213,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
   // Map sanitized key -> athlete name for tooltip
   const keyToName = useMemo(() => {
     const m = {};
-    top10.forEach((a) => { m[a._key] = a.name; });
+    top10.forEach((a) => { m[a._key] = a.display_name || a.name; });
     return m;
   }, [top10]);
 
@@ -279,7 +279,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
                     key={a._key}
                     type="monotone"
                     dataKey={a._key}
-                    name={a.name}
+                    name={a.display_name || a.name}
                     stroke={a._color}
                     strokeWidth={2}
                     dot={{ r: 3, fill: a._color, stroke: a._color }}
@@ -306,7 +306,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
                 title="Smelltu til að fela/sýna"
               >
                 <span style={styles.dot(off ? '#374151' : a._color)} />
-                #{a.rank ?? a._idx + 1} {a.name}
+                #{a.rank ?? a._idx + 1} {a.display_name || a.name}
                 <span style={{ color: '#6b7280', marginLeft: 4 }}>
                   {a.division || ''}
                 </span>

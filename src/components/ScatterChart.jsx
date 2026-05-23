@@ -77,7 +77,7 @@ export default function ScatterChart({ athletes = [] }) {
       out[a.division].push({
         x: run,
         y: stn,
-        name: a.name,
+        name: a.display_name || a.name,
         division: a.division,
         run_total: run,
         station_total: stn,

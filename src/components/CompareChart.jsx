@@ -204,7 +204,7 @@ export default function CompareChart({ athletes = [] }) {
             >
               {sorted.map((a) => (
                 <option key={a.name} value={a.name}>
-                  #{a.rank ?? '?'} {a.name} {a.division ? `(${a.division})` : ''}
+                  #{a.rank ?? '?'} {a.display_name || a.name} {a.division ? `(${a.division})` : ''}
                 </option>
               ))}
             </select>
@@ -218,7 +218,7 @@ export default function CompareChart({ athletes = [] }) {
             >
               {sorted.map((a) => (
                 <option key={a.name} value={a.name}>
-                  #{a.rank ?? '?'} {a.name} {a.division ? `(${a.division})` : ''}
+                  #{a.rank ?? '?'} {a.display_name || a.name} {a.division ? `(${a.division})` : ''}
                 </option>
               ))}
             </select>

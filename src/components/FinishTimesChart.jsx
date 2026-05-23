@@ -85,8 +85,13 @@ function CustomTooltip({ active, payload }) {
         boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
       }}
     >
-      <div style={{ fontWeight: 700, marginBottom: 4, color: '#f9fafb' }}>{d.name}</div>
-      {d.club && <div style={{ color: '#9ca3af', fontSize: 12 }}>{d.club}</div>}
+      <div style={{ fontWeight: 700, marginBottom: 4, color: '#f9fafb' }}>{d.display_name || d.name}</div>
+      {d.members && d.members.length > 1 && (
+        <div style={{ color: '#94a3b8', fontSize: 11, marginBottom: 2 }}>
+          {d.members.join(' · ')}
+        </div>
+      )}
+      {d.club && !d.members?.length && <div style={{ color: '#9ca3af', fontSize: 12 }}>{d.club}</div>}
       <div style={{ color: d.color, fontSize: 12, marginTop: 2 }}>{d.division}</div>
       <div style={{ marginTop: 6, fontWeight: 600 }}>⏱ {formatHMS(d.total_seconds)}</div>
     </div>
@@ -122,7 +127,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
       .map((a) => ({
         ...a,
         total_seconds: Number(a.total_seconds) || 0,
-        short: shortName(a.name),
+        short: shortName(a.display_name || a.name),
         color: colorForDivision(a.division),
       }))
       .sort((a, b) => a.total_seconds - b.total_seconds);
@@ -249,7 +254,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
                 }}
               >
                 <div style={{ fontSize: 22, marginBottom: 6 }}>{RANK_EMOJI[i]}</div>
-                <div style={{ fontWeight: 700, color: '#f9fafb', fontSize: 14 }}>{a.name}</div>
+                <div style={{ fontWeight: 700, color: '#f9fafb', fontSize: 14 }}>{a.display_name || a.name}</div>
                 {a.club && (
                   <div style={{ color: '#9ca3af', fontSize: 12, marginTop: 2 }}>{a.club}</div>
                 )}
