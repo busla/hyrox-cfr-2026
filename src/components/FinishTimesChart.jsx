@@ -185,7 +185,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
       <p style={{ color: '#9ca3af', fontSize: 13, marginTop: 6, marginBottom: 18, lineHeight: 1.5 }}>
         Hér sjást lokatímar allra keppenda í {category === 'para' ? 'pörum' : 'einstaklingsflokki'},
         raðaðir frá fljótasta til hægasta. Litir tákna mismunandi flokka. Strikalínan sýnir
-        meðaltíma — keppendur undir línunni eru fyrir ofan meðaltal í hraða.
+        meðaltíma — keppendur vinstra megin við línuna eru hraðari en meðaltalið.
       </p>
 
       {/* Main chart — explicit height wrapper required for ResponsiveContainer in recharts v3 */}

@@ -127,7 +127,7 @@ export default function ScatterChart({ athletes = [] }) {
       }}
     >
       <h2 style={{ margin: 0, color: '#fff', fontSize: 22 }}>
-        ⚡ Hlaupamenn vs styrklingur
+        ⚡ Hlaup vs stöðvar
       </h2>
       <p
         style={{
@@ -138,7 +138,7 @@ export default function ScatterChart({ athletes = [] }) {
           lineHeight: 1.5,
         }}
       >
-        Hver punktur er einn íþróttamaður: X-ásinn sýnir heildartíma í hlaupi
+        Hver punktur er einn keppandi: X-ásinn sýnir heildartíma í hlaupi
         og Y-ásinn heildartíma á stöðvum. Skálínurnar tengja saman jafna
         heildartíma.
         <br />

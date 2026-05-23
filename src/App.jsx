@@ -14,7 +14,7 @@ const seriesData = rawData.series
 const TABS = [
   { id: 'finish',   label: '🏆 Heildarúrslit' },
   { id: 'series',   label: '📅 Mótaröðin' },
-  { id: 'heatmap',  label: '🔥 Splits heatmap' },
+  { id: 'heatmap',  label: '🔥 Hitakort' },
   { id: 'cumulative', label: '📈 Uppsafnaður tími' },
   { id: 'radar',    label: '🕸️ Radar graf' },
   { id: 'stacked',  label: '📊 Tímaúthlutun' },

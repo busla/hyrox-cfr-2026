@@ -222,7 +222,7 @@ export default function RadarChart({ athletes = [] }) {
           👤 Einstaklingsgreining
         </h3>
         <p style={{ color: '#9ca3af', marginTop: 6, marginBottom: 16, fontSize: 13 }}>
-          Veldu íþróttamann til að sjá hans radar í samanburði við meðaltal deildar.
+          Veldu keppanda til að sjá radar hans í samanburði við meðaltal deildar.
         </p>
 
         <select
@@ -239,7 +239,7 @@ export default function RadarChart({ athletes = [] }) {
             marginBottom: 16,
           }}
         >
-          <option value="">— Veldu íþróttamann —</option>
+          <option value="">— Veldu keppanda —</option>
           {athleteOptions.map((a) => (
             <option key={`${a.name}-${a.division}`} value={a.display_name || a.name}>
               {a.display_name || a.name} ({a.division})

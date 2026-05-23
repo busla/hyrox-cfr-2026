@@ -205,7 +205,7 @@ export default function SplitsHeatmap({ athletes = [] }) {
   return (
     <div style={styles.wrapper}>
       <div style={styles.card}>
-        <h2 style={styles.title}>🔥 Splits heatmap — Tími á hverri stöð</h2>
+        <h2 style={styles.title}>🔥 Hitakort — Tími á hverri stöð</h2>
         <p style={styles.desc}>
           Hér sést hitakort yfir tímann sem hver keppandi tók á hverri af 8 stöðvunum í Hyrox.
           Grænir reitir tákna hraðari tíma en meðaltal stöðvarinnar, rauðir reitir tákna hægari
