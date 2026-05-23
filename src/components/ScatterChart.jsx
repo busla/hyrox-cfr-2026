@@ -12,13 +12,13 @@ import {
 } from 'recharts'
 
 const DIVISION_COLORS = {
-  'PRO KK': '#f97316',
-  'OPEN KK': '#3b82f6',
-  'PRO KVK': '#ec4899',
-  'OPEN KVK': '#a855f7',
+  'Pro KK': '#f97316',
+  'Open KK': '#3b82f6',
+  'Pro KVK': '#ec4899',
+  'Open KVK': '#a855f7',
 }
 
-const DIVISIONS = ['PRO KK', 'OPEN KK', 'PRO KVK', 'OPEN KVK']
+const DIVISIONS = ['Pro KK', 'Open KK', 'Pro KVK', 'Open KVK']
 
 function formatMMSS(seconds) {
   if (seconds == null || isNaN(seconds)) return '—'
