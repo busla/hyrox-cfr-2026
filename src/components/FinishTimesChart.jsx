@@ -127,7 +127,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
       .map((a) => ({
         ...a,
         total_seconds: Number(a.total_seconds) || 0,
-        short: shortName(a.display_name || a.name),
+        short: a.display_name ? a.display_name : shortName(a.name),
         color: colorForDivision(a.division),
       }))
       .sort((a, b) => a.total_seconds - b.total_seconds);
