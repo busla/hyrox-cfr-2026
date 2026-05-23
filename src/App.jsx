@@ -27,10 +27,22 @@ export default function App() {
   const [eventIdx, setEventIdx] = useState(0)
   const [category, setCategory] = useState('einstaklingar')
   const [subcat, setSubcat] = useState('overall')
+  const [divFilter, setDivFilter] = useState('allt') // 'allt' | 'pro' | 'open'
 
   const currentEvent = seriesData.events[eventIdx]
-  const athletes = (currentEvent[category]?.[subcat] || []).filter(a => a.total_seconds > 0)
-  const allAthletes = (currentEvent[category]?.overall || []).filter(a => a.total_seconds > 0)
+
+  const applyDivFilter = (list) => {
+    if (!list) return []
+    return list.filter(a => {
+      if (!a.total_seconds) return false
+      if (divFilter === 'pro') return a.division?.toLowerCase().includes('pro')
+      if (divFilter === 'open') return a.division?.toLowerCase().includes('open') || a.division?.toLowerCase().includes('mixed') || a.division?.toLowerCase().includes('blandað')
+      return true
+    })
+  }
+
+  const athletes = applyDivFilter(currentEvent[category]?.[subcat])
+  const allAthletes = applyDivFilter(currentEvent[category]?.overall)
 
   const subcats = category === 'einstaklingar'
     ? [{ id: 'overall', label: 'Allt' }, { id: 'karlar', label: 'Karlar' }, { id: 'konur', label: 'Konur' }]
@@ -91,6 +103,15 @@ export default function App() {
                   padding: '7px 12px', borderRadius: 7, border: 'none', cursor: 'pointer', fontSize: 12, fontWeight: 600,
                   background: subcat === s.id ? '#3b82f6' : 'transparent',
                   color: subcat === s.id ? '#fff' : '#94a3b8', transition: 'all 0.2s'
+                }}>{s.label}</button>
+              ))}
+            </div>
+            <div style={{ display: 'flex', gap: 4, background: '#1e2535', borderRadius: 10, padding: 3 }}>
+              {[{ id: 'allt', label: 'Allt' }, { id: 'pro', label: 'PRO' }, { id: 'open', label: 'OPEN' }].map(s => (
+                <button key={s.id} onClick={() => setDivFilter(s.id)} style={{
+                  padding: '7px 12px', borderRadius: 7, border: 'none', cursor: 'pointer', fontSize: 12, fontWeight: 600,
+                  background: divFilter === s.id ? '#22c55e' : 'transparent',
+                  color: divFilter === s.id ? '#fff' : '#94a3b8', transition: 'all 0.2s'
                 }}>{s.label}</button>
               ))}
             </div>
