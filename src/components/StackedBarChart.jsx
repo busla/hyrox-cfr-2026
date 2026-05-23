@@ -8,8 +8,6 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  Cell,
-  LabelList,
 } from 'recharts';
 
 function formatTime(seconds) {
@@ -49,7 +47,9 @@ function CustomTooltip({ active, payload }) {
       }}
     >
       <div style={{ fontWeight: 700, marginBottom: 6, color: '#f9fafb' }}>{d.name}</div>
-      <div style={{ color: '#9ca3af', fontSize: 11, marginBottom: 8 }}>{d.division}</div>
+      {d.division && (
+        <div style={{ color: '#9ca3af', fontSize: 11, marginBottom: 8 }}>{d.division}</div>
+      )}
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}>
         <span style={{ color: '#3b82f6' }}>● Hlaup:</span>
         <span>{formatTime(d.run_total)} ({runPct}%)</span>
@@ -90,14 +90,14 @@ export default function StackedBarChart({ athletes = [] }) {
   const data = useMemo(() => {
     return athletes
       .filter((a) => (division === 'all' ? true : a.division === division))
-      .filter((a) => (a.total_seconds || 0) > 0)
-      .sort((a, b) => (a.total_seconds || 0) - (b.total_seconds || 0))
+      .filter((a) => Number(a.total_seconds || 0) > 0)
+      .sort((a, b) => Number(a.total_seconds || 0) - Number(b.total_seconds || 0))
       .map((a) => ({
         name: a.name,
         short: shortName(a.name),
-        run_total: a.run_total || 0,
-        station_total: a.station_total || 0,
-        total_seconds: a.total_seconds || 0,
+        run_total: Number(a.run_total) || 0,
+        station_total: Number(a.station_total) || 0,
+        total_seconds: Number(a.total_seconds) || 0,
         division: a.division,
       }));
   }, [athletes, division]);
@@ -149,9 +149,11 @@ export default function StackedBarChart({ athletes = [] }) {
         Súluritið sýnir hvernig heildartíma hvers keppanda skiptist milli hlaupa (8×1 km) og
         vinnustöðva. Lengri blá svæði þýða meiri hlaupatíma; lengri appelsínugul svæði þýða meiri
         tíma á stöðvunum. Þetta afhjúpar styrkleika og veikleika — hver er sterkur hlaupari og hver
-        afgreiðir stöðvarnar hraðast.
+        afgreiðir stöðvarnar hraðast. Heildartími hvers keppanda sést í tooltip þegar bendillinn er
+        yfir súlu.
       </p>
 
+      {/* Explicit-height wrapper required for ResponsiveContainer in recharts v3 */}
       <div style={{ width: '100%', height: chartHeight }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -165,6 +167,7 @@ export default function StackedBarChart({ athletes = [] }) {
               tickFormatter={(v) => formatTime(v)}
               stroke="#9ca3af"
               tick={{ fill: '#9ca3af', fontSize: 11 }}
+              domain={[0, (dataMax) => Math.ceil(dataMax * 1.05)]}
             />
             <YAxis
               type="category"
@@ -179,22 +182,20 @@ export default function StackedBarChart({ athletes = [] }) {
               wrapperStyle={{ color: '#e5e7eb', fontSize: 12 }}
               formatter={(value) => (value === 'run_total' ? 'Hlaup' : 'Stöðvar')}
             />
-            <Bar dataKey="run_total" stackId="t" fill="#3b82f6" name="run_total">
-              {data.map((_, i) => (
-                <Cell key={`r-${i}`} fill="#3b82f6" />
-              ))}
-            </Bar>
-            <Bar dataKey="station_total" stackId="t" fill="#f97316" name="station_total">
-              {data.map((_, i) => (
-                <Cell key={`s-${i}`} fill="#f97316" />
-              ))}
-              <LabelList
-                dataKey="total_seconds"
-                position="right"
-                formatter={(v) => formatTime(v)}
-                style={{ fill: '#e5e7eb', fontSize: 10 }}
-              />
-            </Bar>
+            <Bar
+              dataKey="run_total"
+              stackId="t"
+              fill="#3b82f6"
+              name="run_total"
+              isAnimationActive={false}
+            />
+            <Bar
+              dataKey="station_total"
+              stackId="t"
+              fill="#f97316"
+              name="station_total"
+              isAnimationActive={false}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

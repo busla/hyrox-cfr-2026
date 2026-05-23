@@ -103,14 +103,12 @@ export default function ScatterChart({ athletes = [] }) {
     const yMin = Math.floor(Math.min(...ys) * 0.95)
     const yMax = Math.ceil(Math.max(...ys) * 1.05)
 
-    // Diagonal reference lines: total = constant => station = total - run
     const totals = allPoints.map((p) => p.total_seconds || p.x + p.y)
     const minT = Math.min(...totals)
     const maxT = Math.max(...totals)
     const midT = (minT + maxT) / 2
     const lines = [minT, midT, maxT].map((t) => ({
       total: t,
-      // segment endpoints across visible x range
       x1: xMin,
       y1: t - xMin,
       x2: xMax,
@@ -155,7 +153,7 @@ export default function ScatterChart({ athletes = [] }) {
       </p>
 
       <div style={{ width: '100%', height: 520 }}>
-        <ResponsiveContainer>
+        <ResponsiveContainer width="100%" height="100%">
           <RechartsScatter margin={{ top: 20, right: 30, bottom: 50, left: 60 }}>
             <CartesianGrid stroke="#2a2f3e" strokeDasharray="3 3" />
             <XAxis

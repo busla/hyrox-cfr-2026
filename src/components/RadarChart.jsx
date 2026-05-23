@@ -76,7 +76,6 @@ function formatSeconds(s) {
 export default function RadarChart({ athletes = [] }) {
   const [selectedAthleteName, setSelectedAthleteName] = useState('')
 
-  // Build aggregated data: one row per station, with one key per division
   const aggregatedData = useMemo(() => {
     const byDivision = {}
     DIVISIONS.forEach((d) => {
@@ -98,7 +97,6 @@ export default function RadarChart({ athletes = [] }) {
     athletes.some((a) => a.division === d)
   )
 
-  // Athlete dropdown
   const athleteOptions = useMemo(
     () =>
       [...athletes]
@@ -183,7 +181,7 @@ export default function RadarChart({ athletes = [] }) {
       </p>
 
       <div style={{ width: '100%', height: 480 }}>
-        <ResponsiveContainer>
+        <ResponsiveContainer width="100%" height="100%">
           <RechartsRadar data={aggregatedData} outerRadius="75%">
             <PolarGrid stroke="#2a2f3e" />
             <PolarAngleAxis
@@ -213,7 +211,6 @@ export default function RadarChart({ athletes = [] }) {
         </ResponsiveContainer>
       </div>
 
-      {/* Individual athlete section */}
       <div
         style={{
           marginTop: 32,
@@ -252,7 +249,7 @@ export default function RadarChart({ athletes = [] }) {
 
         {selectedAthlete && (
           <div style={{ width: '100%', height: 460 }}>
-            <ResponsiveContainer>
+            <ResponsiveContainer width="100%" height="100%">
               <RechartsRadar data={athleteData} outerRadius="75%">
                 <PolarGrid stroke="#2a2f3e" />
                 <PolarAngleAxis

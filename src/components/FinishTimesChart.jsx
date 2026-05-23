@@ -7,7 +7,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Cell,
   ReferenceLine,
 } from 'recharts';
 
@@ -94,14 +93,35 @@ function CustomTooltip({ active, payload }) {
   );
 }
 
+// Custom shape function for recharts v3 — replaces deprecated <Cell> usage.
+// Receives bar geometry (x, y, width, height) plus the entry's `payload` row.
+function ColoredBar(props) {
+  const { x, y, width, height, payload, radius = 4 } = props;
+  const fill = (payload && payload.color) || DIVISION_COLORS.default;
+  const r = Math.min(radius, width / 2, height / 2) || 0;
+  // Render a rounded-top rectangle via path so radius prop survives the shape override
+  if (height <= 0 || width <= 0) return null;
+  const path = `
+    M ${x},${y + r}
+    Q ${x},${y} ${x + r},${y}
+    L ${x + width - r},${y}
+    Q ${x + width},${y} ${x + width},${y + r}
+    L ${x + width},${y + height}
+    L ${x},${y + height}
+    Z
+  `;
+  return <path d={path} fill={fill} />;
+}
+
 const RANK_EMOJI = ['🥇', '🥈', '🥉', '#4', '#5'];
 
 export default function FinishTimesChart({ athletes = [], category = 'einstaklingar' }) {
   const sorted = useMemo(() => {
     return (athletes || [])
-      .filter((a) => (a.total_seconds || 0) > 0)
+      .filter((a) => Number(a.total_seconds || 0) > 0)
       .map((a) => ({
         ...a,
+        total_seconds: Number(a.total_seconds) || 0,
         short: shortName(a.name),
         color: colorForDivision(a.division),
       }))
@@ -112,6 +132,11 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
     if (!sorted.length) return 0;
     const total = sorted.reduce((s, a) => s + a.total_seconds, 0);
     return total / sorted.length;
+  }, [sorted]);
+
+  const minTime = useMemo(() => {
+    if (!sorted.length) return 0;
+    return Math.max(0, Math.floor(sorted[0].total_seconds * 0.95));
   }, [sorted]);
 
   const podium = sorted.slice(0, 5);
@@ -158,8 +183,8 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
         meðaltíma — keppendur undir línunni eru fyrir ofan meðaltal í hraða.
       </p>
 
-      {/* Main chart */}
-      <div style={{ width: '100%', height: 380, background: '#1a1f2e', borderRadius: 10, padding: 12 }}>
+      {/* Main chart — explicit height wrapper required for ResponsiveContainer in recharts v3 */}
+      <div style={{ width: '100%', height: 400, background: '#1a1f2e', borderRadius: 10, padding: 12 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={sorted} margin={{ top: 10, right: 20, left: 0, bottom: 50 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#2d3548" />
@@ -176,6 +201,8 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
               stroke="#9ca3af"
               tick={{ fill: '#9ca3af', fontSize: 11 }}
               tickFormatter={formatHM}
+              domain={[minTime, (dataMax) => Math.ceil(dataMax * 1.02)]}
+              allowDataOverflow={false}
             />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
             {avg > 0 && (
@@ -191,11 +218,11 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
                 }}
               />
             )}
-            <Bar dataKey="total_seconds" radius={[4, 4, 0, 0]}>
-              {sorted.map((a, i) => (
-                <Cell key={i} fill={a.color} />
-              ))}
-            </Bar>
+            <Bar
+              dataKey="total_seconds"
+              isAnimationActive={false}
+              shape={<ColoredBar />}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

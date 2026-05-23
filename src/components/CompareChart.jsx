@@ -225,7 +225,7 @@ export default function CompareChart({ athletes = [] }) {
           </div>
         </div>
 
-        <div style={{ width: '100%', height: 380 }}>
+        <div style={{ width: '100%', height: 420 }}>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ top: 10, right: 16, bottom: 30, left: 8 }}>
               <CartesianGrid stroke="#2a3041" strokeDasharray="3 3" />
