@@ -1,0 +1,4282 @@
+{
+  "series": {
+    "name": "HYROX mótaröðin 2026",
+    "organizer": "Crossfit Reykjavík",
+    "events": [
+      {
+        "id": "mot1",
+        "name": "1. mót — 23. maí",
+        "date": "2026-05-23",
+        "status": "lokið",
+        "einstaklingar": {
+          "overall": [
+            {
+              "rank": 1,
+              "bib": "135",
+              "name": "Vilhjálmur Þór Svansson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:05:26",
+              "total_seconds": 3926,
+              "run_total": 1960,
+              "station_total": 1972,
+              "splits": {
+                "1. Ski-Erg": 272,
+                "2 .Ýta sleða": 192,
+                "3. Draga sleða": 244,
+                "4. Burpee langstökk": 256,
+                "5. Róður": 280,
+                "6. Bændaganga": 169,
+                "7. Lunges": 252,
+                "8. Wall Balls": 307
+              },
+              "run_times": [
+                227,
+                237,
+                252,
+                253,
+                248,
+                244,
+                244,
+                255
+              ]
+            },
+            {
+              "rank": 2,
+              "bib": "162",
+              "name": "Óskar Marinó Jónsson",
+              "club": "Cf suðurnes",
+              "division": "Open KK",
+              "total_time": "01:06:23",
+              "total_seconds": 3983,
+              "run_total": 2187,
+              "station_total": 1805,
+              "splits": {
+                "1. Ski-Erg": 261,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 249,
+                "4. Burpee langstökk": 206,
+                "5. Róður": 277,
+                "6. Bændaganga": 181,
+                "7. Lunges": 247,
+                "8. Wall Balls": 262
+              },
+              "run_times": [
+                246,
+                255,
+                275,
+                278,
+                288,
+                280,
+                277,
+                288
+              ]
+            },
+            {
+              "rank": 3,
+              "bib": "251",
+              "name": "Jóhanna Júlía Júlíusdóttir",
+              "club": "Crossfit Suðurnes",
+              "division": "Pro KVK",
+              "total_time": "01:07:12",
+              "total_seconds": 4032,
+              "run_total": 1940,
+              "station_total": 2101,
+              "splits": {
+                "1. Ski-Erg": 301,
+                "2 .Ýta sleða": 194,
+                "3. Draga sleða": 333,
+                "4. Burpee langstökk": 221,
+                "5. Róður": 301,
+                "6. Bændaganga": 208,
+                "7. Lunges": 230,
+                "8. Wall Balls": 313
+              },
+              "run_times": [
+                218,
+                230,
+                242,
+                248,
+                260,
+                242,
+                245,
+                255
+              ]
+            },
+            {
+              "rank": 4,
+              "bib": "119",
+              "name": "Toni Streckrodt",
+              "club": "Bootcamp Iceland",
+              "division": "Open KK",
+              "total_time": "01:07:38",
+              "total_seconds": 4058,
+              "run_total": 2150,
+              "station_total": 1914,
+              "splits": {
+                "1. Ski-Erg": 271,
+                "2 .Ýta sleða": 153,
+                "3. Draga sleða": 217,
+                "4. Burpee langstökk": 252,
+                "5. Róður": 272,
+                "6. Bændaganga": 164,
+                "7. Lunges": 256,
+                "8. Wall Balls": 329
+              },
+              "run_times": [
+                229,
+                247,
+                274,
+                282,
+                284,
+                277,
+                270,
+                287
+              ]
+            },
+            {
+              "rank": 5,
+              "bib": "204",
+              "name": "Sunneva Jónsdóttir",
+              "club": "Ultraform",
+              "division": "Open KVK",
+              "total_time": "01:08:33",
+              "total_seconds": 4113,
+              "run_total": 2163,
+              "station_total": 1958,
+              "splits": {
+                "1. Ski-Erg": 317,
+                "2 .Ýta sleða": 129,
+                "3. Draga sleða": 279,
+                "4. Burpee langstökk": 263,
+                "5. Róður": 310,
+                "6. Bændaganga": 153,
+                "7. Lunges": 215,
+                "8. Wall Balls": 292
+              },
+              "run_times": [
+                239,
+                262,
+                273,
+                269,
+                288,
+                270,
+                277,
+                285
+              ]
+            },
+            {
+              "rank": 6,
+              "bib": "105",
+              "name": "Guðni Finnsson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:13:12",
+              "total_seconds": 4392,
+              "run_total": 2238,
+              "station_total": 2161,
+              "splits": {
+                "1. Ski-Erg": 305,
+                "2 .Ýta sleða": 182,
+                "3. Draga sleða": 299,
+                "4. Burpee langstökk": 296,
+                "5. Róður": 296,
+                "6. Bændaganga": 186,
+                "7. Lunges": 292,
+                "8. Wall Balls": 305
+              },
+              "run_times": [
+                256,
+                267,
+                278,
+                282,
+                280,
+                291,
+                291,
+                293
+              ]
+            },
+            {
+              "rank": 7,
+              "bib": "120",
+              "name": "Filip Ługowski",
+              "club": "",
+              "division": "Open KK",
+              "total_time": "01:15:37",
+              "total_seconds": 4537,
+              "run_total": 2323,
+              "station_total": 2221,
+              "splits": {
+                "1. Ski-Erg": 272,
+                "2 .Ýta sleða": 144,
+                "3. Draga sleða": 295,
+                "4. Burpee langstökk": 292,
+                "5. Róður": 301,
+                "6. Bændaganga": 217,
+                "7. Lunges": 365,
+                "8. Wall Balls": 335
+              },
+              "run_times": [
+                259,
+                265,
+                307,
+                304,
+                305,
+                290,
+                294,
+                299
+              ]
+            },
+            {
+              "rank": 8,
+              "bib": "208",
+              "name": "Anna Cecilia Inghammar",
+              "club": "CFR",
+              "division": "Open KVK",
+              "total_time": "01:16:49",
+              "total_seconds": 4609,
+              "run_total": 2239,
+              "station_total": 2380,
+              "splits": {
+                "1. Ski-Erg": 337,
+                "2 .Ýta sleða": 169,
+                "3. Draga sleða": 276,
+                "4. Burpee langstökk": 348,
+                "5. Róður": 341,
+                "6. Bændaganga": 187,
+                "7. Lunges": 260,
+                "8. Wall Balls": 462
+              },
+              "run_times": [
+                235,
+                256,
+                290,
+                283,
+                299,
+                284,
+                290,
+                302
+              ]
+            },
+            {
+              "rank": 9,
+              "bib": "171",
+              "name": "Gylfi Þór Sigurðsson",
+              "club": "CFR",
+              "division": "Pro KK",
+              "total_time": "01:20:01",
+              "total_seconds": 4801,
+              "run_total": 2421,
+              "station_total": 2387,
+              "splits": {
+                "1. Ski-Erg": 308,
+                "2 .Ýta sleða": 163,
+                "3. Draga sleða": 391,
+                "4. Burpee langstökk": 256,
+                "5. Róður": 283,
+                "6. Bændaganga": 187,
+                "7. Lunges": 301,
+                "8. Wall Balls": 498
+              },
+              "run_times": [
+                294,
+                281,
+                303,
+                319,
+                325,
+                310,
+                290,
+                299
+              ]
+            },
+            {
+              "rank": 10,
+              "bib": "197",
+              "name": "Glenn moyle",
+              "club": "CrossFit reykjavik",
+              "division": "Open KK",
+              "total_time": "01:20:43",
+              "total_seconds": 4843,
+              "run_total": 2597,
+              "station_total": 2252,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 148,
+                "3. Draga sleða": 245,
+                "4. Burpee langstökk": 351,
+                "5. Róður": 284,
+                "6. Bændaganga": 206,
+                "7. Lunges": 380,
+                "8. Wall Balls": 359
+              },
+              "run_times": [
+                280,
+                301,
+                322,
+                322,
+                338,
+                340,
+                343,
+                351
+              ]
+            },
+            {
+              "rank": 11,
+              "bib": "206",
+              "name": "Jóhannes Felix Jóhannesson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:21:13",
+              "total_seconds": 4873,
+              "run_total": 2338,
+              "station_total": 2542,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 232,
+                "3. Draga sleða": 275,
+                "4. Burpee langstökk": 387,
+                "5. Róður": 333,
+                "6. Bændaganga": 210,
+                "7. Lunges": 386,
+                "8. Wall Balls": 440
+              },
+              "run_times": [
+                250,
+                265,
+                299,
+                287,
+                328,
+                303,
+                298,
+                308
+              ]
+            },
+            {
+              "rank": 12,
+              "bib": "209",
+              "name": "Sturla Freyr Gíslason",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:21:38",
+              "total_seconds": 4898,
+              "run_total": 2561,
+              "station_total": 2344,
+              "splits": {
+                "1. Ski-Erg": 306,
+                "2 .Ýta sleða": 150,
+                "3. Draga sleða": 265,
+                "4. Burpee langstökk": 439,
+                "5. Róður": 308,
+                "6. Bændaganga": 199,
+                "7. Lunges": 332,
+                "8. Wall Balls": 345
+              },
+              "run_times": [
+                282,
+                291,
+                328,
+                328,
+                342,
+                325,
+                333,
+                332
+              ]
+            },
+            {
+              "rank": 13,
+              "bib": "195",
+              "name": "Atli Jónsson",
+              "club": "Crossfit RVK",
+              "division": "Open KK",
+              "total_time": "01:25:54",
+              "total_seconds": 5154,
+              "run_total": 2615,
+              "station_total": 2547,
+              "splits": {
+                "1. Ski-Erg": 310,
+                "2 .Ýta sleða": 198,
+                "3. Draga sleða": 288,
+                "4. Burpee langstökk": 346,
+                "5. Róður": 318,
+                "6. Bændaganga": 302,
+                "7. Lunges": 293,
+                "8. Wall Balls": 492
+              },
+              "run_times": [
+                304,
+                301,
+                329,
+                325,
+                353,
+                340,
+                319,
+                344
+              ]
+            },
+            {
+              "rank": 14,
+              "bib": "123",
+              "name": "Adam Komorowski",
+              "club": "Zabiegani Reykjavik/Ultra Form",
+              "division": "Pro KK",
+              "total_time": "01:26:00",
+              "total_seconds": 5160,
+              "run_total": 2372,
+              "station_total": 2796,
+              "splits": {
+                "1. Ski-Erg": 307,
+                "2 .Ýta sleða": 278,
+                "3. Draga sleða": 464,
+                "4. Burpee langstökk": 297,
+                "5. Róður": 300,
+                "6. Bændaganga": 213,
+                "7. Lunges": 356,
+                "8. Wall Balls": 581
+              },
+              "run_times": [
+                290,
+                283,
+                308,
+                298,
+                291,
+                288,
+                296,
+                318
+              ]
+            },
+            {
+              "rank": 15,
+              "bib": "167",
+              "name": "Sigrún Erla Lárusdóttir",
+              "club": "Crossfit Reykjavík",
+              "division": "Pro KVK",
+              "total_time": "01:26:30",
+              "total_seconds": 5190,
+              "run_total": 2162,
+              "station_total": 3033,
+              "splits": {
+                "1. Ski-Erg": 334,
+                "2 .Ýta sleða": 234,
+                "3. Draga sleða": 476,
+                "4. Burpee langstökk": 444,
+                "5. Róður": 389,
+                "6. Bændaganga": 318,
+                "7. Lunges": 364,
+                "8. Wall Balls": 474
+              },
+              "run_times": [
+                219,
+                258,
+                289,
+                289,
+                275,
+                275,
+                276,
+                281
+              ]
+            },
+            {
+              "rank": 16,
+              "bib": "169",
+              "name": "Seppe Dobbelaere",
+              "club": "Reykjavík",
+              "division": "Open KK",
+              "total_time": "01:26:54",
+              "total_seconds": 5214,
+              "run_total": 2127,
+              "station_total": 3091,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 339,
+                "3. Draga sleða": 424,
+                "4. Burpee langstökk": 370,
+                "5. Róður": 465,
+                "6. Bændaganga": 438,
+                "7. Lunges": 252,
+                "8. Wall Balls": 524
+              },
+              "run_times": [
+                251,
+                256,
+                266,
+                258,
+                249,
+                281,
+                283,
+                283
+              ]
+            },
+            {
+              "rank": 17,
+              "bib": "121",
+              "name": "Grímur Gunnarsson",
+              "club": "Crossfit Reykjavík",
+              "division": "Pro KK",
+              "total_time": "01:27:25",
+              "total_seconds": 5245,
+              "run_total": 2858,
+              "station_total": 2393,
+              "splits": {
+                "1. Ski-Erg": 340,
+                "2 .Ýta sleða": 125,
+                "3. Draga sleða": 376,
+                "4. Burpee langstökk": 265,
+                "5. Róður": 306,
+                "6. Bændaganga": 242,
+                "7. Lunges": 293,
+                "8. Wall Balls": 446
+              },
+              "run_times": [
+                310,
+                314,
+                357,
+                371,
+                377,
+                378,
+                369,
+                382
+              ]
+            },
+            {
+              "rank": 18,
+              "bib": "210",
+              "name": "Pétur Ágústsson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:33:45",
+              "total_seconds": 5625,
+              "run_total": 2905,
+              "station_total": 2726,
+              "splits": {
+                "1. Ski-Erg": 316,
+                "2 .Ýta sleða": 182,
+                "3. Draga sleða": 331,
+                "4. Burpee langstökk": 409,
+                "5. Róður": 363,
+                "6. Bændaganga": 210,
+                "7. Lunges": 457,
+                "8. Wall Balls": 458
+              },
+              "run_times": [
+                289,
+                316,
+                372,
+                370,
+                399,
+                380,
+                385,
+                394
+              ]
+            },
+            {
+              "rank": 19,
+              "bib": "160",
+              "name": "Gunnar Páll Leifsson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:33:49",
+              "total_seconds": 5629,
+              "run_total": 2777,
+              "station_total": 2858,
+              "splits": {
+                "1. Ski-Erg": 323,
+                "2 .Ýta sleða": 178,
+                "3. Draga sleða": 387,
+                "4. Burpee langstökk": 434,
+                "5. Róður": 345,
+                "6. Bændaganga": 243,
+                "7. Lunges": 412,
+                "8. Wall Balls": 536
+              },
+              "run_times": [
+                296,
+                307,
+                344,
+                360,
+                390,
+                364,
+                354,
+                362
+              ]
+            },
+            {
+              "rank": 20,
+              "bib": "136",
+              "name": "Árni Ingvarsson",
+              "club": "Worldfit",
+              "division": "Open KK",
+              "total_time": "01:36:11",
+              "total_seconds": 5771,
+              "run_total": 2917,
+              "station_total": 2862,
+              "splits": {
+                "1. Ski-Erg": 311,
+                "2 .Ýta sleða": 216,
+                "3. Draga sleða": 317,
+                "4. Burpee langstökk": 500,
+                "5. Róður": 380,
+                "6. Bændaganga": 275,
+                "7. Lunges": 400,
+                "8. Wall Balls": 463
+              },
+              "run_times": [
+                295,
+                342,
+                361,
+                370,
+                397,
+                377,
+                357,
+                418
+              ]
+            }
+          ],
+          "karlar": [
+            {
+              "rank": 1,
+              "bib": "135",
+              "name": "Vilhjálmur Þór Svansson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:05:26",
+              "total_seconds": 3926,
+              "run_total": 1960,
+              "station_total": 1972,
+              "splits": {
+                "1. Ski-Erg": 272,
+                "2 .Ýta sleða": 192,
+                "3. Draga sleða": 244,
+                "4. Burpee langstökk": 256,
+                "5. Róður": 280,
+                "6. Bændaganga": 169,
+                "7. Lunges": 252,
+                "8. Wall Balls": 307
+              },
+              "run_times": [
+                227,
+                237,
+                252,
+                253,
+                248,
+                244,
+                244,
+                255
+              ]
+            },
+            {
+              "rank": 2,
+              "bib": "162",
+              "name": "Óskar Marinó Jónsson",
+              "club": "Cf suðurnes",
+              "division": "Open KK",
+              "total_time": "01:06:23",
+              "total_seconds": 3983,
+              "run_total": 2187,
+              "station_total": 1805,
+              "splits": {
+                "1. Ski-Erg": 261,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 249,
+                "4. Burpee langstökk": 206,
+                "5. Róður": 277,
+                "6. Bændaganga": 181,
+                "7. Lunges": 247,
+                "8. Wall Balls": 262
+              },
+              "run_times": [
+                246,
+                255,
+                275,
+                278,
+                288,
+                280,
+                277,
+                288
+              ]
+            },
+            {
+              "rank": 3,
+              "bib": "119",
+              "name": "Toni Streckrodt",
+              "club": "Bootcamp Iceland",
+              "division": "Open KK",
+              "total_time": "01:07:38",
+              "total_seconds": 4058,
+              "run_total": 2150,
+              "station_total": 1914,
+              "splits": {
+                "1. Ski-Erg": 271,
+                "2 .Ýta sleða": 153,
+                "3. Draga sleða": 217,
+                "4. Burpee langstökk": 252,
+                "5. Róður": 272,
+                "6. Bændaganga": 164,
+                "7. Lunges": 256,
+                "8. Wall Balls": 329
+              },
+              "run_times": [
+                229,
+                247,
+                274,
+                282,
+                284,
+                277,
+                270,
+                287
+              ]
+            },
+            {
+              "rank": 4,
+              "bib": "105",
+              "name": "Guðni Finnsson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:13:12",
+              "total_seconds": 4392,
+              "run_total": 2238,
+              "station_total": 2161,
+              "splits": {
+                "1. Ski-Erg": 305,
+                "2 .Ýta sleða": 182,
+                "3. Draga sleða": 299,
+                "4. Burpee langstökk": 296,
+                "5. Róður": 296,
+                "6. Bændaganga": 186,
+                "7. Lunges": 292,
+                "8. Wall Balls": 305
+              },
+              "run_times": [
+                256,
+                267,
+                278,
+                282,
+                280,
+                291,
+                291,
+                293
+              ]
+            },
+            {
+              "rank": 5,
+              "bib": "120",
+              "name": "Filip Ługowski",
+              "club": "",
+              "division": "Open KK",
+              "total_time": "01:15:37",
+              "total_seconds": 4537,
+              "run_total": 2323,
+              "station_total": 2221,
+              "splits": {
+                "1. Ski-Erg": 272,
+                "2 .Ýta sleða": 144,
+                "3. Draga sleða": 295,
+                "4. Burpee langstökk": 292,
+                "5. Róður": 301,
+                "6. Bændaganga": 217,
+                "7. Lunges": 365,
+                "8. Wall Balls": 335
+              },
+              "run_times": [
+                259,
+                265,
+                307,
+                304,
+                305,
+                290,
+                294,
+                299
+              ]
+            },
+            {
+              "rank": 6,
+              "bib": "171",
+              "name": "Gylfi Þór Sigurðsson",
+              "club": "CFR",
+              "division": "Pro KK",
+              "total_time": "01:20:01",
+              "total_seconds": 4801,
+              "run_total": 2421,
+              "station_total": 2387,
+              "splits": {
+                "1. Ski-Erg": 308,
+                "2 .Ýta sleða": 163,
+                "3. Draga sleða": 391,
+                "4. Burpee langstökk": 256,
+                "5. Róður": 283,
+                "6. Bændaganga": 187,
+                "7. Lunges": 301,
+                "8. Wall Balls": 498
+              },
+              "run_times": [
+                294,
+                281,
+                303,
+                319,
+                325,
+                310,
+                290,
+                299
+              ]
+            },
+            {
+              "rank": 7,
+              "bib": "197",
+              "name": "Glenn moyle",
+              "club": "CrossFit reykjavik",
+              "division": "Open KK",
+              "total_time": "01:20:43",
+              "total_seconds": 4843,
+              "run_total": 2597,
+              "station_total": 2252,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 148,
+                "3. Draga sleða": 245,
+                "4. Burpee langstökk": 351,
+                "5. Róður": 284,
+                "6. Bændaganga": 206,
+                "7. Lunges": 380,
+                "8. Wall Balls": 359
+              },
+              "run_times": [
+                280,
+                301,
+                322,
+                322,
+                338,
+                340,
+                343,
+                351
+              ]
+            },
+            {
+              "rank": 8,
+              "bib": "206",
+              "name": "Jóhannes Felix Jóhannesson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:21:13",
+              "total_seconds": 4873,
+              "run_total": 2338,
+              "station_total": 2542,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 232,
+                "3. Draga sleða": 275,
+                "4. Burpee langstökk": 387,
+                "5. Róður": 333,
+                "6. Bændaganga": 210,
+                "7. Lunges": 386,
+                "8. Wall Balls": 440
+              },
+              "run_times": [
+                250,
+                265,
+                299,
+                287,
+                328,
+                303,
+                298,
+                308
+              ]
+            },
+            {
+              "rank": 9,
+              "bib": "209",
+              "name": "Sturla Freyr Gíslason",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:21:38",
+              "total_seconds": 4898,
+              "run_total": 2561,
+              "station_total": 2344,
+              "splits": {
+                "1. Ski-Erg": 306,
+                "2 .Ýta sleða": 150,
+                "3. Draga sleða": 265,
+                "4. Burpee langstökk": 439,
+                "5. Róður": 308,
+                "6. Bændaganga": 199,
+                "7. Lunges": 332,
+                "8. Wall Balls": 345
+              },
+              "run_times": [
+                282,
+                291,
+                328,
+                328,
+                342,
+                325,
+                333,
+                332
+              ]
+            },
+            {
+              "rank": 10,
+              "bib": "195",
+              "name": "Atli Jónsson",
+              "club": "Crossfit RVK",
+              "division": "Open KK",
+              "total_time": "01:25:54",
+              "total_seconds": 5154,
+              "run_total": 2615,
+              "station_total": 2547,
+              "splits": {
+                "1. Ski-Erg": 310,
+                "2 .Ýta sleða": 198,
+                "3. Draga sleða": 288,
+                "4. Burpee langstökk": 346,
+                "5. Róður": 318,
+                "6. Bændaganga": 302,
+                "7. Lunges": 293,
+                "8. Wall Balls": 492
+              },
+              "run_times": [
+                304,
+                301,
+                329,
+                325,
+                353,
+                340,
+                319,
+                344
+              ]
+            },
+            {
+              "rank": 11,
+              "bib": "123",
+              "name": "Adam Komorowski",
+              "club": "Zabiegani Reykjavik/Ultra Form",
+              "division": "Pro KK",
+              "total_time": "01:26:00",
+              "total_seconds": 5160,
+              "run_total": 2372,
+              "station_total": 2796,
+              "splits": {
+                "1. Ski-Erg": 307,
+                "2 .Ýta sleða": 278,
+                "3. Draga sleða": 464,
+                "4. Burpee langstökk": 297,
+                "5. Róður": 300,
+                "6. Bændaganga": 213,
+                "7. Lunges": 356,
+                "8. Wall Balls": 581
+              },
+              "run_times": [
+                290,
+                283,
+                308,
+                298,
+                291,
+                288,
+                296,
+                318
+              ]
+            },
+            {
+              "rank": 12,
+              "bib": "169",
+              "name": "Seppe Dobbelaere",
+              "club": "Reykjavík",
+              "division": "Open KK",
+              "total_time": "01:26:54",
+              "total_seconds": 5214,
+              "run_total": 2127,
+              "station_total": 3091,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 339,
+                "3. Draga sleða": 424,
+                "4. Burpee langstökk": 370,
+                "5. Róður": 465,
+                "6. Bændaganga": 438,
+                "7. Lunges": 252,
+                "8. Wall Balls": 524
+              },
+              "run_times": [
+                251,
+                256,
+                266,
+                258,
+                249,
+                281,
+                283,
+                283
+              ]
+            },
+            {
+              "rank": 13,
+              "bib": "121",
+              "name": "Grímur Gunnarsson",
+              "club": "Crossfit Reykjavík",
+              "division": "Pro KK",
+              "total_time": "01:27:25",
+              "total_seconds": 5245,
+              "run_total": 2858,
+              "station_total": 2393,
+              "splits": {
+                "1. Ski-Erg": 340,
+                "2 .Ýta sleða": 125,
+                "3. Draga sleða": 376,
+                "4. Burpee langstökk": 265,
+                "5. Róður": 306,
+                "6. Bændaganga": 242,
+                "7. Lunges": 293,
+                "8. Wall Balls": 446
+              },
+              "run_times": [
+                310,
+                314,
+                357,
+                371,
+                377,
+                378,
+                369,
+                382
+              ]
+            },
+            {
+              "rank": 14,
+              "bib": "210",
+              "name": "Pétur Ágústsson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:33:45",
+              "total_seconds": 5625,
+              "run_total": 2905,
+              "station_total": 2726,
+              "splits": {
+                "1. Ski-Erg": 316,
+                "2 .Ýta sleða": 182,
+                "3. Draga sleða": 331,
+                "4. Burpee langstökk": 409,
+                "5. Róður": 363,
+                "6. Bændaganga": 210,
+                "7. Lunges": 457,
+                "8. Wall Balls": 458
+              },
+              "run_times": [
+                289,
+                316,
+                372,
+                370,
+                399,
+                380,
+                385,
+                394
+              ]
+            },
+            {
+              "rank": 15,
+              "bib": "160",
+              "name": "Gunnar Páll Leifsson",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": "01:33:49",
+              "total_seconds": 5629,
+              "run_total": 2777,
+              "station_total": 2858,
+              "splits": {
+                "1. Ski-Erg": 323,
+                "2 .Ýta sleða": 178,
+                "3. Draga sleða": 387,
+                "4. Burpee langstökk": 434,
+                "5. Róður": 345,
+                "6. Bændaganga": 243,
+                "7. Lunges": 412,
+                "8. Wall Balls": 536
+              },
+              "run_times": [
+                296,
+                307,
+                344,
+                360,
+                390,
+                364,
+                354,
+                362
+              ]
+            },
+            {
+              "rank": 16,
+              "bib": "136",
+              "name": "Árni Ingvarsson",
+              "club": "Worldfit",
+              "division": "Open KK",
+              "total_time": "01:36:11",
+              "total_seconds": 5771,
+              "run_total": 2917,
+              "station_total": 2862,
+              "splits": {
+                "1. Ski-Erg": 311,
+                "2 .Ýta sleða": 216,
+                "3. Draga sleða": 317,
+                "4. Burpee langstökk": 500,
+                "5. Róður": 380,
+                "6. Bændaganga": 275,
+                "7. Lunges": 400,
+                "8. Wall Balls": 463
+              },
+              "run_times": [
+                295,
+                342,
+                361,
+                370,
+                397,
+                377,
+                357,
+                418
+              ]
+            }
+          ],
+          "konur": [
+            {
+              "rank": 1,
+              "bib": "251",
+              "name": "Jóhanna Júlía Júlíusdóttir",
+              "club": "Crossfit Suðurnes",
+              "division": "Pro KVK",
+              "total_time": "01:07:12",
+              "total_seconds": 4032,
+              "run_total": 1940,
+              "station_total": 2101,
+              "splits": {
+                "1. Ski-Erg": 301,
+                "2 .Ýta sleða": 194,
+                "3. Draga sleða": 333,
+                "4. Burpee langstökk": 221,
+                "5. Róður": 301,
+                "6. Bændaganga": 208,
+                "7. Lunges": 230,
+                "8. Wall Balls": 313
+              },
+              "run_times": [
+                218,
+                230,
+                242,
+                248,
+                260,
+                242,
+                245,
+                255
+              ]
+            },
+            {
+              "rank": 2,
+              "bib": "204",
+              "name": "Sunneva Jónsdóttir",
+              "club": "Ultraform",
+              "division": "Open KVK",
+              "total_time": "01:08:33",
+              "total_seconds": 4113,
+              "run_total": 2163,
+              "station_total": 1958,
+              "splits": {
+                "1. Ski-Erg": 317,
+                "2 .Ýta sleða": 129,
+                "3. Draga sleða": 279,
+                "4. Burpee langstökk": 263,
+                "5. Róður": 310,
+                "6. Bændaganga": 153,
+                "7. Lunges": 215,
+                "8. Wall Balls": 292
+              },
+              "run_times": [
+                239,
+                262,
+                273,
+                269,
+                288,
+                270,
+                277,
+                285
+              ]
+            },
+            {
+              "rank": 3,
+              "bib": "208",
+              "name": "Anna Cecilia Inghammar",
+              "club": "CFR",
+              "division": "Open KVK",
+              "total_time": "01:16:49",
+              "total_seconds": 4609,
+              "run_total": 2239,
+              "station_total": 2380,
+              "splits": {
+                "1. Ski-Erg": 337,
+                "2 .Ýta sleða": 169,
+                "3. Draga sleða": 276,
+                "4. Burpee langstökk": 348,
+                "5. Róður": 341,
+                "6. Bændaganga": 187,
+                "7. Lunges": 260,
+                "8. Wall Balls": 462
+              },
+              "run_times": [
+                235,
+                256,
+                290,
+                283,
+                299,
+                284,
+                290,
+                302
+              ]
+            },
+            {
+              "rank": 4,
+              "bib": "167",
+              "name": "Sigrún Erla Lárusdóttir",
+              "club": "Crossfit Reykjavík",
+              "division": "Pro KVK",
+              "total_time": "01:26:30",
+              "total_seconds": 5190,
+              "run_total": 2162,
+              "station_total": 3033,
+              "splits": {
+                "1. Ski-Erg": 334,
+                "2 .Ýta sleða": 234,
+                "3. Draga sleða": 476,
+                "4. Burpee langstökk": 444,
+                "5. Róður": 389,
+                "6. Bændaganga": 318,
+                "7. Lunges": 364,
+                "8. Wall Balls": 474
+              },
+              "run_times": [
+                219,
+                258,
+                289,
+                289,
+                275,
+                275,
+                276,
+                281
+              ]
+            }
+          ]
+        },
+        "para": {
+          "overall": [
+            {
+              "rank": 1,
+              "bib": "188",
+              "name": "Óskar Már Einarsson\nSnorri Sigurðarson",
+              "club": "Beauty and the beast",
+              "division": "Pro KK",
+              "total_time": "00:56:47",
+              "total_seconds": 3407,
+              "run_total": 1927,
+              "station_total": 1489,
+              "splits": {
+                "1. Ski-Erg": 242,
+                "2 .Ýta sleða": 108,
+                "3. Draga sleða": 177,
+                "4. Burpee langstökk": 153,
+                "5. Róður": 247,
+                "6. Bændaganga": 154,
+                "7. Lunges": 185,
+                "8. Wall Balls": 223
+              },
+              "run_times": [
+                225,
+                229,
+                250,
+                247,
+                245,
+                249,
+                243,
+                239
+              ]
+            },
+            {
+              "rank": 2,
+              "bib": "198",
+              "name": "Jón Eyþór Gottskálksson\nÞorsteinn Grétar Júlíusson",
+              "club": "Blek og spek",
+              "division": "Pro KK",
+              "total_time": "00:58:12",
+              "total_seconds": 3492,
+              "run_total": 2081,
+              "station_total": 1417,
+              "splits": {
+                "1. Ski-Erg": 231,
+                "2 .Ýta sleða": 115,
+                "3. Draga sleða": 142,
+                "4. Burpee langstökk": 107,
+                "5. Róður": 273,
+                "6. Bændaganga": 143,
+                "7. Lunges": 165,
+                "8. Wall Balls": 241
+              },
+              "run_times": [
+                232,
+                240,
+                281,
+                265,
+                284,
+                263,
+                267,
+                249
+              ]
+            },
+            {
+              "rank": 3,
+              "bib": "130",
+              "name": "Davíð Sigurðsson\nAlexander Sindrason",
+              "club": "TheGainTrain",
+              "division": "Open KK",
+              "total_time": "00:58:58",
+              "total_seconds": 3538,
+              "run_total": 2068,
+              "station_total": 1474,
+              "splits": {
+                "1. Ski-Erg": 252,
+                "2 .Ýta sleða": 96,
+                "3. Draga sleða": 125,
+                "4. Burpee langstökk": 147,
+                "5. Róður": 250,
+                "6. Bændaganga": 158,
+                "7. Lunges": 192,
+                "8. Wall Balls": 254
+              },
+              "run_times": [
+                246,
+                247,
+                261,
+                257,
+                272,
+                263,
+                261,
+                261
+              ]
+            },
+            {
+              "rank": 4,
+              "bib": "174",
+              "name": "Frederik aegidius\nAnnie thorisdottie",
+              "club": "Annie and Frederik",
+              "division": "MIXED",
+              "total_time": "00:59:44",
+              "total_seconds": 3584,
+              "run_total": 2160,
+              "station_total": 1432,
+              "splits": {
+                "1. Ski-Erg": 238,
+                "2 .Ýta sleða": 92,
+                "3. Draga sleða": 141,
+                "4. Burpee langstökk": 154,
+                "5. Róður": 245,
+                "6. Bændaganga": 190,
+                "7. Lunges": 147,
+                "8. Wall Balls": 225
+              },
+              "run_times": [
+                256,
+                260,
+                277,
+                278,
+                273,
+                273,
+                269,
+                274
+              ]
+            },
+            {
+              "rank": 5,
+              "bib": "118",
+              "name": "Alma Hrönn Káradóttir\nRagnar Ingi Klemezson",
+              "club": "Hrafnista",
+              "division": "MIXED",
+              "total_time": "01:00:49",
+              "total_seconds": 3649,
+              "run_total": 2072,
+              "station_total": 1585,
+              "splits": {
+                "1. Ski-Erg": 267,
+                "2 .Ýta sleða": 124,
+                "3. Draga sleða": 176,
+                "4. Burpee langstökk": 168,
+                "5. Róður": 268,
+                "6. Bændaganga": 146,
+                "7. Lunges": 211,
+                "8. Wall Balls": 225
+              },
+              "run_times": [
+                246,
+                250,
+                263,
+                259,
+                266,
+                260,
+                268,
+                260
+              ]
+            },
+            {
+              "rank": 6,
+              "bib": "187",
+              "name": "Eggert Karlsson\nMagnús Helgi",
+              "club": "Skaginn2x",
+              "division": "Pro KK",
+              "total_time": "01:01:05",
+              "total_seconds": 3665,
+              "run_total": 2054,
+              "station_total": 1618,
+              "splits": {
+                "1. Ski-Erg": 246,
+                "2 .Ýta sleða": 119,
+                "3. Draga sleða": 200,
+                "4. Burpee langstökk": 141,
+                "5. Róður": 265,
+                "6. Bændaganga": 168,
+                "7. Lunges": 224,
+                "8. Wall Balls": 255
+              },
+              "run_times": [
+                226,
+                229,
+                256,
+                262,
+                280,
+                263,
+                263,
+                275
+              ]
+            },
+            {
+              "rank": 7,
+              "bib": "138",
+              "name": "Jón Þorri Zar Jónsson\nGuðmundur Bjarni Brynjólfsson",
+              "club": "Hfit",
+              "division": "Pro KK",
+              "total_time": "01:02:13",
+              "total_seconds": 3733,
+              "run_total": 2281,
+              "station_total": 1461,
+              "splits": {
+                "1. Ski-Erg": 236,
+                "2 .Ýta sleða": 112,
+                "3. Draga sleða": 146,
+                "4. Burpee langstökk": 161,
+                "5. Róður": 252,
+                "6. Bændaganga": 154,
+                "7. Lunges": 185,
+                "8. Wall Balls": 215
+              },
+              "run_times": [
+                249,
+                256,
+                288,
+                293,
+                313,
+                300,
+                306,
+                276
+              ]
+            },
+            {
+              "rank": 8,
+              "bib": "170",
+              "name": "Glódís Guðgeirsdóttir\nEinar Kristinn",
+              "club": "æðisleg.is",
+              "division": "MIXED",
+              "total_time": "01:02:23",
+              "total_seconds": 3743,
+              "run_total": 2331,
+              "station_total": 1419,
+              "splits": {
+                "1. Ski-Erg": 236,
+                "2 .Ýta sleða": 95,
+                "3. Draga sleða": 136,
+                "4. Burpee langstökk": 155,
+                "5. Róður": 246,
+                "6. Bændaganga": 192,
+                "7. Lunges": 157,
+                "8. Wall Balls": 202
+              },
+              "run_times": [
+                257,
+                275,
+                305,
+                304,
+                307,
+                301,
+                303,
+                279
+              ]
+            },
+            {
+              "rank": 9,
+              "bib": "111",
+              "name": "Patrick Örn Hansen\nSólveig Heiða Foss",
+              "club": "Foss Hansen",
+              "division": "MIXED",
+              "total_time": "01:02:33",
+              "total_seconds": 3753,
+              "run_total": 2153,
+              "station_total": 1608,
+              "splits": {
+                "1. Ski-Erg": 257,
+                "2 .Ýta sleða": 113,
+                "3. Draga sleða": 172,
+                "4. Burpee langstökk": 206,
+                "5. Róður": 290,
+                "6. Bændaganga": 152,
+                "7. Lunges": 190,
+                "8. Wall Balls": 228
+              },
+              "run_times": [
+                244,
+                255,
+                274,
+                275,
+                307,
+                275,
+                266,
+                257
+              ]
+            },
+            {
+              "rank": 10,
+              "bib": "126",
+              "name": "Andrea Ingibjörg Orradóttir\nViktor Ólafsson",
+              "club": "Andrea & Viktor",
+              "division": "MIXED",
+              "total_time": "01:03:18",
+              "total_seconds": 3798,
+              "run_total": 2296,
+              "station_total": 1509,
+              "splits": {
+                "1. Ski-Erg": 246,
+                "2 .Ýta sleða": 101,
+                "3. Draga sleða": 173,
+                "4. Burpee langstökk": 164,
+                "5. Róður": 255,
+                "6. Bændaganga": 162,
+                "7. Lunges": 189,
+                "8. Wall Balls": 219
+              },
+              "run_times": [
+                260,
+                272,
+                287,
+                294,
+                297,
+                291,
+                302,
+                293
+              ]
+            },
+            {
+              "rank": 11,
+              "bib": "205",
+              "name": "Auður Kristín Pétursdóttir\nHulda Fanný Pálsdóttir",
+              "club": "Huldan & Aujan",
+              "division": "Pro KVK",
+              "total_time": "01:03:43",
+              "total_seconds": 3823,
+              "run_total": 1943,
+              "station_total": 1886,
+              "splits": {
+                "1. Ski-Erg": 294,
+                "2 .Ýta sleða": 157,
+                "3. Draga sleða": 263,
+                "4. Burpee langstökk": 173,
+                "5. Róður": 308,
+                "6. Bændaganga": 162,
+                "7. Lunges": 270,
+                "8. Wall Balls": 259
+              },
+              "run_times": [
+                230,
+                234,
+                243,
+                240,
+                246,
+                246,
+                250,
+                254
+              ]
+            },
+            {
+              "rank": 12,
+              "bib": "161",
+              "name": "Lydia Kearney\nSólveig Sigurðardóttir",
+              "club": "Sólveig og Lydia",
+              "division": "Pro KVK",
+              "total_time": "01:04:17",
+              "total_seconds": 3857,
+              "run_total": 2252,
+              "station_total": 1614,
+              "splits": {
+                "1. Ski-Erg": 266,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 185,
+                "4. Burpee langstökk": 174,
+                "5. Róður": 262,
+                "6. Bændaganga": 171,
+                "7. Lunges": 214,
+                "8. Wall Balls": 220
+              },
+              "run_times": [
+                255,
+                266,
+                285,
+                282,
+                292,
+                293,
+                295,
+                284
+              ]
+            },
+            {
+              "rank": 13,
+              "bib": "172",
+              "name": "Hrafnhildur Sigurjónsdóttir\nGunnsteinn Sigurjónsson",
+              "club": "Two of a kind",
+              "division": "MIXED",
+              "total_time": "01:05:12",
+              "total_seconds": 3912,
+              "run_total": 2289,
+              "station_total": 1629,
+              "splits": {
+                "1. Ski-Erg": 259,
+                "2 .Ýta sleða": 95,
+                "3. Draga sleða": 197,
+                "4. Burpee langstökk": 180,
+                "5. Róður": 272,
+                "6. Bændaganga": 171,
+                "7. Lunges": 211,
+                "8. Wall Balls": 244
+              },
+              "run_times": [
+                268,
+                269,
+                299,
+                294,
+                299,
+                289,
+                286,
+                285
+              ]
+            },
+            {
+              "rank": 14,
+              "bib": "127",
+              "name": "Sigurður Einarsson\nAníta Jóhannesardóttir",
+              "club": "Ein í liðveislu",
+              "division": "MIXED",
+              "total_time": "01:05:25",
+              "total_seconds": 3925,
+              "run_total": 2400,
+              "station_total": 1533,
+              "splits": {
+                "1. Ski-Erg": 271,
+                "2 .Ýta sleða": 96,
+                "3. Draga sleða": 184,
+                "4. Burpee langstökk": 160,
+                "5. Róður": 253,
+                "6. Bændaganga": 141,
+                "7. Lunges": 188,
+                "8. Wall Balls": 240
+              },
+              "run_times": [
+                295,
+                292,
+                300,
+                300,
+                304,
+                306,
+                306,
+                297
+              ]
+            },
+            {
+              "rank": 15,
+              "bib": "211",
+              "name": "Sigríður Ómarsdóttir\nKristján Freyr Þrastarson",
+              "club": "Sigga&Krissi",
+              "division": "MIXED",
+              "total_time": "01:05:52",
+              "total_seconds": 3952,
+              "run_total": 2307,
+              "station_total": 1653,
+              "splits": {
+                "1. Ski-Erg": 269,
+                "2 .Ýta sleða": 113,
+                "3. Draga sleða": 214,
+                "4. Burpee langstökk": 171,
+                "5. Róður": 285,
+                "6. Bændaganga": 157,
+                "7. Lunges": 215,
+                "8. Wall Balls": 229
+              },
+              "run_times": [
+                265,
+                280,
+                306,
+                285,
+                303,
+                283,
+                291,
+                294
+              ]
+            },
+            {
+              "rank": 16,
+              "bib": "132",
+              "name": "Davíð Jóhannsson\nÞröstur Pétursson",
+              "club": "Banksters",
+              "division": "Open KK",
+              "total_time": "01:07:14",
+              "total_seconds": 4034,
+              "run_total": 2468,
+              "station_total": 1576,
+              "splits": {
+                "1. Ski-Erg": 250,
+                "2 .Ýta sleða": 92,
+                "3. Draga sleða": 177,
+                "4. Burpee langstökk": 185,
+                "5. Róður": 277,
+                "6. Bændaganga": 155,
+                "7. Lunges": 197,
+                "8. Wall Balls": 243
+              },
+              "run_times": [
+                283,
+                294,
+                320,
+                314,
+                314,
+                316,
+                315,
+                312
+              ]
+            },
+            {
+              "rank": 17,
+              "bib": "186",
+              "name": "Daníel Rafn Guðmundsson\nSamúel K Ámundason",
+              "club": "Hægir&þægir ????",
+              "division": "Pro KK",
+              "total_time": "01:07:27",
+              "total_seconds": 4047,
+              "run_total": 2198,
+              "station_total": 1856,
+              "splits": {
+                "1. Ski-Erg": 269,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 266,
+                "4. Burpee langstökk": 226,
+                "5. Róður": 287,
+                "6. Bændaganga": 180,
+                "7. Lunges": 271,
+                "8. Wall Balls": 235
+              },
+              "run_times": [
+                253,
+                262,
+                281,
+                284,
+                282,
+                283,
+                273,
+                280
+              ]
+            },
+            {
+              "rank": 18,
+              "bib": "199",
+              "name": "Örn Ingi Bergsson\nHildur Birna Helgadóttir",
+              "club": "Non-bloods",
+              "division": "MIXED",
+              "total_time": "01:07:38",
+              "total_seconds": 4058,
+              "run_total": 2370,
+              "station_total": 1694,
+              "splits": {
+                "1. Ski-Erg": 259,
+                "2 .Ýta sleða": 109,
+                "3. Draga sleða": 151,
+                "4. Burpee langstökk": 236,
+                "5. Róður": 309,
+                "6. Bændaganga": 161,
+                "7. Lunges": 221,
+                "8. Wall Balls": 248
+              },
+              "run_times": [
+                263,
+                267,
+                294,
+                299,
+                303,
+                312,
+                316,
+                316
+              ]
+            },
+            {
+              "rank": 19,
+              "bib": "128",
+              "name": "Steinar B. Hafberg\nSólrún Sæmundsdóttir",
+              "club": "Sunny & Stones",
+              "division": "MIXED",
+              "total_time": "01:07:54",
+              "total_seconds": 4074,
+              "run_total": 2351,
+              "station_total": 1732,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 112,
+                "3. Draga sleða": 223,
+                "4. Burpee langstökk": 220,
+                "5. Róður": 295,
+                "6. Bændaganga": 167,
+                "7. Lunges": 205,
+                "8. Wall Balls": 231
+              },
+              "run_times": [
+                262,
+                270,
+                300,
+                295,
+                303,
+                306,
+                305,
+                310
+              ]
+            },
+            {
+              "rank": 20,
+              "bib": "164",
+              "name": "ragnheidur Halldorsdottir\nKári Helgason",
+              "club": "RaGu-sósan",
+              "division": "MIXED",
+              "total_time": "01:08:07",
+              "total_seconds": 4087,
+              "run_total": 2331,
+              "station_total": 1766,
+              "splits": {
+                "1. Ski-Erg": 281,
+                "2 .Ýta sleða": 143,
+                "3. Draga sleða": 214,
+                "4. Burpee langstökk": 146,
+                "5. Róður": 297,
+                "6. Bændaganga": 194,
+                "7. Lunges": 243,
+                "8. Wall Balls": 248
+              },
+              "run_times": [
+                297,
+                289,
+                305,
+                299,
+                308,
+                284,
+                274,
+                275
+              ]
+            },
+            {
+              "rank": 21,
+              "bib": "177",
+              "name": "Sigurður Rúnar Magnússon\nSigurður Ragnarsson",
+              "club": "SR2",
+              "division": "Open KK",
+              "total_time": "01:08:13",
+              "total_seconds": 4093,
+              "run_total": 2475,
+              "station_total": 1625,
+              "splits": {
+                "1. Ski-Erg": 253,
+                "2 .Ýta sleða": 90,
+                "3. Draga sleða": 159,
+                "4. Burpee langstökk": 208,
+                "5. Róður": 275,
+                "6. Bændaganga": 132,
+                "7. Lunges": 258,
+                "8. Wall Balls": 250
+              },
+              "run_times": [
+                292,
+                300,
+                317,
+                299,
+                322,
+                302,
+                321,
+                322
+              ]
+            },
+            {
+              "rank": 22,
+              "bib": "112",
+              "name": "Arnar Óskar Bjarnason\nBirgir Óskar Bjarnason",
+              "club": "Kærleiksbangsabræðurnir",
+              "division": "Pro KK",
+              "total_time": "01:08:17",
+              "total_seconds": 4097,
+              "run_total": 2488,
+              "station_total": 1619,
+              "splits": {
+                "1. Ski-Erg": 254,
+                "2 .Ýta sleða": 142,
+                "3. Draga sleða": 155,
+                "4. Burpee langstökk": 163,
+                "5. Róður": 253,
+                "6. Bændaganga": 170,
+                "7. Lunges": 238,
+                "8. Wall Balls": 244
+              },
+              "run_times": [
+                281,
+                293,
+                323,
+                326,
+                333,
+                317,
+                312,
+                303
+              ]
+            },
+            {
+              "rank": 23,
+              "bib": "176",
+              "name": "Bjarki Magnúsarson\nJón Levý Guðmundar og Selmuson",
+              "club": "Drum & Bass",
+              "division": "Pro KK",
+              "total_time": "01:08:27",
+              "total_seconds": 4107,
+              "run_total": 2297,
+              "station_total": 1817,
+              "splits": {
+                "1. Ski-Erg": 262,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 300,
+                "4. Burpee langstökk": 196,
+                "5. Róður": 279,
+                "6. Bændaganga": 179,
+                "7. Lunges": 224,
+                "8. Wall Balls": 255
+              },
+              "run_times": [
+                276,
+                264,
+                284,
+                297,
+                300,
+                290,
+                289,
+                297
+              ]
+            },
+            {
+              "rank": 24,
+              "bib": "173",
+              "name": "Breki Þórðarson\nEmilíana Ocares Kristjánsdóttir",
+              "club": "Team Mexico",
+              "division": "MIXED",
+              "total_time": "01:08:59",
+              "total_seconds": 4139,
+              "run_total": 2326,
+              "station_total": 1821,
+              "splits": {
+                "1. Ski-Erg": 275,
+                "2 .Ýta sleða": 156,
+                "3. Draga sleða": 205,
+                "4. Burpee langstökk": 205,
+                "5. Róður": 282,
+                "6. Bændaganga": 200,
+                "7. Lunges": 262,
+                "8. Wall Balls": 236
+              },
+              "run_times": [
+                264,
+                266,
+                295,
+                305,
+                306,
+                299,
+                294,
+                297
+              ]
+            },
+            {
+              "rank": 25,
+              "bib": "129",
+              "name": "Victor Gauti Jóhannsson\nAndrea Rán",
+              "club": "Team Miami",
+              "division": "MIXED",
+              "total_time": "01:09:04",
+              "total_seconds": 4144,
+              "run_total": 2456,
+              "station_total": 1696,
+              "splits": {
+                "1. Ski-Erg": 258,
+                "2 .Ýta sleða": 109,
+                "3. Draga sleða": 208,
+                "4. Burpee langstökk": 203,
+                "5. Róður": 291,
+                "6. Bændaganga": 149,
+                "7. Lunges": 211,
+                "8. Wall Balls": 267
+              },
+              "run_times": [
+                280,
+                277,
+                319,
+                302,
+                352,
+                315,
+                309,
+                302
+              ]
+            },
+            {
+              "rank": 26,
+              "bib": "203",
+              "name": "Skírnir Þór Sigfússon\nAron kevinsson",
+              "club": "Prestöfl",
+              "division": "Open KK",
+              "total_time": "01:10:46",
+              "total_seconds": 4246,
+              "run_total": 2713,
+              "station_total": 1541,
+              "splits": {
+                "1. Ski-Erg": 257,
+                "2 .Ýta sleða": 103,
+                "3. Draga sleða": 128,
+                "4. Burpee langstökk": 172,
+                "5. Róður": 277,
+                "6. Bændaganga": 168,
+                "7. Lunges": 209,
+                "8. Wall Balls": 227
+              },
+              "run_times": [
+                314,
+                342,
+                352,
+                352,
+                374,
+                357,
+                325,
+                297
+              ]
+            },
+            {
+              "rank": 27,
+              "bib": "166",
+              "name": "Brynja Björg Halldórsdóttir\nBerglind Sigmarsdóttir",
+              "club": "Queen Bees",
+              "division": "Open KVK",
+              "total_time": "01:11:20",
+              "total_seconds": 4280,
+              "run_total": 2527,
+              "station_total": 1761,
+              "splits": {
+                "1. Ski-Erg": 318,
+                "2 .Ýta sleða": 96,
+                "3. Draga sleða": 205,
+                "4. Burpee langstökk": 210,
+                "5. Róður": 312,
+                "6. Bændaganga": 188,
+                "7. Lunges": 209,
+                "8. Wall Balls": 223
+              },
+              "run_times": [
+                289,
+                288,
+                331,
+                327,
+                331,
+                325,
+                322,
+                314
+              ]
+            },
+            {
+              "rank": 28,
+              "bib": "196",
+              "name": "Olga Unnarsdóttir\nBroddi Ottesen",
+              "club": "Ballers",
+              "division": "MIXED",
+              "total_time": "01:12:09",
+              "total_seconds": 4329,
+              "run_total": 2611,
+              "station_total": 1725,
+              "splits": {
+                "1. Ski-Erg": 266,
+                "2 .Ýta sleða": 112,
+                "3. Draga sleða": 219,
+                "4. Burpee langstökk": 179,
+                "5. Róður": 292,
+                "6. Bændaganga": 176,
+                "7. Lunges": 224,
+                "8. Wall Balls": 257
+              },
+              "run_times": [
+                305,
+                333,
+                344,
+                321,
+                331,
+                314,
+                329,
+                334
+              ]
+            },
+            {
+              "rank": 29,
+              "bib": "107",
+              "name": "Ingibjörg Ásta Halldórsdóttir\nSigurður Ólafur Kjartansson",
+              "club": "Rólegt & Rómantískt",
+              "division": "MIXED",
+              "total_time": "01:12:38",
+              "total_seconds": 4358,
+              "run_total": 2590,
+              "station_total": 1775,
+              "splits": {
+                "1. Ski-Erg": 277,
+                "2 .Ýta sleða": 105,
+                "3. Draga sleða": 249,
+                "4. Burpee langstökk": 188,
+                "5. Róður": 279,
+                "6. Bændaganga": 178,
+                "7. Lunges": 260,
+                "8. Wall Balls": 239
+              },
+              "run_times": [
+                306,
+                330,
+                337,
+                321,
+                323,
+                318,
+                353,
+                302
+              ]
+            },
+            {
+              "rank": 30,
+              "bib": "133",
+              "name": "Óskar Marinó Jónsson\nIngibjörg RósaJónsdóttir",
+              "club": "Still better together",
+              "division": "MIXED",
+              "total_time": "01:12:41",
+              "total_seconds": 4361,
+              "run_total": 2680,
+              "station_total": 1687,
+              "splits": {
+                "1. Ski-Erg": 273,
+                "2 .Ýta sleða": 129,
+                "3. Draga sleða": 207,
+                "4. Burpee langstökk": 164,
+                "5. Róður": 280,
+                "6. Bændaganga": 191,
+                "7. Lunges": 219,
+                "8. Wall Balls": 224
+              },
+              "run_times": [
+                298,
+                310,
+                335,
+                334,
+                358,
+                350,
+                356,
+                339
+              ]
+            },
+            {
+              "rank": 31,
+              "bib": "125",
+              "name": "Fjóla Lind Sigurlaugardóttir\nMargrét Þórhildur",
+              "club": "Ekkert",
+              "division": "Pro KVK",
+              "total_time": "01:12:46",
+              "total_seconds": 4366,
+              "run_total": 2567,
+              "station_total": 1810,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 278,
+                "4. Burpee langstökk": 201,
+                "5. Róður": 274,
+                "6. Bændaganga": 180,
+                "7. Lunges": 232,
+                "8. Wall Balls": 244
+              },
+              "run_times": [
+                290,
+                308,
+                319,
+                318,
+                334,
+                335,
+                335,
+                328
+              ]
+            },
+            {
+              "rank": 32,
+              "bib": "202",
+              "name": "Arnar Freyr Stefánsson\nAnna Margrét Kristinsdóttir",
+              "club": "5lota",
+              "division": "MIXED",
+              "total_time": "01:13:52",
+              "total_seconds": 4432,
+              "run_total": 2709,
+              "station_total": 1731,
+              "splits": {
+                "1. Ski-Erg": 286,
+                "2 .Ýta sleða": 88,
+                "3. Draga sleða": 189,
+                "4. Burpee langstökk": 181,
+                "5. Róður": 314,
+                "6. Bændaganga": 140,
+                "7. Lunges": 243,
+                "8. Wall Balls": 290
+              },
+              "run_times": [
+                312,
+                322,
+                353,
+                353,
+                359,
+                338,
+                336,
+                336
+              ]
+            },
+            {
+              "rank": 33,
+              "bib": "175",
+              "name": "Steinar Sig\nElma Rut",
+              "club": "SaxUp!",
+              "division": "MIXED",
+              "total_time": "01:13:58",
+              "total_seconds": 4438,
+              "run_total": 2838,
+              "station_total": 1607,
+              "splits": {
+                "1. Ski-Erg": 275,
+                "2 .Ýta sleða": 87,
+                "3. Draga sleða": 179,
+                "4. Burpee langstökk": 176,
+                "5. Róður": 264,
+                "6. Bændaganga": 160,
+                "7. Lunges": 226,
+                "8. Wall Balls": 240
+              },
+              "run_times": [
+                318,
+                335,
+                362,
+                366,
+                372,
+                361,
+                368,
+                356
+              ]
+            },
+            {
+              "rank": 34,
+              "bib": "131",
+              "name": "Daði Jónsson\nÓlafur Jónsson",
+              "club": "DÓla Cher-",
+              "division": "Open KK",
+              "total_time": "01:14:29",
+              "total_seconds": 4469,
+              "run_total": 2814,
+              "station_total": 1664,
+              "splits": {
+                "1. Ski-Erg": 286,
+                "2 .Ýta sleða": 104,
+                "3. Draga sleða": 143,
+                "4. Burpee langstökk": 219,
+                "5. Róður": 264,
+                "6. Bændaganga": 161,
+                "7. Lunges": 206,
+                "8. Wall Balls": 281
+              },
+              "run_times": [
+                326,
+                329,
+                368,
+                353,
+                393,
+                363,
+                354,
+                328
+              ]
+            },
+            {
+              "rank": 35,
+              "bib": "212",
+              "name": "Páll Hólm Sigurðarson\nSvavar Sigurður Sigurðarason",
+              "club": "Sigurðarsynir",
+              "division": "Pro KK",
+              "total_time": "01:15:20",
+              "total_seconds": 4520,
+              "run_total": 2703,
+              "station_total": 1825,
+              "splits": {
+                "1. Ski-Erg": 255,
+                "2 .Ýta sleða": 136,
+                "3. Draga sleða": 255,
+                "4. Burpee langstökk": 211,
+                "5. Róður": 283,
+                "6. Bændaganga": 183,
+                "7. Lunges": 252,
+                "8. Wall Balls": 250
+              },
+              "run_times": [
+                286,
+                323,
+                373,
+                337,
+                344,
+                354,
+                334,
+                352
+              ]
+            },
+            {
+              "rank": 36,
+              "bib": "200",
+              "name": "Harpa Ingólfsdóttir Gígja\nRakel Ragnarsdóttir",
+              "club": "HyRox - því við hötum hlaup",
+              "division": "Open KVK",
+              "total_time": "01:15:33",
+              "total_seconds": 4533,
+              "run_total": 2730,
+              "station_total": 1812,
+              "splits": {
+                "1. Ski-Erg": 287,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 178,
+                "4. Burpee langstökk": 219,
+                "5. Róður": 313,
+                "6. Bændaganga": 193,
+                "7. Lunges": 251,
+                "8. Wall Balls": 249
+              },
+              "run_times": [
+                310,
+                307,
+                370,
+                347,
+                362,
+                340,
+                348,
+                346
+              ]
+            },
+            {
+              "rank": 37,
+              "bib": "134",
+              "name": "Þórir Arnar Jónsson\nAuður Karlsdóttir",
+              "club": "Team ballena",
+              "division": "MIXED",
+              "total_time": "01:15:54",
+              "total_seconds": 4554,
+              "run_total": 2677,
+              "station_total": 1885,
+              "splits": {
+                "1. Ski-Erg": 289,
+                "2 .Ýta sleða": 133,
+                "3. Draga sleða": 212,
+                "4. Burpee langstökk": 249,
+                "5. Róður": 301,
+                "6. Bændaganga": 188,
+                "7. Lunges": 240,
+                "8. Wall Balls": 273
+              },
+              "run_times": [
+                314,
+                311,
+                353,
+                348,
+                357,
+                332,
+                325,
+                337
+              ]
+            },
+            {
+              "rank": 38,
+              "bib": "178",
+              "name": "Viðar Pálsson\nJónína Helga Ólafsdóttir",
+              "club": "Viðar & Jónína",
+              "division": "MIXED",
+              "total_time": "01:16:31",
+              "total_seconds": 4591,
+              "run_total": 2728,
+              "station_total": 1871,
+              "splits": {
+                "1. Ski-Erg": 303,
+                "2 .Ýta sleða": 97,
+                "3. Draga sleða": 228,
+                "4. Burpee langstökk": 217,
+                "5. Róður": 293,
+                "6. Bændaganga": 187,
+                "7. Lunges": 292,
+                "8. Wall Balls": 254
+              },
+              "run_times": [
+                313,
+                323,
+                342,
+                331,
+                359,
+                340,
+                364,
+                356
+              ]
+            },
+            {
+              "rank": 39,
+              "bib": "201",
+              "name": "Þórður Þórðarson\nBjörk Gunnarsdóttir",
+              "club": "Þórk",
+              "division": "MIXED",
+              "total_time": "01:17:00",
+              "total_seconds": 4620,
+              "run_total": 2751,
+              "station_total": 1877,
+              "splits": {
+                "1. Ski-Erg": 287,
+                "2 .Ýta sleða": 106,
+                "3. Draga sleða": 257,
+                "4. Burpee langstökk": 192,
+                "5. Róður": 313,
+                "6. Bændaganga": 179,
+                "7. Lunges": 274,
+                "8. Wall Balls": 269
+              },
+              "run_times": [
+                306,
+                309,
+                339,
+                347,
+                365,
+                350,
+                365,
+                370
+              ]
+            },
+            {
+              "rank": 40,
+              "bib": "165",
+              "name": "Birna Dís Bergsdóttir\nBjartey Theódórsdóttir",
+              "club": "B-in tvö",
+              "division": "Pro KVK",
+              "total_time": "01:17:19",
+              "total_seconds": 4639,
+              "run_total": 2727,
+              "station_total": 1919,
+              "splits": {
+                "1. Ski-Erg": 280,
+                "2 .Ýta sleða": 157,
+                "3. Draga sleða": 259,
+                "4. Burpee langstökk": 207,
+                "5. Róður": 307,
+                "6. Bændaganga": 204,
+                "7. Lunges": 265,
+                "8. Wall Balls": 240
+              },
+              "run_times": [
+                279,
+                299,
+                360,
+                354,
+                362,
+                349,
+                371,
+                353
+              ]
+            },
+            {
+              "rank": 41,
+              "bib": "137",
+              "name": "Valgeir H. Kjartansson\nDavíð Örn Svavarsson",
+              "club": "DV",
+              "division": "Open KK",
+              "total_time": "01:18:12",
+              "total_seconds": 4692,
+              "run_total": 2830,
+              "station_total": 1870,
+              "splits": {
+                "1. Ski-Erg": 276,
+                "2 .Ýta sleða": 113,
+                "3. Draga sleða": 195,
+                "4. Burpee langstökk": 223,
+                "5. Róður": 203,
+                "6. Bændaganga": 279,
+                "7. Lunges": 289,
+                "8. Wall Balls": 292
+              },
+              "run_times": [
+                332,
+                328,
+                334,
+                357,
+                380,
+                352,
+                373,
+                374
+              ]
+            },
+            {
+              "rank": 42,
+              "bib": "179",
+              "name": "Valeria Rodríguez\nJoel Fjalarsson",
+              "club": "Valeria Joel",
+              "division": "MIXED",
+              "total_time": "01:21:14",
+              "total_seconds": 4874,
+              "run_total": 2694,
+              "station_total": 2186,
+              "splits": {
+                "1. Ski-Erg": 308,
+                "2 .Ýta sleða": 138,
+                "3. Draga sleða": 300,
+                "4. Burpee langstökk": 324,
+                "5. Róður": 252,
+                "6. Bændaganga": 184,
+                "7. Lunges": 320,
+                "8. Wall Balls": 360
+              },
+              "run_times": [
+                314,
+                311,
+                337,
+                341,
+                364,
+                344,
+                346,
+                337
+              ]
+            },
+            {
+              "rank": 43,
+              "bib": "207",
+              "name": "Kristinn Guðmundsson\nAleksandra Hawrylewicz",
+              "club": "Næturvaktin",
+              "division": "MIXED",
+              "total_time": "01:21:40",
+              "total_seconds": 4900,
+              "run_total": 2910,
+              "station_total": 1998,
+              "splits": {
+                "1. Ski-Erg": 291,
+                "2 .Ýta sleða": 182,
+                "3. Draga sleða": 272,
+                "4. Burpee langstökk": 220,
+                "5. Róður": 301,
+                "6. Bændaganga": 185,
+                "7. Lunges": 263,
+                "8. Wall Balls": 284
+              },
+              "run_times": [
+                304,
+                340,
+                379,
+                380,
+                383,
+                388,
+                369,
+                367
+              ]
+            },
+            {
+              "rank": 44,
+              "bib": "163",
+              "name": "Hörður Örn Harðarson\nHarpa Svansdóttir",
+              "club": "H&H",
+              "division": "MIXED",
+              "total_time": "01:22:57",
+              "total_seconds": 4977,
+              "run_total": 2982,
+              "station_total": 2004,
+              "splits": {
+                "1. Ski-Erg": 280,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 235,
+                "4. Burpee langstökk": 292,
+                "5. Róður": 326,
+                "6. Bændaganga": 185,
+                "7. Lunges": 269,
+                "8. Wall Balls": 295
+              },
+              "run_times": [
+                320,
+                342,
+                462,
+                372,
+                375,
+                352,
+                382,
+                377
+              ]
+            },
+            {
+              "rank": 45,
+              "bib": "168",
+              "name": "Hekla Sif Magnúsdóttir\nOddný Gunnarsdóttir",
+              "club": "Oddný & Hekla drollur",
+              "division": "Pro KVK",
+              "total_time": "01:25:25",
+              "total_seconds": 5125,
+              "run_total": 2980,
+              "station_total": 2152,
+              "splits": {
+                "1. Ski-Erg": 310,
+                "2 .Ýta sleða": 147,
+                "3. Draga sleða": 256,
+                "4. Burpee langstökk": 262,
+                "5. Róður": 335,
+                "6. Bændaganga": 354,
+                "7. Lunges": 198,
+                "8. Wall Balls": 290
+              },
+              "run_times": [
+                306,
+                345,
+                365,
+                384,
+                382,
+                389,
+                413,
+                396
+              ]
+            },
+            {
+              "rank": 46,
+              "bib": "122",
+              "name": "Beata Monika Jankowska\nMagdalena Błaszak",
+              "club": "Zabiegani Reykjavík",
+              "division": "Open KVK",
+              "total_time": "01:27:15",
+              "total_seconds": 5235,
+              "run_total": 2955,
+              "station_total": 2286,
+              "splits": {
+                "1. Ski-Erg": 314,
+                "2 .Ýta sleða": 214,
+                "3. Draga sleða": 272,
+                "4. Burpee langstökk": 391,
+                "5. Róður": 322,
+                "6. Bændaganga": 208,
+                "7. Lunges": 239,
+                "8. Wall Balls": 326
+              },
+              "run_times": [
+                306,
+                359,
+                373,
+                386,
+                398,
+                386,
+                367,
+                380
+              ]
+            },
+            {
+              "rank": 47,
+              "bib": "124",
+              "name": "Patrycja Komorowska\nKasia Żabka",
+              "club": "Zabiegani Reykjavík",
+              "division": "Open KVK",
+              "total_time": "01:27:59",
+              "total_seconds": 5279,
+              "run_total": 2975,
+              "station_total": 2311,
+              "splits": {
+                "1. Ski-Erg": 328,
+                "2 .Ýta sleða": 198,
+                "3. Draga sleða": 254,
+                "4. Burpee langstökk": 397,
+                "5. Róður": 341,
+                "6. Bændaganga": 192,
+                "7. Lunges": 280,
+                "8. Wall Balls": 321
+              },
+              "run_times": [
+                303,
+                379,
+                374,
+                390,
+                394,
+                381,
+                369,
+                385
+              ]
+            },
+            {
+              "rank": 48,
+              "bib": "113",
+              "name": "Þórdís Birna Lúthersdóttir\nJón Óðinn Reynisson",
+              "club": "I'm with stupid!",
+              "division": "MIXED",
+              "total_time": "01:32:51",
+              "total_seconds": 5571,
+              "run_total": 3532,
+              "station_total": 2049,
+              "splits": {
+                "1. Ski-Erg": 313,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 221,
+                "4. Burpee langstökk": 307,
+                "5. Róður": 325,
+                "6. Bændaganga": 179,
+                "7. Lunges": 303,
+                "8. Wall Balls": 279
+              },
+              "run_times": [
+                390,
+                403,
+                439,
+                448,
+                458,
+                462,
+                457,
+                475
+              ]
+            }
+          ],
+          "karlar": [
+            {
+              "rank": 1,
+              "bib": "188",
+              "name": "Óskar Már Einarsson\nSnorri Sigurðarson",
+              "club": "Beauty and the beast",
+              "division": "Pro KK",
+              "total_time": "00:56:47",
+              "total_seconds": 3407,
+              "run_total": 1927,
+              "station_total": 1489,
+              "splits": {
+                "1. Ski-Erg": 242,
+                "2 .Ýta sleða": 108,
+                "3. Draga sleða": 177,
+                "4. Burpee langstökk": 153,
+                "5. Róður": 247,
+                "6. Bændaganga": 154,
+                "7. Lunges": 185,
+                "8. Wall Balls": 223
+              },
+              "run_times": [
+                225,
+                229,
+                250,
+                247,
+                245,
+                249,
+                243,
+                239
+              ]
+            },
+            {
+              "rank": 2,
+              "bib": "198",
+              "name": "Jón Eyþór Gottskálksson\nÞorsteinn Grétar Júlíusson",
+              "club": "Blek og spek",
+              "division": "Pro KK",
+              "total_time": "00:58:12",
+              "total_seconds": 3492,
+              "run_total": 2081,
+              "station_total": 1417,
+              "splits": {
+                "1. Ski-Erg": 231,
+                "2 .Ýta sleða": 115,
+                "3. Draga sleða": 142,
+                "4. Burpee langstökk": 107,
+                "5. Róður": 273,
+                "6. Bændaganga": 143,
+                "7. Lunges": 165,
+                "8. Wall Balls": 241
+              },
+              "run_times": [
+                232,
+                240,
+                281,
+                265,
+                284,
+                263,
+                267,
+                249
+              ]
+            },
+            {
+              "rank": 3,
+              "bib": "130",
+              "name": "Davíð Sigurðsson\nAlexander Sindrason",
+              "club": "TheGainTrain",
+              "division": "Open KK",
+              "total_time": "00:58:58",
+              "total_seconds": 3538,
+              "run_total": 2068,
+              "station_total": 1474,
+              "splits": {
+                "1. Ski-Erg": 252,
+                "2 .Ýta sleða": 96,
+                "3. Draga sleða": 125,
+                "4. Burpee langstökk": 147,
+                "5. Róður": 250,
+                "6. Bændaganga": 158,
+                "7. Lunges": 192,
+                "8. Wall Balls": 254
+              },
+              "run_times": [
+                246,
+                247,
+                261,
+                257,
+                272,
+                263,
+                261,
+                261
+              ]
+            },
+            {
+              "rank": 4,
+              "bib": "187",
+              "name": "Eggert Karlsson\nMagnús Helgi",
+              "club": "Skaginn2x",
+              "division": "Pro KK",
+              "total_time": "01:01:05",
+              "total_seconds": 3665,
+              "run_total": 2054,
+              "station_total": 1618,
+              "splits": {
+                "1. Ski-Erg": 246,
+                "2 .Ýta sleða": 119,
+                "3. Draga sleða": 200,
+                "4. Burpee langstökk": 141,
+                "5. Róður": 265,
+                "6. Bændaganga": 168,
+                "7. Lunges": 224,
+                "8. Wall Balls": 255
+              },
+              "run_times": [
+                226,
+                229,
+                256,
+                262,
+                280,
+                263,
+                263,
+                275
+              ]
+            },
+            {
+              "rank": 5,
+              "bib": "138",
+              "name": "Jón Þorri Zar Jónsson\nGuðmundur Bjarni Brynjólfsson",
+              "club": "Hfit",
+              "division": "Pro KK",
+              "total_time": "01:02:13",
+              "total_seconds": 3733,
+              "run_total": 2281,
+              "station_total": 1461,
+              "splits": {
+                "1. Ski-Erg": 236,
+                "2 .Ýta sleða": 112,
+                "3. Draga sleða": 146,
+                "4. Burpee langstökk": 161,
+                "5. Róður": 252,
+                "6. Bændaganga": 154,
+                "7. Lunges": 185,
+                "8. Wall Balls": 215
+              },
+              "run_times": [
+                249,
+                256,
+                288,
+                293,
+                313,
+                300,
+                306,
+                276
+              ]
+            },
+            {
+              "rank": 6,
+              "bib": "132",
+              "name": "Davíð Jóhannsson\nÞröstur Pétursson",
+              "club": "Banksters",
+              "division": "Open KK",
+              "total_time": "01:07:14",
+              "total_seconds": 4034,
+              "run_total": 2468,
+              "station_total": 1576,
+              "splits": {
+                "1. Ski-Erg": 250,
+                "2 .Ýta sleða": 92,
+                "3. Draga sleða": 177,
+                "4. Burpee langstökk": 185,
+                "5. Róður": 277,
+                "6. Bændaganga": 155,
+                "7. Lunges": 197,
+                "8. Wall Balls": 243
+              },
+              "run_times": [
+                283,
+                294,
+                320,
+                314,
+                314,
+                316,
+                315,
+                312
+              ]
+            },
+            {
+              "rank": 7,
+              "bib": "186",
+              "name": "Daníel Rafn Guðmundsson\nSamúel K Ámundason",
+              "club": "Hægir&þægir ????",
+              "division": "Pro KK",
+              "total_time": "01:07:27",
+              "total_seconds": 4047,
+              "run_total": 2198,
+              "station_total": 1856,
+              "splits": {
+                "1. Ski-Erg": 269,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 266,
+                "4. Burpee langstökk": 226,
+                "5. Róður": 287,
+                "6. Bændaganga": 180,
+                "7. Lunges": 271,
+                "8. Wall Balls": 235
+              },
+              "run_times": [
+                253,
+                262,
+                281,
+                284,
+                282,
+                283,
+                273,
+                280
+              ]
+            },
+            {
+              "rank": 8,
+              "bib": "177",
+              "name": "Sigurður Rúnar Magnússon\nSigurður Ragnarsson",
+              "club": "SR2",
+              "division": "Open KK",
+              "total_time": "01:08:13",
+              "total_seconds": 4093,
+              "run_total": 2475,
+              "station_total": 1625,
+              "splits": {
+                "1. Ski-Erg": 253,
+                "2 .Ýta sleða": 90,
+                "3. Draga sleða": 159,
+                "4. Burpee langstökk": 208,
+                "5. Róður": 275,
+                "6. Bændaganga": 132,
+                "7. Lunges": 258,
+                "8. Wall Balls": 250
+              },
+              "run_times": [
+                292,
+                300,
+                317,
+                299,
+                322,
+                302,
+                321,
+                322
+              ]
+            },
+            {
+              "rank": 9,
+              "bib": "112",
+              "name": "Arnar Óskar Bjarnason\nBirgir Óskar Bjarnason",
+              "club": "Kærleiksbangsabræðurnir",
+              "division": "Pro KK",
+              "total_time": "01:08:17",
+              "total_seconds": 4097,
+              "run_total": 2488,
+              "station_total": 1619,
+              "splits": {
+                "1. Ski-Erg": 254,
+                "2 .Ýta sleða": 142,
+                "3. Draga sleða": 155,
+                "4. Burpee langstökk": 163,
+                "5. Róður": 253,
+                "6. Bændaganga": 170,
+                "7. Lunges": 238,
+                "8. Wall Balls": 244
+              },
+              "run_times": [
+                281,
+                293,
+                323,
+                326,
+                333,
+                317,
+                312,
+                303
+              ]
+            },
+            {
+              "rank": 10,
+              "bib": "176",
+              "name": "Bjarki Magnúsarson\nJón Levý Guðmundar og Selmuson",
+              "club": "Drum & Bass",
+              "division": "Pro KK",
+              "total_time": "01:08:27",
+              "total_seconds": 4107,
+              "run_total": 2297,
+              "station_total": 1817,
+              "splits": {
+                "1. Ski-Erg": 262,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 300,
+                "4. Burpee langstökk": 196,
+                "5. Róður": 279,
+                "6. Bændaganga": 179,
+                "7. Lunges": 224,
+                "8. Wall Balls": 255
+              },
+              "run_times": [
+                276,
+                264,
+                284,
+                297,
+                300,
+                290,
+                289,
+                297
+              ]
+            },
+            {
+              "rank": 11,
+              "bib": "203",
+              "name": "Skírnir Þór Sigfússon\nAron kevinsson",
+              "club": "Prestöfl",
+              "division": "Open KK",
+              "total_time": "01:10:46",
+              "total_seconds": 4246,
+              "run_total": 2713,
+              "station_total": 1541,
+              "splits": {
+                "1. Ski-Erg": 257,
+                "2 .Ýta sleða": 103,
+                "3. Draga sleða": 128,
+                "4. Burpee langstökk": 172,
+                "5. Róður": 277,
+                "6. Bændaganga": 168,
+                "7. Lunges": 209,
+                "8. Wall Balls": 227
+              },
+              "run_times": [
+                314,
+                342,
+                352,
+                352,
+                374,
+                357,
+                325,
+                297
+              ]
+            },
+            {
+              "rank": 12,
+              "bib": "131",
+              "name": "Daði Jónsson\nÓlafur Jónsson",
+              "club": "DÓla Cher-",
+              "division": "Open KK",
+              "total_time": "01:14:29",
+              "total_seconds": 4469,
+              "run_total": 2814,
+              "station_total": 1664,
+              "splits": {
+                "1. Ski-Erg": 286,
+                "2 .Ýta sleða": 104,
+                "3. Draga sleða": 143,
+                "4. Burpee langstökk": 219,
+                "5. Róður": 264,
+                "6. Bændaganga": 161,
+                "7. Lunges": 206,
+                "8. Wall Balls": 281
+              },
+              "run_times": [
+                326,
+                329,
+                368,
+                353,
+                393,
+                363,
+                354,
+                328
+              ]
+            },
+            {
+              "rank": 13,
+              "bib": "212",
+              "name": "Páll Hólm Sigurðarson\nSvavar Sigurður Sigurðarason",
+              "club": "Sigurðarsynir",
+              "division": "Pro KK",
+              "total_time": "01:15:20",
+              "total_seconds": 4520,
+              "run_total": 2703,
+              "station_total": 1825,
+              "splits": {
+                "1. Ski-Erg": 255,
+                "2 .Ýta sleða": 136,
+                "3. Draga sleða": 255,
+                "4. Burpee langstökk": 211,
+                "5. Róður": 283,
+                "6. Bændaganga": 183,
+                "7. Lunges": 252,
+                "8. Wall Balls": 250
+              },
+              "run_times": [
+                286,
+                323,
+                373,
+                337,
+                344,
+                354,
+                334,
+                352
+              ]
+            },
+            {
+              "rank": 14,
+              "bib": "137",
+              "name": "Valgeir H. Kjartansson\nDavíð Örn Svavarsson",
+              "club": "DV",
+              "division": "Open KK",
+              "total_time": "01:18:12",
+              "total_seconds": 4692,
+              "run_total": 2830,
+              "station_total": 1870,
+              "splits": {
+                "1. Ski-Erg": 276,
+                "2 .Ýta sleða": 113,
+                "3. Draga sleða": 195,
+                "4. Burpee langstökk": 223,
+                "5. Róður": 203,
+                "6. Bændaganga": 279,
+                "7. Lunges": 289,
+                "8. Wall Balls": 292
+              },
+              "run_times": [
+                332,
+                328,
+                334,
+                357,
+                380,
+                352,
+                373,
+                374
+              ]
+            }
+          ],
+          "konur": [
+            {
+              "rank": 1,
+              "bib": "205",
+              "name": "Auður Kristín Pétursdóttir\nHulda Fanný Pálsdóttir",
+              "club": "Huldan & Aujan",
+              "division": "Pro KVK",
+              "total_time": "01:03:43",
+              "total_seconds": 3823,
+              "run_total": 1943,
+              "station_total": 1886,
+              "splits": {
+                "1. Ski-Erg": 294,
+                "2 .Ýta sleða": 157,
+                "3. Draga sleða": 263,
+                "4. Burpee langstökk": 173,
+                "5. Róður": 308,
+                "6. Bændaganga": 162,
+                "7. Lunges": 270,
+                "8. Wall Balls": 259
+              },
+              "run_times": [
+                230,
+                234,
+                243,
+                240,
+                246,
+                246,
+                250,
+                254
+              ]
+            },
+            {
+              "rank": 2,
+              "bib": "161",
+              "name": "Lydia Kearney\nSólveig Sigurðardóttir",
+              "club": "Sólveig og Lydia",
+              "division": "Pro KVK",
+              "total_time": "01:04:17",
+              "total_seconds": 3857,
+              "run_total": 2252,
+              "station_total": 1614,
+              "splits": {
+                "1. Ski-Erg": 266,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 185,
+                "4. Burpee langstökk": 174,
+                "5. Róður": 262,
+                "6. Bændaganga": 171,
+                "7. Lunges": 214,
+                "8. Wall Balls": 220
+              },
+              "run_times": [
+                255,
+                266,
+                285,
+                282,
+                292,
+                293,
+                295,
+                284
+              ]
+            },
+            {
+              "rank": 3,
+              "bib": "166",
+              "name": "Brynja Björg Halldórsdóttir\nBerglind Sigmarsdóttir",
+              "club": "Queen Bees",
+              "division": "Open KVK",
+              "total_time": "01:11:20",
+              "total_seconds": 4280,
+              "run_total": 2527,
+              "station_total": 1761,
+              "splits": {
+                "1. Ski-Erg": 318,
+                "2 .Ýta sleða": 96,
+                "3. Draga sleða": 205,
+                "4. Burpee langstökk": 210,
+                "5. Róður": 312,
+                "6. Bændaganga": 188,
+                "7. Lunges": 209,
+                "8. Wall Balls": 223
+              },
+              "run_times": [
+                289,
+                288,
+                331,
+                327,
+                331,
+                325,
+                322,
+                314
+              ]
+            },
+            {
+              "rank": 4,
+              "bib": "125",
+              "name": "Fjóla Lind Sigurlaugardóttir\nMargrét Þórhildur",
+              "club": "Ekkert",
+              "division": "Pro KVK",
+              "total_time": "01:12:46",
+              "total_seconds": 4366,
+              "run_total": 2567,
+              "station_total": 1810,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 278,
+                "4. Burpee langstökk": 201,
+                "5. Róður": 274,
+                "6. Bændaganga": 180,
+                "7. Lunges": 232,
+                "8. Wall Balls": 244
+              },
+              "run_times": [
+                290,
+                308,
+                319,
+                318,
+                334,
+                335,
+                335,
+                328
+              ]
+            },
+            {
+              "rank": 5,
+              "bib": "200",
+              "name": "Harpa Ingólfsdóttir Gígja\nRakel Ragnarsdóttir",
+              "club": "HyRox - því við hötum hlaup",
+              "division": "Open KVK",
+              "total_time": "01:15:33",
+              "total_seconds": 4533,
+              "run_total": 2730,
+              "station_total": 1812,
+              "splits": {
+                "1. Ski-Erg": 287,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 178,
+                "4. Burpee langstökk": 219,
+                "5. Róður": 313,
+                "6. Bændaganga": 193,
+                "7. Lunges": 251,
+                "8. Wall Balls": 249
+              },
+              "run_times": [
+                310,
+                307,
+                370,
+                347,
+                362,
+                340,
+                348,
+                346
+              ]
+            },
+            {
+              "rank": 6,
+              "bib": "165",
+              "name": "Birna Dís Bergsdóttir\nBjartey Theódórsdóttir",
+              "club": "B-in tvö",
+              "division": "Pro KVK",
+              "total_time": "01:17:19",
+              "total_seconds": 4639,
+              "run_total": 2727,
+              "station_total": 1919,
+              "splits": {
+                "1. Ski-Erg": 280,
+                "2 .Ýta sleða": 157,
+                "3. Draga sleða": 259,
+                "4. Burpee langstökk": 207,
+                "5. Róður": 307,
+                "6. Bændaganga": 204,
+                "7. Lunges": 265,
+                "8. Wall Balls": 240
+              },
+              "run_times": [
+                279,
+                299,
+                360,
+                354,
+                362,
+                349,
+                371,
+                353
+              ]
+            },
+            {
+              "rank": 7,
+              "bib": "168",
+              "name": "Hekla Sif Magnúsdóttir\nOddný Gunnarsdóttir",
+              "club": "Oddný & Hekla drollur",
+              "division": "Pro KVK",
+              "total_time": "01:25:25",
+              "total_seconds": 5125,
+              "run_total": 2980,
+              "station_total": 2152,
+              "splits": {
+                "1. Ski-Erg": 310,
+                "2 .Ýta sleða": 147,
+                "3. Draga sleða": 256,
+                "4. Burpee langstökk": 262,
+                "5. Róður": 335,
+                "6. Bændaganga": 354,
+                "7. Lunges": 198,
+                "8. Wall Balls": 290
+              },
+              "run_times": [
+                306,
+                345,
+                365,
+                384,
+                382,
+                389,
+                413,
+                396
+              ]
+            },
+            {
+              "rank": 8,
+              "bib": "122",
+              "name": "Beata Monika Jankowska\nMagdalena Błaszak",
+              "club": "Zabiegani Reykjavík",
+              "division": "Open KVK",
+              "total_time": "01:27:15",
+              "total_seconds": 5235,
+              "run_total": 2955,
+              "station_total": 2286,
+              "splits": {
+                "1. Ski-Erg": 314,
+                "2 .Ýta sleða": 214,
+                "3. Draga sleða": 272,
+                "4. Burpee langstökk": 391,
+                "5. Róður": 322,
+                "6. Bændaganga": 208,
+                "7. Lunges": 239,
+                "8. Wall Balls": 326
+              },
+              "run_times": [
+                306,
+                359,
+                373,
+                386,
+                398,
+                386,
+                367,
+                380
+              ]
+            },
+            {
+              "rank": 9,
+              "bib": "124",
+              "name": "Patrycja Komorowska\nKasia Żabka",
+              "club": "Zabiegani Reykjavík",
+              "division": "Open KVK",
+              "total_time": "01:27:59",
+              "total_seconds": 5279,
+              "run_total": 2975,
+              "station_total": 2311,
+              "splits": {
+                "1. Ski-Erg": 328,
+                "2 .Ýta sleða": 198,
+                "3. Draga sleða": 254,
+                "4. Burpee langstökk": 397,
+                "5. Róður": 341,
+                "6. Bændaganga": 192,
+                "7. Lunges": 280,
+                "8. Wall Balls": 321
+              },
+              "run_times": [
+                303,
+                379,
+                374,
+                390,
+                394,
+                381,
+                369,
+                385
+              ]
+            }
+          ],
+          "blandað": [
+            {
+              "rank": 4,
+              "bib": "174",
+              "name": "Frederik aegidius\nAnnie thorisdottie",
+              "club": "Annie and Frederik",
+              "division": "MIXED",
+              "total_time": "00:59:44",
+              "total_seconds": 3584,
+              "run_total": 2160,
+              "station_total": 1432,
+              "splits": {
+                "1. Ski-Erg": 238,
+                "2 .Ýta sleða": 92,
+                "3. Draga sleða": 141,
+                "4. Burpee langstökk": 154,
+                "5. Róður": 245,
+                "6. Bændaganga": 190,
+                "7. Lunges": 147,
+                "8. Wall Balls": 225
+              },
+              "run_times": [
+                256,
+                260,
+                277,
+                278,
+                273,
+                273,
+                269,
+                274
+              ]
+            },
+            {
+              "rank": 5,
+              "bib": "118",
+              "name": "Alma Hrönn Káradóttir\nRagnar Ingi Klemezson",
+              "club": "Hrafnista",
+              "division": "MIXED",
+              "total_time": "01:00:49",
+              "total_seconds": 3649,
+              "run_total": 2072,
+              "station_total": 1585,
+              "splits": {
+                "1. Ski-Erg": 267,
+                "2 .Ýta sleða": 124,
+                "3. Draga sleða": 176,
+                "4. Burpee langstökk": 168,
+                "5. Róður": 268,
+                "6. Bændaganga": 146,
+                "7. Lunges": 211,
+                "8. Wall Balls": 225
+              },
+              "run_times": [
+                246,
+                250,
+                263,
+                259,
+                266,
+                260,
+                268,
+                260
+              ]
+            },
+            {
+              "rank": 8,
+              "bib": "170",
+              "name": "Glódís Guðgeirsdóttir\nEinar Kristinn",
+              "club": "æðisleg.is",
+              "division": "MIXED",
+              "total_time": "01:02:23",
+              "total_seconds": 3743,
+              "run_total": 2331,
+              "station_total": 1419,
+              "splits": {
+                "1. Ski-Erg": 236,
+                "2 .Ýta sleða": 95,
+                "3. Draga sleða": 136,
+                "4. Burpee langstökk": 155,
+                "5. Róður": 246,
+                "6. Bændaganga": 192,
+                "7. Lunges": 157,
+                "8. Wall Balls": 202
+              },
+              "run_times": [
+                257,
+                275,
+                305,
+                304,
+                307,
+                301,
+                303,
+                279
+              ]
+            },
+            {
+              "rank": 9,
+              "bib": "111",
+              "name": "Patrick Örn Hansen\nSólveig Heiða Foss",
+              "club": "Foss Hansen",
+              "division": "MIXED",
+              "total_time": "01:02:33",
+              "total_seconds": 3753,
+              "run_total": 2153,
+              "station_total": 1608,
+              "splits": {
+                "1. Ski-Erg": 257,
+                "2 .Ýta sleða": 113,
+                "3. Draga sleða": 172,
+                "4. Burpee langstökk": 206,
+                "5. Róður": 290,
+                "6. Bændaganga": 152,
+                "7. Lunges": 190,
+                "8. Wall Balls": 228
+              },
+              "run_times": [
+                244,
+                255,
+                274,
+                275,
+                307,
+                275,
+                266,
+                257
+              ]
+            },
+            {
+              "rank": 10,
+              "bib": "126",
+              "name": "Andrea Ingibjörg Orradóttir\nViktor Ólafsson",
+              "club": "Andrea & Viktor",
+              "division": "MIXED",
+              "total_time": "01:03:18",
+              "total_seconds": 3798,
+              "run_total": 2296,
+              "station_total": 1509,
+              "splits": {
+                "1. Ski-Erg": 246,
+                "2 .Ýta sleða": 101,
+                "3. Draga sleða": 173,
+                "4. Burpee langstökk": 164,
+                "5. Róður": 255,
+                "6. Bændaganga": 162,
+                "7. Lunges": 189,
+                "8. Wall Balls": 219
+              },
+              "run_times": [
+                260,
+                272,
+                287,
+                294,
+                297,
+                291,
+                302,
+                293
+              ]
+            },
+            {
+              "rank": 13,
+              "bib": "172",
+              "name": "Hrafnhildur Sigurjónsdóttir\nGunnsteinn Sigurjónsson",
+              "club": "Two of a kind",
+              "division": "MIXED",
+              "total_time": "01:05:12",
+              "total_seconds": 3912,
+              "run_total": 2289,
+              "station_total": 1629,
+              "splits": {
+                "1. Ski-Erg": 259,
+                "2 .Ýta sleða": 95,
+                "3. Draga sleða": 197,
+                "4. Burpee langstökk": 180,
+                "5. Róður": 272,
+                "6. Bændaganga": 171,
+                "7. Lunges": 211,
+                "8. Wall Balls": 244
+              },
+              "run_times": [
+                268,
+                269,
+                299,
+                294,
+                299,
+                289,
+                286,
+                285
+              ]
+            },
+            {
+              "rank": 14,
+              "bib": "127",
+              "name": "Sigurður Einarsson\nAníta Jóhannesardóttir",
+              "club": "Ein í liðveislu",
+              "division": "MIXED",
+              "total_time": "01:05:25",
+              "total_seconds": 3925,
+              "run_total": 2400,
+              "station_total": 1533,
+              "splits": {
+                "1. Ski-Erg": 271,
+                "2 .Ýta sleða": 96,
+                "3. Draga sleða": 184,
+                "4. Burpee langstökk": 160,
+                "5. Róður": 253,
+                "6. Bændaganga": 141,
+                "7. Lunges": 188,
+                "8. Wall Balls": 240
+              },
+              "run_times": [
+                295,
+                292,
+                300,
+                300,
+                304,
+                306,
+                306,
+                297
+              ]
+            },
+            {
+              "rank": 15,
+              "bib": "211",
+              "name": "Sigríður Ómarsdóttir\nKristján Freyr Þrastarson",
+              "club": "Sigga&Krissi",
+              "division": "MIXED",
+              "total_time": "01:05:52",
+              "total_seconds": 3952,
+              "run_total": 2307,
+              "station_total": 1653,
+              "splits": {
+                "1. Ski-Erg": 269,
+                "2 .Ýta sleða": 113,
+                "3. Draga sleða": 214,
+                "4. Burpee langstökk": 171,
+                "5. Róður": 285,
+                "6. Bændaganga": 157,
+                "7. Lunges": 215,
+                "8. Wall Balls": 229
+              },
+              "run_times": [
+                265,
+                280,
+                306,
+                285,
+                303,
+                283,
+                291,
+                294
+              ]
+            },
+            {
+              "rank": 18,
+              "bib": "199",
+              "name": "Örn Ingi Bergsson\nHildur Birna Helgadóttir",
+              "club": "Non-bloods",
+              "division": "MIXED",
+              "total_time": "01:07:38",
+              "total_seconds": 4058,
+              "run_total": 2370,
+              "station_total": 1694,
+              "splits": {
+                "1. Ski-Erg": 259,
+                "2 .Ýta sleða": 109,
+                "3. Draga sleða": 151,
+                "4. Burpee langstökk": 236,
+                "5. Róður": 309,
+                "6. Bændaganga": 161,
+                "7. Lunges": 221,
+                "8. Wall Balls": 248
+              },
+              "run_times": [
+                263,
+                267,
+                294,
+                299,
+                303,
+                312,
+                316,
+                316
+              ]
+            },
+            {
+              "rank": 19,
+              "bib": "128",
+              "name": "Steinar B. Hafberg\nSólrún Sæmundsdóttir",
+              "club": "Sunny & Stones",
+              "division": "MIXED",
+              "total_time": "01:07:54",
+              "total_seconds": 4074,
+              "run_total": 2351,
+              "station_total": 1732,
+              "splits": {
+                "1. Ski-Erg": 279,
+                "2 .Ýta sleða": 112,
+                "3. Draga sleða": 223,
+                "4. Burpee langstökk": 220,
+                "5. Róður": 295,
+                "6. Bændaganga": 167,
+                "7. Lunges": 205,
+                "8. Wall Balls": 231
+              },
+              "run_times": [
+                262,
+                270,
+                300,
+                295,
+                303,
+                306,
+                305,
+                310
+              ]
+            },
+            {
+              "rank": 20,
+              "bib": "164",
+              "name": "ragnheidur Halldorsdottir\nKári Helgason",
+              "club": "RaGu-sósan",
+              "division": "MIXED",
+              "total_time": "01:08:07",
+              "total_seconds": 4087,
+              "run_total": 2331,
+              "station_total": 1766,
+              "splits": {
+                "1. Ski-Erg": 281,
+                "2 .Ýta sleða": 143,
+                "3. Draga sleða": 214,
+                "4. Burpee langstökk": 146,
+                "5. Róður": 297,
+                "6. Bændaganga": 194,
+                "7. Lunges": 243,
+                "8. Wall Balls": 248
+              },
+              "run_times": [
+                297,
+                289,
+                305,
+                299,
+                308,
+                284,
+                274,
+                275
+              ]
+            },
+            {
+              "rank": 24,
+              "bib": "173",
+              "name": "Breki Þórðarson\nEmilíana Ocares Kristjánsdóttir",
+              "club": "Team Mexico",
+              "division": "MIXED",
+              "total_time": "01:08:59",
+              "total_seconds": 4139,
+              "run_total": 2326,
+              "station_total": 1821,
+              "splits": {
+                "1. Ski-Erg": 275,
+                "2 .Ýta sleða": 156,
+                "3. Draga sleða": 205,
+                "4. Burpee langstökk": 205,
+                "5. Róður": 282,
+                "6. Bændaganga": 200,
+                "7. Lunges": 262,
+                "8. Wall Balls": 236
+              },
+              "run_times": [
+                264,
+                266,
+                295,
+                305,
+                306,
+                299,
+                294,
+                297
+              ]
+            },
+            {
+              "rank": 25,
+              "bib": "129",
+              "name": "Victor Gauti Jóhannsson\nAndrea Rán",
+              "club": "Team Miami",
+              "division": "MIXED",
+              "total_time": "01:09:04",
+              "total_seconds": 4144,
+              "run_total": 2456,
+              "station_total": 1696,
+              "splits": {
+                "1. Ski-Erg": 258,
+                "2 .Ýta sleða": 109,
+                "3. Draga sleða": 208,
+                "4. Burpee langstökk": 203,
+                "5. Róður": 291,
+                "6. Bændaganga": 149,
+                "7. Lunges": 211,
+                "8. Wall Balls": 267
+              },
+              "run_times": [
+                280,
+                277,
+                319,
+                302,
+                352,
+                315,
+                309,
+                302
+              ]
+            },
+            {
+              "rank": 28,
+              "bib": "196",
+              "name": "Olga Unnarsdóttir\nBroddi Ottesen",
+              "club": "Ballers",
+              "division": "MIXED",
+              "total_time": "01:12:09",
+              "total_seconds": 4329,
+              "run_total": 2611,
+              "station_total": 1725,
+              "splits": {
+                "1. Ski-Erg": 266,
+                "2 .Ýta sleða": 112,
+                "3. Draga sleða": 219,
+                "4. Burpee langstökk": 179,
+                "5. Róður": 292,
+                "6. Bændaganga": 176,
+                "7. Lunges": 224,
+                "8. Wall Balls": 257
+              },
+              "run_times": [
+                305,
+                333,
+                344,
+                321,
+                331,
+                314,
+                329,
+                334
+              ]
+            },
+            {
+              "rank": 29,
+              "bib": "107",
+              "name": "Ingibjörg Ásta Halldórsdóttir\nSigurður Ólafur Kjartansson",
+              "club": "Rólegt & Rómantískt",
+              "division": "MIXED",
+              "total_time": "01:12:38",
+              "total_seconds": 4358,
+              "run_total": 2590,
+              "station_total": 1775,
+              "splits": {
+                "1. Ski-Erg": 277,
+                "2 .Ýta sleða": 105,
+                "3. Draga sleða": 249,
+                "4. Burpee langstökk": 188,
+                "5. Róður": 279,
+                "6. Bændaganga": 178,
+                "7. Lunges": 260,
+                "8. Wall Balls": 239
+              },
+              "run_times": [
+                306,
+                330,
+                337,
+                321,
+                323,
+                318,
+                353,
+                302
+              ]
+            },
+            {
+              "rank": 30,
+              "bib": "133",
+              "name": "Óskar Marinó Jónsson\nIngibjörg RósaJónsdóttir",
+              "club": "Still better together",
+              "division": "MIXED",
+              "total_time": "01:12:41",
+              "total_seconds": 4361,
+              "run_total": 2680,
+              "station_total": 1687,
+              "splits": {
+                "1. Ski-Erg": 273,
+                "2 .Ýta sleða": 129,
+                "3. Draga sleða": 207,
+                "4. Burpee langstökk": 164,
+                "5. Róður": 280,
+                "6. Bændaganga": 191,
+                "7. Lunges": 219,
+                "8. Wall Balls": 224
+              },
+              "run_times": [
+                298,
+                310,
+                335,
+                334,
+                358,
+                350,
+                356,
+                339
+              ]
+            },
+            {
+              "rank": 32,
+              "bib": "202",
+              "name": "Arnar Freyr Stefánsson\nAnna Margrét Kristinsdóttir",
+              "club": "5lota",
+              "division": "MIXED",
+              "total_time": "01:13:52",
+              "total_seconds": 4432,
+              "run_total": 2709,
+              "station_total": 1731,
+              "splits": {
+                "1. Ski-Erg": 286,
+                "2 .Ýta sleða": 88,
+                "3. Draga sleða": 189,
+                "4. Burpee langstökk": 181,
+                "5. Róður": 314,
+                "6. Bændaganga": 140,
+                "7. Lunges": 243,
+                "8. Wall Balls": 290
+              },
+              "run_times": [
+                312,
+                322,
+                353,
+                353,
+                359,
+                338,
+                336,
+                336
+              ]
+            },
+            {
+              "rank": 33,
+              "bib": "175",
+              "name": "Steinar Sig\nElma Rut",
+              "club": "SaxUp!",
+              "division": "MIXED",
+              "total_time": "01:13:58",
+              "total_seconds": 4438,
+              "run_total": 2838,
+              "station_total": 1607,
+              "splits": {
+                "1. Ski-Erg": 275,
+                "2 .Ýta sleða": 87,
+                "3. Draga sleða": 179,
+                "4. Burpee langstökk": 176,
+                "5. Róður": 264,
+                "6. Bændaganga": 160,
+                "7. Lunges": 226,
+                "8. Wall Balls": 240
+              },
+              "run_times": [
+                318,
+                335,
+                362,
+                366,
+                372,
+                361,
+                368,
+                356
+              ]
+            },
+            {
+              "rank": 37,
+              "bib": "134",
+              "name": "Þórir Arnar Jónsson\nAuður Karlsdóttir",
+              "club": "Team ballena",
+              "division": "MIXED",
+              "total_time": "01:15:54",
+              "total_seconds": 4554,
+              "run_total": 2677,
+              "station_total": 1885,
+              "splits": {
+                "1. Ski-Erg": 289,
+                "2 .Ýta sleða": 133,
+                "3. Draga sleða": 212,
+                "4. Burpee langstökk": 249,
+                "5. Róður": 301,
+                "6. Bændaganga": 188,
+                "7. Lunges": 240,
+                "8. Wall Balls": 273
+              },
+              "run_times": [
+                314,
+                311,
+                353,
+                348,
+                357,
+                332,
+                325,
+                337
+              ]
+            },
+            {
+              "rank": 38,
+              "bib": "178",
+              "name": "Viðar Pálsson\nJónína Helga Ólafsdóttir",
+              "club": "Viðar & Jónína",
+              "division": "MIXED",
+              "total_time": "01:16:31",
+              "total_seconds": 4591,
+              "run_total": 2728,
+              "station_total": 1871,
+              "splits": {
+                "1. Ski-Erg": 303,
+                "2 .Ýta sleða": 97,
+                "3. Draga sleða": 228,
+                "4. Burpee langstökk": 217,
+                "5. Róður": 293,
+                "6. Bændaganga": 187,
+                "7. Lunges": 292,
+                "8. Wall Balls": 254
+              },
+              "run_times": [
+                313,
+                323,
+                342,
+                331,
+                359,
+                340,
+                364,
+                356
+              ]
+            },
+            {
+              "rank": 39,
+              "bib": "201",
+              "name": "Þórður Þórðarson\nBjörk Gunnarsdóttir",
+              "club": "Þórk",
+              "division": "MIXED",
+              "total_time": "01:17:00",
+              "total_seconds": 4620,
+              "run_total": 2751,
+              "station_total": 1877,
+              "splits": {
+                "1. Ski-Erg": 287,
+                "2 .Ýta sleða": 106,
+                "3. Draga sleða": 257,
+                "4. Burpee langstökk": 192,
+                "5. Róður": 313,
+                "6. Bændaganga": 179,
+                "7. Lunges": 274,
+                "8. Wall Balls": 269
+              },
+              "run_times": [
+                306,
+                309,
+                339,
+                347,
+                365,
+                350,
+                365,
+                370
+              ]
+            },
+            {
+              "rank": 42,
+              "bib": "179",
+              "name": "Valeria Rodríguez\nJoel Fjalarsson",
+              "club": "Valeria Joel",
+              "division": "MIXED",
+              "total_time": "01:21:14",
+              "total_seconds": 4874,
+              "run_total": 2694,
+              "station_total": 2186,
+              "splits": {
+                "1. Ski-Erg": 308,
+                "2 .Ýta sleða": 138,
+                "3. Draga sleða": 300,
+                "4. Burpee langstökk": 324,
+                "5. Róður": 252,
+                "6. Bændaganga": 184,
+                "7. Lunges": 320,
+                "8. Wall Balls": 360
+              },
+              "run_times": [
+                314,
+                311,
+                337,
+                341,
+                364,
+                344,
+                346,
+                337
+              ]
+            },
+            {
+              "rank": 43,
+              "bib": "207",
+              "name": "Kristinn Guðmundsson\nAleksandra Hawrylewicz",
+              "club": "Næturvaktin",
+              "division": "MIXED",
+              "total_time": "01:21:40",
+              "total_seconds": 4900,
+              "run_total": 2910,
+              "station_total": 1998,
+              "splits": {
+                "1. Ski-Erg": 291,
+                "2 .Ýta sleða": 182,
+                "3. Draga sleða": 272,
+                "4. Burpee langstökk": 220,
+                "5. Róður": 301,
+                "6. Bændaganga": 185,
+                "7. Lunges": 263,
+                "8. Wall Balls": 284
+              },
+              "run_times": [
+                304,
+                340,
+                379,
+                380,
+                383,
+                388,
+                369,
+                367
+              ]
+            },
+            {
+              "rank": 44,
+              "bib": "163",
+              "name": "Hörður Örn Harðarson\nHarpa Svansdóttir",
+              "club": "H&H",
+              "division": "MIXED",
+              "total_time": "01:22:57",
+              "total_seconds": 4977,
+              "run_total": 2982,
+              "station_total": 2004,
+              "splits": {
+                "1. Ski-Erg": 280,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 235,
+                "4. Burpee langstökk": 292,
+                "5. Róður": 326,
+                "6. Bændaganga": 185,
+                "7. Lunges": 269,
+                "8. Wall Balls": 295
+              },
+              "run_times": [
+                320,
+                342,
+                462,
+                372,
+                375,
+                352,
+                382,
+                377
+              ]
+            },
+            {
+              "rank": 48,
+              "bib": "113",
+              "name": "Þórdís Birna Lúthersdóttir\nJón Óðinn Reynisson",
+              "club": "I'm with stupid!",
+              "division": "MIXED",
+              "total_time": "01:32:51",
+              "total_seconds": 5571,
+              "run_total": 3532,
+              "station_total": 2049,
+              "splits": {
+                "1. Ski-Erg": 313,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 221,
+                "4. Burpee langstökk": 307,
+                "5. Róður": 325,
+                "6. Bændaganga": 179,
+                "7. Lunges": 303,
+                "8. Wall Balls": 279
+              },
+              "run_times": [
+                390,
+                403,
+                439,
+                448,
+                458,
+                462,
+                457,
+                475
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "mot2",
+        "name": "2. mót — 11. júlí",
+        "date": "2026-07-11",
+        "status": "væntanlegt",
+        "einstaklingar": {
+          "overall": [],
+          "karlar": [],
+          "konur": []
+        },
+        "para": {
+          "overall": [],
+          "karlar": [],
+          "konur": [],
+          "blandað": []
+        }
+      },
+      {
+        "id": "mot3",
+        "name": "3. mót — 5. september",
+        "date": "2026-09-05",
+        "status": "væntanlegt",
+        "einstaklingar": {
+          "overall": [],
+          "karlar": [],
+          "konur": []
+        },
+        "para": {
+          "overall": [],
+          "karlar": [],
+          "konur": [],
+          "blandað": []
+        }
+      }
+    ]
+  }
+}
