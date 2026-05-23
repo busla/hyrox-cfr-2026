@@ -88,12 +88,10 @@ function colorFor(division, idx) {
 }
 
 export default function CumulativeTimeChart({ athletes = [] }) {
-  // Top 10 by rank
   const top10 = useMemo(() => {
     return [...athletes]
       .filter((a) => a && a.name)
       .sort((a, b) => (a.rank ?? 1e9) - (b.rank ?? 1e9))
-      .slice(0, 10)
       .map((a, idx) => ({
         ...a,
         _key: sanitizeKey(a.display_name || a.name, idx),
@@ -233,7 +231,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
       <div style={styles.card}>
         <h2 style={styles.title}>📈 Heildartími í gegnum brautina</h2>
         <p style={styles.desc}>
-          Línuritið sýnir uppsafnaðan tíma efstu 10 keppenda í gegnum öll 16 stig keppninnar
+          Línuritið sýnir uppsafnaðan tíma keppenda í gegnum öll 16 stig keppninnar
           (8 hlaup og 8 stöðvar til skiptis). Þeir sem halda lægri línu eru framar í
           keppninni, og bilið milli lína sýnir hvar tíminn vinnst eða tapast. Smelltu á
           nafn keppanda fyrir neðan til að fela eða sýna línuna hans.
