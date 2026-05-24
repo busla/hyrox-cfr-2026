@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from 'recharts'
+import { T, DIVISION_COLORS } from '../theme.js'
 
 const STATION_KEYS = [
   '1. Ski-Erg',
@@ -31,13 +32,6 @@ const STATION_LABELS = [
   'Lunges',
   'Wall Balls',
 ]
-
-const DIVISION_COLORS = {
-  'PRO KK': '#f97316',
-  'OPEN KK': '#3b82f6',
-  'PRO KVK': '#ec4899',
-  'OPEN KVK': '#a855f7',
-}
 
 const DIVISIONS = ['PRO KK', 'OPEN KK', 'PRO KVK', 'OPEN KVK']
 
@@ -127,18 +121,11 @@ export default function RadarChart({ athletes = [] }) {
     })
   }, [selectedAthlete, athletes])
 
-  const tooltipStyle = {
-    backgroundColor: '#1a1d28',
-    border: '1px solid #2a2f3e',
-    borderRadius: 6,
-    color: '#e5e7eb',
-  }
-
   const CustomTooltip = ({ active, payload, label }) => {
     if (!active || !payload || !payload.length) return null
     return (
-      <div style={{ ...tooltipStyle, padding: '8px 12px' }}>
-        <div style={{ color: '#fff', fontWeight: 600, marginBottom: 4 }}>
+      <div style={T.tooltip}>
+        <div style={{ color: T.white, fontWeight: 700, marginBottom: 4, fontFamily: T.font }}>
           {label}
         </div>
         {payload.map((p) => {
@@ -151,7 +138,7 @@ export default function RadarChart({ athletes = [] }) {
               ? p.payload?.divAvg
               : null)
           return (
-            <div key={p.dataKey} style={{ color: p.color, fontSize: 13 }}>
+            <div key={p.dataKey} style={{ color: p.color, fontSize: 13, fontFamily: T.font }}>
               {p.dataKey}: {formatSeconds(sec)} ({Math.round(p.value)} stig)
             </div>
           )
@@ -161,18 +148,11 @@ export default function RadarChart({ athletes = [] }) {
   }
 
   return (
-    <div
-      style={{
-        backgroundColor: '#0f1117',
-        padding: 24,
-        borderRadius: 12,
-        color: '#e5e7eb',
-      }}
-    >
-      <h2 style={{ margin: 0, color: '#fff', fontSize: 22 }}>
-        🕸️ Radar graf — Styrkleikar og veikleikar
+    <div style={T.card}>
+      <h2 style={T.sectionTitle}>
+        Radar graf — Styrkleikar og veikleikar
       </h2>
-      <p style={{ color: '#9ca3af', marginTop: 8, marginBottom: 20, fontSize: 14, lineHeight: 1.5 }}>
+      <p style={{ ...T.subTitle, lineHeight: 1.5 }}>
         Radarinn sýnir meðalframmistöðu á hverri af átta stöðvum, eftir deild.
         Stigin eru reiknuð sem <strong>600 − sekúndur</strong> (lægstu tímar gefa
         hæstu stig), þannig að stærra svæði táknar betri heildarframmistöðu.
@@ -180,19 +160,19 @@ export default function RadarChart({ athletes = [] }) {
         hvar tækifæri liggja.
       </p>
 
-      <div style={{ width: '100%', height: 480 }}>
+      <div style={{ ...T.chartArea, width: '100%', height: 480 }}>
         <ResponsiveContainer width="100%" height="100%">
           <RechartsRadar data={aggregatedData} outerRadius="75%">
-            <PolarGrid stroke="#2a2f3e" />
+            <PolarGrid stroke="#1e1e1e" />
             <PolarAngleAxis
               dataKey="station"
-              tick={{ fill: '#e5e7eb', fontSize: 12 }}
+              tick={{ fill: T.white, fontSize: 12, fontFamily: T.font }}
             />
             <PolarRadiusAxis
               angle={90}
               domain={[0, 600]}
-              tick={{ fill: '#6b7280', fontSize: 10 }}
-              stroke="#2a2f3e"
+              tick={{ fill: T.gray, fontSize: 10 }}
+              stroke="#1e1e1e"
             />
             {presentDivisions.map((d) => (
               <Radar
@@ -206,7 +186,7 @@ export default function RadarChart({ athletes = [] }) {
               />
             ))}
             <Tooltip content={<CustomTooltip />} />
-            <Legend wrapperStyle={{ color: '#e5e7eb', paddingTop: 8 }} />
+            <Legend wrapperStyle={{ color: T.white, paddingTop: 8, fontFamily: T.font }} />
           </RechartsRadar>
         </ResponsiveContainer>
       </div>
@@ -215,13 +195,13 @@ export default function RadarChart({ athletes = [] }) {
         style={{
           marginTop: 32,
           paddingTop: 24,
-          borderTop: '1px solid #2a2f3e',
+          borderTop: `1px solid ${T.border}`,
         }}
       >
-        <h3 style={{ margin: 0, color: '#fff', fontSize: 18 }}>
-          👤 Einstaklingsgreining
+        <h3 style={{ ...T.sectionTitle, fontSize: 18 }}>
+          Einstaklingsgreining
         </h3>
-        <p style={{ color: '#9ca3af', marginTop: 6, marginBottom: 16, fontSize: 13 }}>
+        <p style={{ ...T.subTitle, marginTop: 6 }}>
           Veldu keppanda til að sjá radar hans í samanburði við meðaltal deildar.
         </p>
 
@@ -229,14 +209,15 @@ export default function RadarChart({ athletes = [] }) {
           value={selectedAthleteName}
           onChange={(e) => setSelectedAthleteName(e.target.value)}
           style={{
-            backgroundColor: '#1a1d28',
-            color: '#e5e7eb',
-            border: '1px solid #2a2f3e',
-            borderRadius: 6,
+            backgroundColor: T.dark2,
+            color: T.white,
+            border: `1px solid ${T.border}`,
+            borderRadius: 0,
             padding: '8px 12px',
             fontSize: 14,
             minWidth: 280,
             marginBottom: 16,
+            fontFamily: T.font,
           }}
         >
           <option value="">— Veldu keppanda —</option>
@@ -248,25 +229,25 @@ export default function RadarChart({ athletes = [] }) {
         </select>
 
         {selectedAthlete && (
-          <div style={{ width: '100%', height: 460 }}>
+          <div style={{ ...T.chartArea, width: '100%', height: 460 }}>
             <ResponsiveContainer width="100%" height="100%">
               <RechartsRadar data={athleteData} outerRadius="75%">
-                <PolarGrid stroke="#2a2f3e" />
+                <PolarGrid stroke="#1e1e1e" />
                 <PolarAngleAxis
                   dataKey="station"
-                  tick={{ fill: '#e5e7eb', fontSize: 12 }}
+                  tick={{ fill: T.white, fontSize: 12, fontFamily: T.font }}
                 />
                 <PolarRadiusAxis
                   angle={90}
                   domain={[0, 600]}
-                  tick={{ fill: '#6b7280', fontSize: 10 }}
-                  stroke="#2a2f3e"
+                  tick={{ fill: T.gray, fontSize: 10 }}
+                  stroke="#1e1e1e"
                 />
                 <Radar
                   name="Meðaltal deildar"
                   dataKey="Meðaltal deildar"
-                  stroke="#6b7280"
-                  fill="#6b7280"
+                  stroke={T.gray}
+                  fill={T.gray}
                   fillOpacity={0.15}
                   strokeWidth={2}
                   strokeDasharray="4 4"
@@ -274,13 +255,13 @@ export default function RadarChart({ athletes = [] }) {
                 <Radar
                   name={selectedAthlete.name}
                   dataKey="Íþróttamaður"
-                  stroke={DIVISION_COLORS[selectedAthlete.division] || '#22d3ee'}
-                  fill={DIVISION_COLORS[selectedAthlete.division] || '#22d3ee'}
+                  stroke={DIVISION_COLORS[selectedAthlete.division] || T.yellow}
+                  fill={DIVISION_COLORS[selectedAthlete.division] || T.yellow}
                   fillOpacity={0.35}
                   strokeWidth={2}
                 />
                 <Tooltip content={<CustomTooltip />} />
-                <Legend wrapperStyle={{ color: '#e5e7eb', paddingTop: 8 }} />
+                <Legend wrapperStyle={{ color: T.white, paddingTop: 8, fontFamily: T.font }} />
               </RechartsRadar>
             </ResponsiveContainer>
           </div>

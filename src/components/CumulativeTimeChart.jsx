@@ -8,6 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+import { T, DIVISION_COLORS } from '../theme.js';
 
 // 16 segments: alternating run + station
 const SEGMENT_LABELS = [
@@ -37,14 +38,6 @@ const RUN_KEYS = [
   'Hlaup 1', 'Hlaup 2', 'Hlaup 3', 'Hlaup 4',
   'Hlaup 5', 'Hlaup 6', 'Hlaup 7', 'Hlaup 8',
 ];
-
-const DIVISION_COLORS = {
-  KK: '#3b82f6',
-  KVK: '#ec4899',
-  PRO: '#f59e0b',
-  OPEN: '#10b981',
-  DEFAULT: '#a78bfa',
-};
 
 function parseTime(val) {
   if (val == null) return null;
@@ -80,8 +73,7 @@ function sanitizeKey(name, idx) {
 }
 
 function colorFor(division, idx) {
-  const key = (division || '').toUpperCase();
-  const base = DIVISION_COLORS[key] || DIVISION_COLORS.DEFAULT;
+  const base = DIVISION_COLORS[division] || DIVISION_COLORS.default;
   // light variation per athlete inside a division
   const variants = [base, base + 'cc', base + '99', base + 'dd', base + 'bb'];
   return variants[idx % variants.length];
@@ -149,29 +141,17 @@ export default function CumulativeTimeChart({ athletes = [] }) {
 
   const styles = {
     wrapper: {
-      background: '#0f1117',
-      padding: '24px',
-      borderRadius: '12px',
-      color: '#e5e7eb',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
+      ...T.card,
     },
     card: {
-      background: '#1a1f2e',
-      borderRadius: '12px',
-      padding: '20px',
-      boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+      background: 'transparent',
     },
     title: {
-      fontSize: '22px',
-      fontWeight: 700,
-      margin: '0 0 8px 0',
-      color: '#fff',
+      ...T.sectionTitle,
     },
     desc: {
-      fontSize: '14px',
-      color: '#9ca3af',
+      ...T.subTitle,
       lineHeight: 1.55,
-      marginBottom: '18px',
     },
     legend: {
       display: 'flex',
@@ -184,27 +164,34 @@ export default function CumulativeTimeChart({ athletes = [] }) {
       alignItems: 'center',
       gap: '6px',
       padding: '6px 10px',
-      borderRadius: '999px',
-      border: `1px solid ${off ? '#2a3041' : color}`,
-      background: off ? '#0f1117' : '#1a1f2e',
-      color: off ? '#6b7280' : '#e5e7eb',
+      borderRadius: 0,
+      border: `1px solid ${off ? T.border : color}`,
+      background: off ? T.dark2 : T.dark3,
+      color: off ? T.grayDim : T.white,
       fontSize: '12px',
       cursor: 'pointer',
       userSelect: 'none',
       transition: 'all 0.15s ease',
+      fontFamily: T.font,
     }),
     dot: (color) => ({
       width: '10px',
       height: '10px',
-      borderRadius: '50%',
+      borderRadius: 0,
       background: color,
       flexShrink: 0,
     }),
     empty: {
-      color: '#6b7280',
+      color: T.grayDim,
       fontSize: 14,
       textAlign: 'center',
       padding: '40px 20px',
+      fontFamily: T.font,
+    },
+    chartArea: {
+      ...T.chartArea,
+      width: '100%',
+      height: 460,
     },
   };
 
@@ -219,7 +206,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
     return (
       <div style={styles.wrapper}>
         <div style={styles.card}>
-          <h2 style={styles.title}>📈 Heildartími í gegnum brautina</h2>
+          <h2 style={styles.title}>Heildartími í gegnum brautina</h2>
           <div style={styles.empty}>Engin gögn í boði.</div>
         </div>
       </div>
@@ -229,7 +216,7 @@ export default function CumulativeTimeChart({ athletes = [] }) {
   return (
     <div style={styles.wrapper}>
       <div style={styles.card}>
-        <h2 style={styles.title}>📈 Heildartími í gegnum brautina</h2>
+        <h2 style={styles.title}>Heildartími í gegnum brautina</h2>
         <p style={styles.desc}>
           Línuritið sýnir uppsafnaðan tíma keppenda í gegnum öll 16 stig keppninnar
           (8 hlaup og 8 stöðvar til skiptis). Þeir sem halda lægri línu eru framar í
@@ -237,37 +224,32 @@ export default function CumulativeTimeChart({ athletes = [] }) {
           nafn keppanda fyrir neðan til að fela eða sýna línuna hans.
         </p>
 
-        <div style={{ width: '100%', height: 460 }}>
+        <div style={styles.chartArea}>
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={chartData}
               margin={{ top: 10, right: 24, bottom: 40, left: 16 }}
             >
-              <CartesianGrid stroke="#2a3041" strokeDasharray="3 3" />
+              <CartesianGrid stroke="#1e1e1e" strokeDasharray="3 3" />
               <XAxis
                 dataKey="segment"
-                stroke="#9ca3af"
-                tick={{ fill: '#9ca3af', fontSize: 11 }}
+                stroke={T.gray}
+                tick={{ fill: T.gray, fontSize: 11 }}
                 angle={-35}
                 textAnchor="end"
                 interval={0}
                 height={70}
               />
               <YAxis
-                stroke="#9ca3af"
-                tick={{ fill: '#9ca3af', fontSize: 11 }}
+                stroke={T.gray}
+                tick={{ fill: T.gray, fontSize: 11 }}
                 tickFormatter={formatHMS}
                 width={70}
               />
               <Tooltip
-                contentStyle={{
-                  background: '#0f1117',
-                  border: '1px solid #2a3041',
-                  borderRadius: '6px',
-                  color: '#e5e7eb',
-                }}
-                labelStyle={{ color: '#9ca3af' }}
-                itemStyle={{ color: '#e5e7eb' }}
+                contentStyle={T.tooltip}
+                labelStyle={{ color: T.gray, fontFamily: T.font }}
+                itemStyle={{ color: T.white, fontFamily: T.font }}
                 formatter={(value, key) => [formatHMS(value), keyToName[key] || key]}
               />
               {top10.map((a) => {
@@ -303,9 +285,9 @@ export default function CumulativeTimeChart({ athletes = [] }) {
                 }
                 title="Smelltu til að fela/sýna"
               >
-                <span style={styles.dot(off ? '#374151' : a._color)} />
+                <span style={styles.dot(off ? T.grayDim : a._color)} />
                 #{a.rank ?? a._idx + 1} {a.display_name || a.name}
-                <span style={{ color: '#6b7280', marginLeft: 4 }}>
+                <span style={{ color: T.grayDim, marginLeft: 4 }}>
                   {a.division || ''}
                 </span>
               </span>

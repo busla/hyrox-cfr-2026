@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
+import { T, DIVISION_COLORS } from '../theme.js';
 
 const STATION_KEYS = [
   '1. Ski-Erg',
@@ -35,7 +36,7 @@ const STATION_LABELS = [
 
 const GREEN = '#22c55e';
 const RED = '#ef4444';
-const NEUTRAL = '#64748b';
+const NEUTRAL = T.grayDim;
 
 function parseTime(val) {
   if (val == null) return null;
@@ -120,20 +121,13 @@ export default function CompareChart({ athletes = [] }) {
 
   const styles = {
     wrapper: {
-      background: '#0f1117',
-      padding: '24px',
-      borderRadius: '12px',
-      color: '#e5e7eb',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
+      ...T.card,
     },
     card: {
-      background: '#1a1f2e',
-      borderRadius: '12px',
-      padding: '20px',
-      boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+      padding: 0,
     },
-    title: { fontSize: '22px', fontWeight: 700, margin: '0 0 8px 0', color: '#fff' },
-    desc: { fontSize: '14px', color: '#9ca3af', lineHeight: 1.55, marginBottom: '18px' },
+    title: T.sectionTitle,
+    desc: { ...T.subTitle, lineHeight: 1.55, textTransform: 'none', letterSpacing: 0, fontWeight: 400, fontSize: 13, marginBottom: 18 },
     pickRow: {
       display: 'flex',
       gap: '16px',
@@ -141,24 +135,26 @@ export default function CompareChart({ athletes = [] }) {
       marginBottom: '18px',
     },
     pickCol: { display: 'flex', flexDirection: 'column', gap: '4px', minWidth: 220 },
-    label: { fontSize: '12px', color: '#9ca3af' },
+    label: { fontSize: 11, color: T.gray, fontFamily: T.font, letterSpacing: 2, textTransform: 'uppercase', fontWeight: 700 },
     select: {
-      background: '#0f1117',
-      color: '#e5e7eb',
-      border: '1px solid #2a3041',
-      borderRadius: '6px',
+      background: '#111',
+      color: T.white,
+      border: `1px solid ${T.border}`,
+      borderRadius: 0,
       padding: '8px 10px',
-      fontSize: '14px',
+      fontSize: 14,
+      fontFamily: T.font,
     },
     summary: {
       marginTop: '18px',
       padding: '14px 16px',
-      background: '#0f1117',
-      border: '1px solid #2a3041',
-      borderRadius: '8px',
-      fontSize: '13px',
-      color: '#e5e7eb',
+      background: T.dark2,
+      border: `1px solid ${T.border}`,
+      borderRadius: 0,
+      fontSize: 13,
+      color: T.white,
       lineHeight: 1.6,
+      fontFamily: T.font,
     },
     grid: {
       display: 'grid',
@@ -168,25 +164,29 @@ export default function CompareChart({ athletes = [] }) {
     },
     statBox: {
       padding: '8px 10px',
-      background: '#1a1f2e',
-      borderRadius: '6px',
-      fontSize: '12px',
+      background: T.dark3,
+      border: `1px solid ${T.border}`,
+      borderRadius: 0,
+      fontSize: 12,
+      fontFamily: T.font,
     },
-    statTitle: { color: '#9ca3af', fontSize: '11px', marginBottom: 2 },
-    statVal: { fontWeight: 700, color: '#fff' },
+    statTitle: { color: T.gray, fontSize: 11, marginBottom: 2, letterSpacing: 1, textTransform: 'uppercase', fontWeight: 700 },
+    statVal: { fontWeight: 900, color: T.white },
   };
 
   const tooltipStyle = {
-    background: '#0f1117',
-    border: '1px solid #2a3041',
-    borderRadius: '6px',
-    color: '#e5e7eb',
+    background: T.dark2,
+    border: `1px solid ${T.border}`,
+    borderLeft: `3px solid ${T.yellow}`,
+    borderRadius: 0,
+    color: T.white,
+    fontFamily: T.font,
   };
 
   return (
     <div style={styles.wrapper}>
       <div style={styles.card}>
-        <h2 style={styles.title}>🔍 Samanburður tveggja keppenda</h2>
+        <h2 style={styles.title}>Samanburður tveggja keppenda</h2>
         <p style={styles.desc}>
           Veldu tvo keppendur úr listunum að neðan og sjáðu hvernig þeir bera sig saman á
           hverri af 8 stöðvunum. Grænn dálkur sýnir hvor keppandinn var hraðari á þeirri
@@ -225,32 +225,32 @@ export default function CompareChart({ athletes = [] }) {
           </div>
         </div>
 
-        <div style={{ width: '100%', height: 420 }}>
+        <div style={{ ...T.chartArea, width: '100%', height: 420 }}>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ top: 10, right: 16, bottom: 30, left: 8 }}>
-              <CartesianGrid stroke="#2a3041" strokeDasharray="3 3" />
+              <CartesianGrid stroke="#1e1e1e" strokeDasharray="3 3" />
               <XAxis
                 dataKey="station"
-                stroke="#9ca3af"
-                tick={{ fill: '#9ca3af', fontSize: 11 }}
+                stroke={T.gray}
+                tick={{ fill: T.gray, fontSize: 11 }}
                 interval={0}
                 angle={-20}
                 textAnchor="end"
                 height={50}
               />
               <YAxis
-                stroke="#9ca3af"
-                tick={{ fill: '#9ca3af', fontSize: 11 }}
+                stroke={T.gray}
+                tick={{ fill: T.gray, fontSize: 11 }}
                 tickFormatter={formatMMSS}
                 width={60}
               />
               <Tooltip
                 contentStyle={tooltipStyle}
-                labelStyle={{ color: '#9ca3af' }}
+                labelStyle={{ color: T.gray, fontFamily: T.font }}
                 formatter={(value, name) => [formatMMSS(value), name === 'a' ? aName : bName]}
               />
               <Legend
-                wrapperStyle={{ color: '#e5e7eb', fontSize: 12 }}
+                wrapperStyle={{ color: T.white, fontSize: 12, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }}
                 formatter={(value) => (value === 'a' ? aName : bName)}
               />
               <Bar dataKey="a" name="a">
@@ -297,10 +297,10 @@ export default function CompareChart({ athletes = [] }) {
                 <div key={i} style={styles.statBox}>
                   <div style={styles.statTitle}>{d.station}</div>
                   <div style={styles.statVal}>{winner}</div>
-                  <div style={{ color: '#9ca3af', fontSize: 11 }}>
+                  <div style={{ color: T.gray, fontSize: 11, fontFamily: T.font }}>
                     {formatMMSS(d.a)} vs {formatMMSS(d.b)}
                     {delta != null && (
-                      <span style={{ marginLeft: 6, color: delta < 0 ? GREEN : delta > 0 ? RED : '#9ca3af' }}>
+                      <span style={{ marginLeft: 6, color: delta < 0 ? GREEN : delta > 0 ? RED : T.gray }}>
                         ({signedSeconds(delta)})
                       </span>
                     )}

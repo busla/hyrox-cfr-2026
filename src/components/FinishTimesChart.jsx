@@ -9,15 +9,7 @@ import {
   ResponsiveContainer,
   ReferenceLine,
 } from 'recharts';
-
-const DIVISION_COLORS = {
-  'Pro KK': '#f97316',
-  'Open KK': '#3b82f6',
-  'Pro KVK': '#ec4899',
-  'Open KVK': '#a855f7',
-  MIXED: '#22c55e',
-  default: '#64748b',
-};
+import { T, DIVISION_COLORS } from '../theme.js';
 
 function colorForDivision(division) {
   if (!division) return DIVISION_COLORS.default;
@@ -74,26 +66,16 @@ function CustomTooltip({ active, payload }) {
   if (!active || !payload || !payload.length) return null;
   const d = payload[0].payload;
   return (
-    <div
-      style={{
-        background: '#1a1f2e',
-        border: '1px solid #2d3548',
-        borderRadius: 8,
-        padding: '10px 14px',
-        color: '#e5e7eb',
-        fontSize: 13,
-        boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
-      }}
-    >
-      <div style={{ fontWeight: 700, marginBottom: 4, color: '#f9fafb' }}>{d.display_name || d.name}</div>
+    <div style={T.tooltip}>
+      <div style={{ fontWeight: 700, marginBottom: 4, color: T.white, fontFamily: T.font }}>{d.display_name || d.name}</div>
       {d.members && d.members.length > 1 && (
-        <div style={{ color: '#94a3b8', fontSize: 11, marginBottom: 2 }}>
+        <div style={{ color: T.gray, fontSize: 11, marginBottom: 2, fontFamily: T.font }}>
           {d.members.join(' · ')}
         </div>
       )}
-      {d.club && !d.members?.length && <div style={{ color: '#9ca3af', fontSize: 12 }}>{d.club}</div>}
-      <div style={{ color: d.color, fontSize: 12, marginTop: 2 }}>{d.division}</div>
-      <div style={{ marginTop: 6, fontWeight: 600 }}>⏱ {formatHMS(d.total_seconds)}</div>
+      {d.club && !d.members?.length && <div style={{ color: T.gray, fontSize: 12, fontFamily: T.font }}>{d.club}</div>}
+      <div style={{ color: d.color, fontSize: 12, marginTop: 2, fontFamily: T.font }}>{d.division}</div>
+      <div style={{ marginTop: 6, fontWeight: 600, fontFamily: T.font }}>{formatHMS(d.total_seconds)}</div>
     </div>
   );
 }
@@ -101,10 +83,9 @@ function CustomTooltip({ active, payload }) {
 // Custom shape function for recharts v3 — replaces deprecated <Cell> usage.
 // Receives bar geometry (x, y, width, height) plus the entry's `payload` row.
 function ColoredBar(props) {
-  const { x, y, width, height, payload, radius = 4 } = props;
+  const { x, y, width, height, payload, radius = 0 } = props;
   const fill = (payload && payload.color) || DIVISION_COLORS.default;
   const r = Math.min(radius, width / 2, height / 2) || 0;
-  // Render a rounded-top rectangle via path so radius prop survives the shape override
   if (height <= 0 || width <= 0) return null;
   const path = `
     M ${x},${y + r}
@@ -118,7 +99,7 @@ function ColoredBar(props) {
   return <path d={path} fill={fill} />;
 }
 
-const RANK_EMOJI = ['🥇', '🥈', '🥉', '#4', '#5'];
+const RANK_LABEL = ['1', '2', '3', '4', '5'];
 
 export default function FinishTimesChart({ athletes = [], category = 'einstaklingar' }) {
   const sorted = useMemo(() => {
@@ -171,53 +152,46 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
   }, [sorted]);
 
   return (
-    <div
-      style={{
-        background: '#0f1117',
-        borderRadius: 12,
-        padding: '20px 20px 24px',
-        color: '#e5e7eb',
-      }}
-    >
-      <h2 style={{ margin: 0, fontSize: 20, color: '#f9fafb' }}>
-        🏆 Heildarúrslit — Lokatími allra keppenda
+    <div style={T.card}>
+      <h2 style={T.sectionTitle}>
+        Heildarúrslit — Lokatími allra keppenda
       </h2>
-      <p style={{ color: '#9ca3af', fontSize: 13, marginTop: 6, marginBottom: 18, lineHeight: 1.5 }}>
+      <p style={{ ...T.subTitle, lineHeight: 1.5 }}>
         Hér sjást lokatímar allra keppenda í {category === 'para' ? 'pörum' : 'einstaklingsflokki'},
         raðaðir frá fljótasta til hægasta. Litir tákna mismunandi flokka. Strikalínan sýnir
         meðaltíma — keppendur vinstra megin við línuna eru hraðari en meðaltalið.
       </p>
 
       {/* Main chart — explicit height wrapper required for ResponsiveContainer in recharts v3 */}
-      <div style={{ width: '100%', height: 400, background: '#1a1f2e', borderRadius: 10, padding: 12 }}>
+      <div style={{ ...T.chartArea, width: '100%', height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={sorted} margin={{ top: 10, right: 20, left: 0, bottom: 50 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2d3548" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e1e1e" />
             <XAxis
               dataKey="short"
-              stroke="#9ca3af"
-              tick={{ fill: '#e5e7eb', fontSize: 10 }}
+              stroke={T.gray}
+              tick={{ fill: T.gray, fontSize: 11 }}
               angle={-45}
               textAnchor="end"
               interval={0}
               height={60}
             />
             <YAxis
-              stroke="#9ca3af"
-              tick={{ fill: '#9ca3af', fontSize: 11 }}
+              stroke={T.gray}
+              tick={{ fill: T.gray, fontSize: 11 }}
               tickFormatter={formatHM}
               domain={[minTime, (dataMax) => Math.ceil(dataMax * 1.02)]}
               allowDataOverflow={false}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
+            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,237,0,0.06)' }} />
             {avg > 0 && (
               <ReferenceLine
                 y={avg}
-                stroke="#fbbf24"
+                stroke={T.yellow}
                 strokeDasharray="4 4"
                 label={{
                   value: `Meðaltal ${formatHM(avg)}`,
-                  fill: '#fbbf24',
+                  fill: T.yellow,
                   fontSize: 11,
                   position: 'insideTopRight',
                 }}
@@ -235,7 +209,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
       {/* Top 5 podium */}
       {podium.length > 0 && (
         <div style={{ marginTop: 24 }}>
-          <h3 style={{ margin: '0 0 12px', fontSize: 15, color: '#f9fafb' }}>Top 5 — Verðlaunapallur</h3>
+          <h3 style={{ ...T.sectionTitle, fontSize: 15, marginBottom: 12 }}>Top 5 — Verðlaunapallur</h3>
           <div
             style={{
               display: 'grid',
@@ -247,21 +221,19 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
               <div
                 key={i}
                 style={{
-                  background: '#1a1f2e',
-                  borderRadius: 10,
-                  padding: '14px 16px',
+                  ...T.rankCard,
                   borderLeft: `4px solid ${a.color}`,
                 }}
               >
-                <div style={{ fontSize: 22, marginBottom: 6 }}>{RANK_EMOJI[i]}</div>
-                <div style={{ fontWeight: 700, color: '#f9fafb', fontSize: 14 }}>{a.display_name || a.name}</div>
+                <div style={{ fontSize: 22, marginBottom: 6, fontWeight: 900, color: T.yellow, fontFamily: T.font }}>{RANK_LABEL[i]}</div>
+                <div style={{ fontWeight: 700, color: T.white, fontSize: 14, fontFamily: T.font }}>{a.display_name || a.name}</div>
                 {a.club && (
-                  <div style={{ color: '#9ca3af', fontSize: 12, marginTop: 2 }}>{a.club}</div>
+                  <div style={{ color: T.gray, fontSize: 12, marginTop: 2, fontFamily: T.font }}>{a.club}</div>
                 )}
-                <div style={{ color: a.color, fontSize: 11, marginTop: 4, fontWeight: 600 }}>
+                <div style={{ color: a.color, fontSize: 11, marginTop: 4, fontWeight: 600, fontFamily: T.font }}>
                   {a.division}
                 </div>
-                <div style={{ marginTop: 8, fontSize: 16, fontWeight: 700, color: '#e5e7eb' }}>
+                <div style={{ marginTop: 8, fontSize: 16, fontWeight: 700, color: T.white, fontFamily: T.font }}>
                   {formatHMS(a.total_seconds)}
                 </div>
               </div>
@@ -273,7 +245,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
       {/* Division stats */}
       {divisionStats.length > 0 && (
         <div style={{ marginTop: 24 }}>
-          <h3 style={{ margin: '0 0 12px', fontSize: 15, color: '#f9fafb' }}>
+          <h3 style={{ ...T.sectionTitle, fontSize: 15, marginBottom: 12 }}>
             Flokkasundurliðun
           </h3>
           <div
@@ -287,21 +259,19 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
               <div
                 key={s.label}
                 style={{
-                  background: '#1a1f2e',
-                  borderRadius: 10,
-                  padding: '12px 14px',
+                  ...T.rankCard,
                   borderTop: `3px solid ${s.color}`,
                 }}
               >
-                <div style={{ color: s.color, fontWeight: 700, fontSize: 13 }}>{s.label}</div>
-                <div style={{ color: '#9ca3af', fontSize: 11, marginTop: 4 }}>
+                <div style={{ color: s.color, fontWeight: 700, fontSize: 13, fontFamily: T.font }}>{s.label}</div>
+                <div style={{ color: T.gray, fontSize: 11, marginTop: 4, fontFamily: T.font }}>
                   {s.count} keppendur
                 </div>
-                <div style={{ marginTop: 8, fontSize: 12, color: '#e5e7eb' }}>
+                <div style={{ marginTop: 8, fontSize: 12, color: T.white, fontFamily: T.font }}>
                   <div>Bestur: <strong>{formatHMS(s.best.total_seconds)}</strong></div>
-                  <div style={{ color: '#9ca3af' }}>{s.best.name}</div>
+                  <div style={{ color: T.gray }}>{s.best.name}</div>
                 </div>
-                <div style={{ marginTop: 6, fontSize: 12, color: '#9ca3af' }}>
+                <div style={{ marginTop: 6, fontSize: 12, color: T.gray, fontFamily: T.font }}>
                   Meðaltími: {formatHMS(s.avg)}
                 </div>
               </div>
@@ -311,7 +281,7 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
       )}
 
       {sorted.length === 0 && (
-        <div style={{ textAlign: 'center', color: '#6b7280', padding: 32 }}>
+        <div style={{ textAlign: 'center', color: T.grayDim, padding: 32, fontFamily: T.font }}>
           Engin gögn til staðar.
         </div>
       )}

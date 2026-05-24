@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { T, DIVISION_COLORS } from '../theme.js';
 
 const STATION_KEYS = [
   '1. Ski-Erg',
@@ -54,8 +55,8 @@ function lerpColor(a, b, t) {
 
 function colorForDelta(delta, maxAbs) {
   // delta < 0 => faster than avg => green; delta > 0 => slower => red
-  const NEUTRAL = '1e2535';
-  const GREEN = '22c55e';
+  const NEUTRAL = '1a1a1a';
+  const GREEN = '4ade80';
   const RED = 'ef4444';
   if (maxAbs === 0 || delta == null) return `#${NEUTRAL}`;
   const t = Math.max(-1, Math.min(1, delta / maxAbs));
@@ -101,29 +102,19 @@ export default function SplitsHeatmap({ athletes = [] }) {
 
   const styles = {
     wrapper: {
-      background: '#0f1117',
+      ...T.card,
       padding: '24px',
-      borderRadius: '12px',
-      color: '#e5e7eb',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
     },
     card: {
-      background: '#1a1f2e',
-      borderRadius: '12px',
+      background: T.dark3,
+      border: `1px solid ${T.border}`,
+      borderRadius: 0,
       padding: '20px',
-      boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
     },
-    title: {
-      fontSize: '22px',
-      fontWeight: 700,
-      margin: '0 0 8px 0',
-      color: '#fff',
-    },
+    title: T.sectionTitle,
     desc: {
-      fontSize: '14px',
-      color: '#9ca3af',
+      ...T.subTitle,
       lineHeight: 1.55,
-      marginBottom: '18px',
     },
     controls: {
       display: 'flex',
@@ -131,57 +122,67 @@ export default function SplitsHeatmap({ athletes = [] }) {
       gap: '10px',
       marginBottom: '16px',
     },
-    label: { fontSize: '13px', color: '#9ca3af' },
+    label: { fontSize: '13px', color: T.gray, fontFamily: T.font },
     select: {
-      background: '#0f1117',
-      color: '#e5e7eb',
-      border: '1px solid #2a3041',
-      borderRadius: '6px',
+      background: T.dark2,
+      color: T.white,
+      border: `1px solid ${T.border}`,
+      borderRadius: 0,
       padding: '6px 10px',
       fontSize: '14px',
+      fontFamily: T.font,
     },
     tableWrap: { overflowX: 'auto' },
     table: { borderCollapse: 'separate', borderSpacing: '4px', width: '100%' },
     th: {
       fontSize: '12px',
-      color: '#9ca3af',
-      fontWeight: 600,
+      color: T.gray,
+      fontWeight: 700,
       padding: '8px 6px',
       textAlign: 'center',
       whiteSpace: 'nowrap',
+      textTransform: 'uppercase',
+      letterSpacing: 1,
+      fontFamily: T.font,
     },
     thLeft: {
       fontSize: '12px',
-      color: '#9ca3af',
-      fontWeight: 600,
+      color: T.gray,
+      fontWeight: 700,
       padding: '8px 6px',
       textAlign: 'left',
+      textTransform: 'uppercase',
+      letterSpacing: 1,
+      fontFamily: T.font,
     },
     nameCell: {
       padding: '6px 10px',
       fontSize: '13px',
       whiteSpace: 'nowrap',
-      color: '#e5e7eb',
-      background: '#0f1117',
-      borderRadius: '6px',
+      color: T.white,
+      background: T.dark2,
+      borderRadius: 0,
+      fontFamily: T.font,
     },
     rankCell: {
       padding: '6px 10px',
       fontSize: '12px',
-      color: '#9ca3af',
-      background: '#0f1117',
-      borderRadius: '6px',
+      color: T.gray,
+      background: T.dark2,
+      borderRadius: 0,
       textAlign: 'center',
+      fontFamily: T.font,
     },
     cell: {
       padding: '8px 10px',
       fontSize: '12px',
-      fontWeight: 600,
-      color: '#fff',
-      borderRadius: '6px',
+      fontWeight: 700,
+      color: T.white,
+      borderRadius: 0,
       textAlign: 'center',
       minWidth: '64px',
       textShadow: '0 1px 2px rgba(0,0,0,0.5)',
+      fontFamily: T.font,
     },
     legend: {
       display: 'flex',
@@ -189,13 +190,14 @@ export default function SplitsHeatmap({ athletes = [] }) {
       gap: '10px',
       marginTop: '16px',
       fontSize: '12px',
-      color: '#9ca3af',
+      color: T.gray,
+      fontFamily: T.font,
     },
     swatch: (c) => ({
       display: 'inline-block',
       width: '14px',
       height: '14px',
-      borderRadius: '3px',
+      borderRadius: 0,
       background: c,
       verticalAlign: 'middle',
       marginRight: '4px',
@@ -205,7 +207,7 @@ export default function SplitsHeatmap({ athletes = [] }) {
   return (
     <div style={styles.wrapper}>
       <div style={styles.card}>
-        <h2 style={styles.title}>🔥 Hitakort — Tími á hverri stöð</h2>
+        <h2 style={styles.title}>Hitakort — Tími á hverri stöð</h2>
         <p style={styles.desc}>
           Hér sést hitakort yfir tímann sem hver keppandi tók á hverri af 8 stöðvunum í Hyrox.
           Grænir reitir tákna hraðari tíma en meðaltal stöðvarinnar, rauðir reitir tákna hægari
@@ -244,7 +246,7 @@ export default function SplitsHeatmap({ athletes = [] }) {
                 <th style={styles.thLeft}></th>
                 <th style={styles.thLeft} title="Meðaltími á hverri stöð">Meðaltal</th>
                 {averages.map((a, i) => (
-                  <th key={i} style={{ ...styles.th, color: '#6b7280' }}>
+                  <th key={i} style={{ ...styles.th, color: T.grayDim }}>
                     {formatMMSS(a)}
                   </th>
                 ))}
@@ -257,7 +259,7 @@ export default function SplitsHeatmap({ athletes = [] }) {
                   <td style={styles.nameCell}>
                     {athlete.name}
                     {athlete.division ? (
-                      <span style={{ color: '#6b7280', marginLeft: 6, fontSize: 11 }}>
+                      <span style={{ color: T.grayDim, marginLeft: 6, fontSize: 11, fontFamily: T.font }}>
                         {athlete.division}
                       </span>
                     ) : null}
@@ -288,8 +290,8 @@ export default function SplitsHeatmap({ athletes = [] }) {
         </div>
 
         <div style={styles.legend}>
-          <span><span style={styles.swatch('#22c55e')} />Hraðari en meðaltal</span>
-          <span><span style={styles.swatch('#1e2535')} />Meðaltal</span>
+          <span><span style={styles.swatch('#4ade80')} />Hraðari en meðaltal</span>
+          <span><span style={styles.swatch(T.dark3)} />Meðaltal</span>
           <span><span style={styles.swatch('#ef4444')} />Hægari en meðaltal</span>
         </div>
       </div>

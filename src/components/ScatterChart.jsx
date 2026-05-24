@@ -10,13 +10,7 @@ import {
   ResponsiveContainer,
   ReferenceLine,
 } from 'recharts'
-
-const DIVISION_COLORS = {
-  'Pro KK': '#f97316',
-  'Open KK': '#3b82f6',
-  'Pro KVK': '#ec4899',
-  'Open KVK': '#a855f7',
-}
+import { T, DIVISION_COLORS } from '../theme.js'
 
 const DIVISIONS = ['Pro KK', 'Open KK', 'Pro KVK', 'Open KVK']
 
@@ -41,24 +35,15 @@ function CustomTooltip({ active, payload }) {
   if (!active || !payload || !payload.length) return null
   const d = payload[0].payload
   return (
-    <div
-      style={{
-        backgroundColor: '#1a1d28',
-        border: '1px solid #2a2f3e',
-        borderRadius: 6,
-        padding: '10px 14px',
-        color: '#e5e7eb',
-        fontSize: 13,
-      }}
-    >
-      <div style={{ color: '#fff', fontWeight: 600, marginBottom: 6 }}>
+    <div style={T.tooltip}>
+      <div style={{ color: T.white, fontWeight: 900, marginBottom: 6, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }}>
         {d.name}
       </div>
-      <div style={{ color: '#9ca3af', marginBottom: 4 }}>{d.division}</div>
-      <div>🏃 Hlaup: <strong>{formatHMMSS(d.run_total)}</strong></div>
-      <div>💪 Stöðvar: <strong>{formatHMMSS(d.station_total)}</strong></div>
-      <div style={{ marginTop: 4, paddingTop: 4, borderTop: '1px solid #2a2f3e' }}>
-        ⏱️ Heild: <strong>{formatHMMSS(d.total_seconds)}</strong>
+      <div style={{ color: T.gray, marginBottom: 4, fontFamily: T.font }}>{d.division}</div>
+      <div style={{ fontFamily: T.font }}>Hlaup: <strong>{formatHMMSS(d.run_total)}</strong></div>
+      <div style={{ fontFamily: T.font }}>Stöðvar: <strong>{formatHMMSS(d.station_total)}</strong></div>
+      <div style={{ marginTop: 4, paddingTop: 4, borderTop: `1px solid ${T.border}`, fontFamily: T.font }}>
+        Heild: <strong>{formatHMMSS(d.total_seconds)}</strong>
       </div>
     </div>
   )
@@ -118,24 +103,18 @@ export default function ScatterChart({ athletes = [] }) {
   }, [allPoints])
 
   return (
-    <div
-      style={{
-        backgroundColor: '#0f1117',
-        padding: 24,
-        borderRadius: 12,
-        color: '#e5e7eb',
-      }}
-    >
-      <h2 style={{ margin: 0, color: '#fff', fontSize: 22 }}>
-        ⚡ Hlaup vs stöðvar
+    <div style={T.card}>
+      <h2 style={T.sectionTitle}>
+        Hlaup vs stöðvar
       </h2>
       <p
         style={{
-          color: '#9ca3af',
+          color: T.gray,
           marginTop: 8,
           marginBottom: 20,
           fontSize: 14,
           lineHeight: 1.5,
+          fontFamily: T.font,
         }}
       >
         Hver punktur er einn keppandi: X-ásinn sýnir heildartíma í hlaupi
@@ -152,23 +131,23 @@ export default function ScatterChart({ athletes = [] }) {
         hlaupi.
       </p>
 
-      <div style={{ width: '100%', height: 520 }}>
+      <div style={{ ...T.chartArea, width: '100%', height: 520 }}>
         <ResponsiveContainer width="100%" height="100%">
           <RechartsScatter margin={{ top: 20, right: 30, bottom: 50, left: 60 }}>
-            <CartesianGrid stroke="#2a2f3e" strokeDasharray="3 3" />
+            <CartesianGrid stroke="#1e1e1e" strokeDasharray="3 3" />
             <XAxis
               type="number"
               dataKey="x"
               name="Hlaup"
               domain={[xMin, xMax]}
-              tick={{ fill: '#9ca3af', fontSize: 12 }}
+              tick={{ fill: T.gray, fontSize: 11 }}
               tickFormatter={formatMMSS}
-              stroke="#4b5563"
+              stroke={T.grayDim}
               label={{
                 value: 'Heildartími í hlaupi',
                 position: 'insideBottom',
                 offset: -10,
-                fill: '#e5e7eb',
+                fill: T.white,
                 fontSize: 13,
               }}
             />
@@ -177,24 +156,24 @@ export default function ScatterChart({ athletes = [] }) {
               dataKey="y"
               name="Stöðvar"
               domain={[yMin, yMax]}
-              tick={{ fill: '#9ca3af', fontSize: 12 }}
+              tick={{ fill: T.gray, fontSize: 11 }}
               tickFormatter={formatMMSS}
-              stroke="#4b5563"
+              stroke={T.grayDim}
               label={{
                 value: 'Heildartími á stöðvum',
                 angle: -90,
                 position: 'insideLeft',
                 offset: 10,
-                fill: '#e5e7eb',
+                fill: T.white,
                 fontSize: 13,
                 style: { textAnchor: 'middle' },
               }}
             />
             <Tooltip
               content={<CustomTooltip />}
-              cursor={{ strokeDasharray: '3 3', stroke: '#4b5563' }}
+              cursor={{ strokeDasharray: '3 3', stroke: T.grayDim }}
             />
-            <Legend wrapperStyle={{ color: '#e5e7eb', paddingTop: 12 }} />
+            <Legend wrapperStyle={{ color: T.white, paddingTop: 12, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }} />
 
             {refLines.map((ln, i) => (
               <ReferenceLine
@@ -203,12 +182,12 @@ export default function ScatterChart({ athletes = [] }) {
                   { x: ln.x1, y: ln.y1 },
                   { x: ln.x2, y: ln.y2 },
                 ]}
-                stroke="#4b5563"
+                stroke={T.grayDim}
                 strokeDasharray="4 4"
                 ifOverflow="hidden"
                 label={{
                   value: `Heild ${formatHMMSS(ln.total)}`,
-                  fill: '#6b7280',
+                  fill: T.grayDim,
                   fontSize: 11,
                   position: 'insideTopRight',
                 }}
@@ -221,8 +200,8 @@ export default function ScatterChart({ athletes = [] }) {
                   key={d}
                   name={d}
                   data={grouped[d]}
-                  fill={DIVISION_COLORS[d]}
-                  fillOpacity={0.75}
+                  fill={DIVISION_COLORS[d] || DIVISION_COLORS.default}
+                  fillOpacity={0.85}
                 />
               ) : null
             )}

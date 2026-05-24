@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import { T, DIVISION_COLORS } from '../theme.js';
 
 function formatTime(seconds) {
   if (!seconds || seconds <= 0) return '—';
@@ -35,27 +36,17 @@ function CustomTooltip({ active, payload }) {
   const stationPct = total > 0 ? ((d.station_total / total) * 100).toFixed(1) : '0.0';
 
   return (
-    <div
-      style={{
-        background: '#1a1f2e',
-        border: '1px solid #2d3548',
-        borderRadius: 8,
-        padding: '10px 14px',
-        color: '#e5e7eb',
-        fontSize: 13,
-        boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
-      }}
-    >
-      <div style={{ fontWeight: 700, marginBottom: 6, color: '#f9fafb' }}>{d.name}</div>
+    <div style={T.tooltip}>
+      <div style={{ fontWeight: 900, marginBottom: 6, color: T.white, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }}>{d.name}</div>
       {d.division && (
-        <div style={{ color: '#9ca3af', fontSize: 11, marginBottom: 8 }}>{d.division}</div>
+        <div style={{ color: T.gray, fontSize: 11, marginBottom: 8, fontFamily: T.font }}>{d.division}</div>
       )}
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}>
-        <span style={{ color: '#3b82f6' }}>● Hlaup:</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, fontFamily: T.font }}>
+        <span style={{ color: T.yellow }}>Hlaup:</span>
         <span>{formatTime(d.run_total)} ({runPct}%)</span>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}>
-        <span style={{ color: '#f97316' }}>● Stöðvar:</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, fontFamily: T.font }}>
+        <span style={{ color: T.gray }}>Stöðvar:</span>
         <span>{formatTime(d.station_total)} ({stationPct}%)</span>
       </div>
       <div
@@ -65,8 +56,9 @@ function CustomTooltip({ active, payload }) {
           gap: 16,
           marginTop: 6,
           paddingTop: 6,
-          borderTop: '1px solid #2d3548',
-          fontWeight: 600,
+          borderTop: `1px solid ${T.border}`,
+          fontWeight: 700,
+          fontFamily: T.font,
         }}
       >
         <span>Heild:</span>
@@ -105,14 +97,7 @@ export default function StackedBarChart({ athletes = [] }) {
   const chartHeight = Math.max(320, data.length * 28 + 80);
 
   return (
-    <div
-      style={{
-        background: '#0f1117',
-        borderRadius: 12,
-        padding: '20px 20px 24px',
-        color: '#e5e7eb',
-      }}
-    >
+    <div style={T.card}>
       <div
         style={{
           display: 'flex',
@@ -123,19 +108,22 @@ export default function StackedBarChart({ athletes = [] }) {
           marginBottom: 8,
         }}
       >
-        <h2 style={{ margin: 0, fontSize: 20, color: '#f9fafb' }}>
-          📊 Tímaúthlutun — Hlaup vs stöðvar
+        <h2 style={T.sectionTitle}>
+          Tímaúthlutun — Hlaup vs stöðvar
         </h2>
         <select
           value={division}
           onChange={(e) => setDivision(e.target.value)}
           style={{
-            background: '#1a1f2e',
-            color: '#e5e7eb',
-            border: '1px solid #2d3548',
-            borderRadius: 6,
+            background: '#111',
+            color: T.white,
+            border: `1px solid ${T.border}`,
+            borderRadius: 0,
             padding: '6px 10px',
             fontSize: 13,
+            fontFamily: T.font,
+            letterSpacing: 1,
+            textTransform: 'uppercase',
           }}
         >
           <option value="all">Allir flokkar</option>
@@ -145,54 +133,54 @@ export default function StackedBarChart({ athletes = [] }) {
         </select>
       </div>
 
-      <p style={{ color: '#9ca3af', fontSize: 13, marginTop: 4, marginBottom: 18, lineHeight: 1.5 }}>
+      <p style={{ ...T.subTitle, lineHeight: 1.5, textTransform: 'none', letterSpacing: 0, fontWeight: 400, fontSize: 13 }}>
         Súluritið sýnir hvernig heildartíma hvers keppanda skiptist milli hlaupa (8×1 km) og
-        vinnustöðva. Lengri blá svæði þýða meiri hlaupatíma; lengri appelsínugul svæði þýða meiri
+        vinnustöðva. Lengri gul svæði þýða meiri hlaupatíma; lengri grá svæði þýða meiri
         tíma á stöðvunum. Þetta afhjúpar styrkleika og veikleika — hver er sterkur hlaupari og hver
         afgreiðir stöðvarnar hraðast. Heildartími hvers keppanda sést í tooltip þegar bendillinn er
         yfir súlu.
       </p>
 
       {/* Explicit-height wrapper required for ResponsiveContainer in recharts v3 */}
-      <div style={{ width: '100%', height: chartHeight }}>
+      <div style={{ ...T.chartArea, width: '100%', height: chartHeight }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
             layout="vertical"
             margin={{ top: 10, right: 30, left: 10, bottom: 10 }}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#2d3548" horizontal={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e1e1e" horizontal={false} />
             <XAxis
               type="number"
               tickFormatter={(v) => formatTime(v)}
-              stroke="#9ca3af"
-              tick={{ fill: '#9ca3af', fontSize: 11 }}
+              stroke={T.gray}
+              tick={{ fill: T.gray, fontSize: 11 }}
               domain={[0, (dataMax) => Math.ceil(dataMax * 1.05)]}
             />
             <YAxis
               type="category"
               dataKey="short"
-              stroke="#9ca3af"
-              tick={{ fill: '#e5e7eb', fontSize: 11 }}
+              stroke={T.gray}
+              tick={{ fill: T.white, fontSize: 11 }}
               width={90}
               interval={0}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
+            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,237,0,0.06)' }} />
             <Legend
-              wrapperStyle={{ color: '#e5e7eb', fontSize: 12 }}
+              wrapperStyle={{ color: T.white, fontSize: 12, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }}
               formatter={(value) => (value === 'run_total' ? 'Hlaup' : 'Stöðvar')}
             />
             <Bar
               dataKey="run_total"
               stackId="t"
-              fill="#3b82f6"
+              fill={T.yellow}
               name="run_total"
               isAnimationActive={false}
             />
             <Bar
               dataKey="station_total"
               stackId="t"
-              fill="#f97316"
+              fill={T.grayDim}
               name="station_total"
               isAnimationActive={false}
             />
@@ -201,7 +189,7 @@ export default function StackedBarChart({ athletes = [] }) {
       </div>
 
       {data.length === 0 && (
-        <div style={{ textAlign: 'center', color: '#6b7280', padding: 32 }}>
+        <div style={{ textAlign: 'center', color: T.grayDim, padding: 32, fontFamily: T.font }}>
           Engin gögn til að sýna fyrir valinn flokk.
         </div>
       )}

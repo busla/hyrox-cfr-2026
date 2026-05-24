@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import { T, DIVISION_COLORS } from '../theme.js';
 
 function formatTime(seconds) {
   if (!seconds || seconds <= 0) return '—';
@@ -48,17 +49,8 @@ function collectAthletes(event) {
 function CustomTooltip({ active, payload, label }) {
   if (!active || !payload || !payload.length) return null;
   return (
-    <div
-      style={{
-        background: '#1a1f2e',
-        border: '1px solid #2d3548',
-        borderRadius: 8,
-        padding: '10px 14px',
-        color: '#e5e7eb',
-        fontSize: 13,
-      }}
-    >
-      <div style={{ fontWeight: 700, marginBottom: 6, color: '#f9fafb' }}>{label}</div>
+    <div style={T.tooltip}>
+      <div style={{ fontWeight: 900, marginBottom: 6, color: T.white, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }}>{label}</div>
       {payload.map((p, i) => (
         <div
           key={i}
@@ -67,9 +59,10 @@ function CustomTooltip({ active, payload, label }) {
             justifyContent: 'space-between',
             gap: 16,
             marginTop: 2,
+            fontFamily: T.font,
           }}
         >
-          <span style={{ color: p.color }}>● {p.name}</span>
+          <span style={{ color: p.color }}>{p.name}</span>
           <span>{formatTime(p.value)}</span>
         </div>
       ))}
@@ -77,7 +70,7 @@ function CustomTooltip({ active, payload, label }) {
   );
 }
 
-const EVENT_COLORS = ['#3b82f6', '#f97316', '#22c55e'];
+const EVENT_COLORS = [T.yellow, '#60a5fa', '#4ade80'];
 
 export default function EventComparison({ seriesData }) {
   const events = (seriesData && seriesData.events) || [];
@@ -112,25 +105,18 @@ export default function EventComparison({ seriesData }) {
   }, [completedEvents]);
 
   return (
-    <div
-      style={{
-        background: '#0f1117',
-        borderRadius: 12,
-        padding: '20px 20px 24px',
-        color: '#e5e7eb',
-        fontFamily: 'system-ui, -apple-system, sans-serif',
-      }}
-    >
-      <h2 style={{ margin: 0, fontSize: 22, fontWeight: 700, color: '#f9fafb' }}>
-        📅 Mótaröðin — Samanburður yfir öll mót
+    <div style={T.card}>
+      <h2 style={T.sectionTitle}>
+        Mótaröðin — Samanburður yfir öll mót
       </h2>
       <p
         style={{
-          color: '#9ca3af',
+          color: T.gray,
           fontSize: 14,
           marginTop: 6,
           marginBottom: 18,
           lineHeight: 1.55,
+          fontFamily: T.font,
         }}
       >
         Hyrox Ísland 2026 samanstendur af þremur mótum. Hér sérðu stöðu hvers móts og
@@ -153,19 +139,22 @@ export default function EventComparison({ seriesData }) {
             <div
               key={idx}
               style={{
-                background: '#1a1f2e',
-                borderRadius: 10,
+                background: T.dark2,
+                borderRadius: 0,
                 padding: '14px 16px',
-                border: `1px solid ${done ? '#22c55e44' : '#2d3548'}`,
+                border: `1px solid ${T.border}`,
+                borderLeft: `3px solid ${done ? '#22c55e' : T.yellow}`,
                 opacity: done ? 1 : 0.9,
+                fontFamily: T.font,
               }}
             >
               <div
                 style={{
                   fontSize: 11,
-                  color: '#9ca3af',
+                  color: T.gray,
                   textTransform: 'uppercase',
-                  letterSpacing: 0.5,
+                  letterSpacing: 2,
+                  fontWeight: 700,
                 }}
               >
                 Mót {ev.number || idx + 1}
@@ -173,27 +162,29 @@ export default function EventComparison({ seriesData }) {
               <div
                 style={{
                   fontSize: 16,
-                  fontWeight: 700,
+                  fontWeight: 900,
                   marginTop: 4,
-                  color: '#f9fafb',
+                  color: T.white,
+                  letterSpacing: 1,
+                  textTransform: 'uppercase',
                 }}
               >
                 {ev.name || ev.title || `Mót ${idx + 1}`}
               </div>
-              <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
+              <div style={{ fontSize: 12, color: T.gray, marginTop: 4 }}>
                 {ev.date || ev.dagsetning || ''}
               </div>
               <div
                 style={{
                   marginTop: 10,
                   fontSize: 11,
-                  fontWeight: 600,
-                  color: done ? '#22c55e' : '#f59e0b',
+                  fontWeight: 700,
+                  color: done ? '#22c55e' : T.yellow,
                   textTransform: 'uppercase',
-                  letterSpacing: 0.5,
+                  letterSpacing: 2,
                 }}
               >
-                {done ? '✓ Lokið' : '⏳ Væntanlegt'}
+                {done ? 'Lokið' : 'Væntanlegt'}
               </div>
             </div>
           );
@@ -203,16 +194,14 @@ export default function EventComparison({ seriesData }) {
       {/* Grouped bar chart for completed events */}
       <div
         style={{
-          background: '#1a1f2e',
-          borderRadius: 10,
-          padding: 16,
+          ...T.chartArea,
           marginBottom: 20,
         }}
       >
-        <h3 style={{ margin: '0 0 4px', fontSize: 16, color: '#f9fafb' }}>
+        <h3 style={{ ...T.sectionTitle, fontSize: 16, marginBottom: 4 }}>
           Bestu tímar á flokkum — samanburður milli móta
         </h3>
-        <p style={{ margin: '0 0 12px', fontSize: 12, color: '#9ca3af' }}>
+        <p style={{ margin: '0 0 12px', fontSize: 12, color: T.gray, fontFamily: T.font }}>
           Besti tími hvers flokks í hverju móti sem er lokið.
         </p>
         {topByDivision.length > 0 && completedNames.length > 0 ? (
@@ -222,30 +211,29 @@ export default function EventComparison({ seriesData }) {
                 data={topByDivision}
                 margin={{ top: 10, right: 20, left: 0, bottom: 10 }}
               >
-                <CartesianGrid strokeDasharray="3 3" stroke="#2d3548" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#1e1e1e" />
                 <XAxis
                   dataKey="division"
-                  stroke="#9ca3af"
-                  tick={{ fill: '#e5e7eb', fontSize: 12 }}
+                  stroke={T.gray}
+                  tick={{ fill: T.white, fontSize: 12 }}
                 />
                 <YAxis
-                  stroke="#9ca3af"
-                  tick={{ fill: '#9ca3af', fontSize: 11 }}
+                  stroke={T.gray}
+                  tick={{ fill: T.gray, fontSize: 11 }}
                   tickFormatter={(v) => formatTime(v)}
                   width={70}
                 />
                 <Tooltip
                   content={<CustomTooltip />}
-                  cursor={{ fill: 'rgba(255,255,255,0.04)' }}
+                  cursor={{ fill: 'rgba(255,237,0,0.06)' }}
                 />
-                <Legend wrapperStyle={{ color: '#e5e7eb', fontSize: 12 }} />
+                <Legend wrapperStyle={{ color: T.white, fontSize: 12, fontFamily: T.font, letterSpacing: 1, textTransform: 'uppercase' }} />
                 {completedNames.map((n, i) => (
                   <Bar
                     key={n}
                     dataKey={n}
                     name={n}
                     fill={EVENT_COLORS[i % EVENT_COLORS.length]}
-                    radius={[4, 4, 0, 0]}
                     isAnimationActive={false}
                   />
                 ))}
@@ -255,10 +243,11 @@ export default function EventComparison({ seriesData }) {
         ) : (
           <div
             style={{
-              color: '#6b7280',
+              color: T.grayDim,
               fontSize: 13,
               padding: 24,
               textAlign: 'center',
+              fontFamily: T.font,
             }}
           >
             Engin gögn í boði enn — bíðum eftir niðurstöðum.
@@ -270,27 +259,29 @@ export default function EventComparison({ seriesData }) {
       {upcomingEvents.length > 0 && (
         <div
           style={{
-            background: 'linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%)',
-            borderRadius: 10,
+            background: T.dark2,
+            borderRadius: 0,
             padding: 28,
             textAlign: 'center',
-            border: '1px dashed #2d3548',
+            border: `1px dashed ${T.border}`,
+            fontFamily: T.font,
           }}
         >
-          <div style={{ fontSize: 32, marginBottom: 10 }}>⏳</div>
           <div
             style={{
               fontSize: 17,
-              fontWeight: 700,
-              color: '#f9fafb',
+              fontWeight: 900,
+              color: T.white,
               marginBottom: 6,
+              letterSpacing: 2,
+              textTransform: 'uppercase',
             }}
           >
             Væntanleg mót
           </div>
           <div
             style={{
-              color: '#9ca3af',
+              color: T.gray,
               fontSize: 13,
               marginBottom: 16,
               lineHeight: 1.5,
@@ -311,21 +302,24 @@ export default function EventComparison({ seriesData }) {
               <div
                 key={i}
                 style={{
-                  color: '#9ca3af',
+                  color: T.gray,
                   fontSize: 13,
-                  background: '#0f1117',
-                  border: '1px solid #2d3548',
-                  borderRadius: 8,
+                  background: T.dark3,
+                  border: `1px solid ${T.border}`,
+                  borderRadius: 0,
                   padding: '10px 16px',
                   minWidth: 160,
+                  fontFamily: T.font,
                 }}
               >
                 <div
                   style={{
-                    color: '#f9fafb',
-                    fontWeight: 700,
+                    color: T.white,
+                    fontWeight: 900,
                     fontSize: 14,
                     marginBottom: 2,
+                    letterSpacing: 1,
+                    textTransform: 'uppercase',
                   }}
                 >
                   {ev.name || ev.title || `Mót ${ev.number || ''}`}

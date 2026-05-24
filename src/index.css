@@ -1,23 +1,34 @@
-/* Empty default styles — App handles all styling inline */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* ── HYROX brand tokens ───────────────────────────────────── */
 :root {
-  color-scheme: dark;
+  --yellow:      #ffed00;
+  --yellow-dim:  rgba(255,237,0,0.12);
+  --black:       #000000;
+  --dark2:       #161616;
+  --dark3:       #262626;
+  --border-col:  #1e1e1e;
+  --gray:        #999;
+  --gray-dim:    #444;
+  --white:       #ffffff;
+  --font:        'Barlow Condensed', system-ui, sans-serif;
+  color-scheme:  dark;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
 body {
-  background: #0f1117;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #1a1f2e;
-}
-::-webkit-scrollbar-thumb {
-  background: #2d3748;
-  border-radius: 3px;
-}
+button { font-family: var(--font); cursor: pointer; border: none; background: transparent; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; height: 4px; }
+::-webkit-scrollbar-track  { background: var(--black); }
+::-webkit-scrollbar-thumb  { background: var(--dark3); }
