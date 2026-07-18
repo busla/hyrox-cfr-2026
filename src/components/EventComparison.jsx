@@ -22,27 +22,30 @@ function formatTime(seconds) {
   return `${m}:${String(s).padStart(2, '0')}`;
 }
 
-function collectAthletes(event) {
+function collectAthletes(event, category) {
   const list = [];
   if (!event) return list;
   const buckets = [];
-  // Individuals live under `einstaklingar` as { overall, karlar, konur }.
-  // Pairs (`para`) run as relays, so their times aren't comparable to solo
-  // times on the same division axis and are intentionally left out here.
-  // `categories`/`flokkar`/`athletes` are kept as fallbacks for older shapes.
-  const groups = [event.einstaklingar, event.categories, event.flokkar];
-  groups.forEach((g) => {
-    if (g && typeof g === 'object') {
-      Object.values(g).forEach((v) => {
-        if (Array.isArray(v)) buckets.push(v);
-        else if (v && typeof v === 'object') {
-          Object.values(v).forEach((vv) => {
-            if (Array.isArray(vv)) buckets.push(vv);
-          });
-        }
-      });
-    }
-  });
+  // Results live under `einstaklingar` / `para`, each an object of arrays
+  // ({ overall, karlar, konur[, blandað] }). The comparison follows the active
+  // category so individuals and pairs are never mixed on the same division axis
+  // (pairs run as relays and finish much faster). Older shapes
+  // (`categories`/`flokkar`/`athletes`) are kept as fallbacks.
+  const group =
+    (category && event[category]) ||
+    event.einstaklingar ||
+    event.categories ||
+    event.flokkar;
+  if (group && typeof group === 'object') {
+    Object.values(group).forEach((v) => {
+      if (Array.isArray(v)) buckets.push(v);
+      else if (v && typeof v === 'object') {
+        Object.values(v).forEach((vv) => {
+          if (Array.isArray(vv)) buckets.push(vv);
+        });
+      }
+    });
+  }
   if (Array.isArray(event.athletes)) buckets.push(event.athletes);
   buckets.forEach((arr) => {
     arr.forEach((a) => {
@@ -78,8 +81,9 @@ function CustomTooltip({ active, payload, label }) {
 
 const EVENT_COLORS = [T.yellow, '#60a5fa', '#4ade80'];
 
-export default function EventComparison({ seriesData }) {
+export default function EventComparison({ seriesData, category = 'einstaklingar' }) {
   const events = (seriesData && seriesData.events) || [];
+  const catNoun = category === 'para' ? 'liða' : 'einstaklinga';
   const completedEvents = events.filter((e) => e.status === 'lokið');
   const upcomingEvents = events.filter((e) => e.status === 'væntanlegt');
 
@@ -92,7 +96,7 @@ export default function EventComparison({ seriesData }) {
     const divisionMap = new Map();
     completedEvents.forEach((ev) => {
       const evName = ev.name || ev.title || `Mót ${ev.number || ''}`;
-      const athletes = collectAthletes(ev);
+      const athletes = collectAthletes(ev, category);
       const byDiv = new Map();
       athletes.forEach((a) => {
         if (!a.total_seconds || a.total_seconds <= 0) return;
@@ -108,7 +112,7 @@ export default function EventComparison({ seriesData }) {
       });
     });
     return Array.from(divisionMap.values());
-  }, [completedEvents]);
+  }, [completedEvents, category]);
 
   return (
     <div style={T.card}>
@@ -208,7 +212,7 @@ export default function EventComparison({ seriesData }) {
           Bestu tímar á flokkum — samanburður milli móta
         </h3>
         <p style={{ margin: '0 0 12px', fontSize: 12, color: T.gray, fontFamily: T.font }}>
-          Besti tími einstaklinga í hverjum flokki, í hverju móti sem er lokið.
+          Besti tími {catNoun} í hverjum flokki, í hverju móti sem er lokið.
         </p>
         {topByDivision.length > 0 && completedNames.length > 0 ? (
           <div style={{ width: '100%', height: 380 }}>
