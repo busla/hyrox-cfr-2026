@@ -21,6 +21,16 @@ const BORDER = '1px solid #1e1e1e'
 
 const seriesData = rawData.series
 
+/* Default to the most recently completed event (currently 2. mót);
+   falls through to the first event if none are marked "lokið". */
+const defaultEventIdx = (() => {
+  let idx = 0
+  seriesData.events.forEach((ev, i) => {
+    if (ev.status === 'lokið') idx = i
+  })
+  return idx
+})()
+
 const TABS = [
   { id: 'finish',     label: 'Heildarúrslit',   Icon: Trophy        },
   { id: 'series',     label: 'Mótaröðin',        Icon: CalendarDays  },
@@ -55,7 +65,7 @@ const segWhite = (active) => ({
 
 export default function App() {
   const [activeTab, setActiveTab]   = useState('finish')
-  const [eventIdx, setEventIdx]     = useState(0)
+  const [eventIdx, setEventIdx]     = useState(defaultEventIdx)
   const [category, setCategory]     = useState('einstaklingar')
   const [subcat, setSubcat]         = useState('overall')
   const [divFilter, setDivFilter]   = useState('allt')
