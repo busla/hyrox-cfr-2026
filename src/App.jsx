@@ -266,7 +266,7 @@ export default function App() {
         ) : (
           <>
             {activeTab === 'finish'     && <FinishTimesChart athletes={athletes} category={category} />}
-            {activeTab === 'series'     && <EventComparison seriesData={seriesData} />}
+            {activeTab === 'series'     && <EventComparison seriesData={seriesData} category={category} />}
             {activeTab === 'heatmap'    && <SplitsHeatmap athletes={athletes} />}
             {activeTab === 'cumulative' && <CumulativeTimeChart athletes={allAthletes} />}
             {activeTab === 'radar'      && <RadarChart athletes={allAthletes} />}
