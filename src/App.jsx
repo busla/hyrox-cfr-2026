@@ -8,9 +8,10 @@ import StackedBarChart from './components/StackedBarChart'
 import ScatterChart from './components/ScatterChart'
 import CompareChart from './components/CompareChart'
 import EventComparison from './components/EventComparison'
+import ProgressionChart from './components/ProgressionChart'
 import {
   Trophy, CalendarDays, Flame, TrendingUp, Radar,
-  BarChart2, Zap, SlidersHorizontal,
+  BarChart2, Zap, SlidersHorizontal, LineChart,
   User, Users, Mars, Venus, Star, Flag, Lock
 } from 'lucide-react'
 
@@ -34,6 +35,7 @@ const defaultEventIdx = (() => {
 const TABS = [
   { id: 'finish',     label: 'Heildarúrslit',   Icon: Trophy        },
   { id: 'series',     label: 'Mótaröðin',        Icon: CalendarDays  },
+  { id: 'progress',   label: 'Framför',           Icon: LineChart     },
   { id: 'heatmap',    label: 'Hitakort',          Icon: Flame         },
   { id: 'cumulative', label: 'Uppsafnaður tími',  Icon: TrendingUp    },
   { id: 'radar',      label: 'Radar',             Icon: Radar         },
@@ -260,7 +262,7 @@ export default function App() {
 
       {/* ══ MAIN ════════════════════════════════════════════════ */}
       <main style={{ maxWidth: 1300, margin: '0 auto', padding: '16px' }}>
-        {currentEvent.status === 'væntanlegt' && activeTab !== 'series' ? (
+        {currentEvent.status === 'væntanlegt' && activeTab !== 'series' && activeTab !== 'progress' ? (
           <div style={{
             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
             padding: '80px 20px', gap: 16, color: '#333',
@@ -277,6 +279,7 @@ export default function App() {
           <>
             {activeTab === 'finish'     && <FinishTimesChart athletes={athletes} category={category} />}
             {activeTab === 'series'     && <EventComparison seriesData={seriesData} category={category} />}
+            {activeTab === 'progress'   && <ProgressionChart seriesData={seriesData} category={category} />}
             {activeTab === 'heatmap'    && <SplitsHeatmap athletes={athletes} />}
             {activeTab === 'cumulative' && <CumulativeTimeChart athletes={allAthletes} />}
             {activeTab === 'radar'      && <RadarChart athletes={allAthletes} />}
