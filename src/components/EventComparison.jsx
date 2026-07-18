@@ -25,19 +25,25 @@ function formatTime(seconds) {
 function collectAthletes(event) {
   const list = [];
   if (!event) return list;
-  const cats = event.categories || event.flokkar || {};
   const buckets = [];
+  // Individuals live under `einstaklingar` as { overall, karlar, konur }.
+  // Pairs (`para`) run as relays, so their times aren't comparable to solo
+  // times on the same division axis and are intentionally left out here.
+  // `categories`/`flokkar`/`athletes` are kept as fallbacks for older shapes.
+  const groups = [event.einstaklingar, event.categories, event.flokkar];
+  groups.forEach((g) => {
+    if (g && typeof g === 'object') {
+      Object.values(g).forEach((v) => {
+        if (Array.isArray(v)) buckets.push(v);
+        else if (v && typeof v === 'object') {
+          Object.values(v).forEach((vv) => {
+            if (Array.isArray(vv)) buckets.push(vv);
+          });
+        }
+      });
+    }
+  });
   if (Array.isArray(event.athletes)) buckets.push(event.athletes);
-  if (cats && typeof cats === 'object') {
-    Object.values(cats).forEach((v) => {
-      if (Array.isArray(v)) buckets.push(v);
-      else if (v && typeof v === 'object') {
-        Object.values(v).forEach((vv) => {
-          if (Array.isArray(vv)) buckets.push(vv);
-        });
-      }
-    });
-  }
   buckets.forEach((arr) => {
     arr.forEach((a) => {
       if (a && a.name) list.push(a);
@@ -202,7 +208,7 @@ export default function EventComparison({ seriesData }) {
           Bestu tímar á flokkum — samanburður milli móta
         </h3>
         <p style={{ margin: '0 0 12px', fontSize: 12, color: T.gray, fontFamily: T.font }}>
-          Besti tími hvers flokks í hverju móti sem er lokið.
+          Besti tími einstaklinga í hverjum flokki, í hverju móti sem er lokið.
         </p>
         {topByDivision.length > 0 && completedNames.length > 0 ? (
           <div style={{ width: '100%', height: 380 }}>
