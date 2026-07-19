@@ -12,12 +12,11 @@ import ProgressionChart from './components/ProgressionChart'
 import {
   Trophy, CalendarDays, Flame, TrendingUp, Radar,
   BarChart2, Zap, SlidersHorizontal, LineChart,
-  User, Users, Mars, Venus, Star, Flag, Lock
+  User, Users, Mars, Venus, Lock
 } from 'lucide-react'
 
 /* ── HYROX brand ───────────────────────────────────────── */
 const Y = '#ffed00'
-const YDim = 'rgba(255,237,0,0.12)'
 const BORDER = '1px solid #1e1e1e'
 
 const seriesData = rawData.series
@@ -45,25 +44,32 @@ const TABS = [
 ]
 
 /* ── Tiny style helpers ─────────────────────────────────── */
+/* One segment style: yellow = active, grey = inactive. */
 const seg = (active) => ({
   display: 'flex', alignItems: 'center', gap: 5,
-  padding: '9px 13px', minHeight: 40,
+  padding: '7px 11px', minHeight: 34,
   border: BORDER, cursor: 'pointer', transition: 'all .12s',
   fontFamily: "'Barlow Condensed', sans-serif",
   fontSize: 11, fontWeight: 700, letterSpacing: '1.5px',
-  textTransform: 'uppercase', whiteSpace: 'nowrap',
+  textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
   ...(active
     ? { background: Y, color: '#000', borderColor: Y }
     : { background: 'transparent', color: '#555' }),
 })
-const segGreen = (active) => ({
-  ...seg(active),
-  ...(active ? { background: '#00c853', borderColor: '#00c853', color: '#000' } : {}),
-})
-const segWhite = (active) => ({
-  ...seg(active),
-  ...(active ? { background: '#fff', borderColor: '#fff', color: '#000' } : {}),
-})
+
+/* Brand-styled native <select>. */
+const selectStyle = {
+  appearance: 'none', WebkitAppearance: 'none', MozAppearance: 'none',
+  background: '#000', color: '#fff',
+  border: BORDER, borderRadius: 0,
+  padding: '7px 28px 7px 11px', minHeight: 34,
+  fontFamily: "'Barlow Condensed', sans-serif",
+  fontSize: 11, fontWeight: 700, letterSpacing: '1.5px',
+  textTransform: 'uppercase', cursor: 'pointer', flexShrink: 0,
+  backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M0 0l5 6 5-6z' fill='%23ffed00'/></svg>")`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'right 10px center',
+}
 
 export default function App() {
   const [activeTab, setActiveTab]   = useState('finish')
@@ -117,25 +123,17 @@ export default function App() {
         position: 'sticky', top: 0, zIndex: 50,
       }}>
 
-        {/* Brand + KPIs */}
+        {/* Line 1 — Brand (left) + KPIs (right) */}
         <div style={{
           display: 'flex', alignItems: 'center', gap: 12,
-          padding: '12px 16px', borderBottom: BORDER,
+          padding: '8px 14px', borderBottom: BORDER,
         }}>
-          <div>
-            <h1 style={{
-              fontSize: 'clamp(20px, 5vw, 30px)', fontWeight: 900,
-              letterSpacing: 2, textTransform: 'uppercase', lineHeight: 1, color: '#fff',
-            }}>
-              HYROX <span style={{ color: Y }}>CFR</span> 2026
-            </h1>
-            <p style={{
-              fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 700,
-              letterSpacing: 3, textTransform: 'uppercase', color: '#444', marginTop: 3,
-            }}>
-              Crossfit Reykjavík · Mótaröð 2026
-            </p>
-          </div>
+          <h1 style={{
+            fontSize: 'clamp(18px, 4.5vw, 22px)', fontWeight: 900,
+            letterSpacing: 2, textTransform: 'uppercase', lineHeight: 1, color: '#fff',
+          }}>
+            HYROX <span style={{ color: Y }}>CFR</span> 2026
+          </h1>
 
           <div style={{ display: 'flex', gap: 0, marginLeft: 'auto', flexShrink: 0 }}>
             {[
@@ -144,23 +142,24 @@ export default function App() {
               { n: femaleCount,   l: 'Konur'    },
             ].map(({ n, l }) => (
               <div key={l} style={{
-                padding: '4px 12px', borderLeft: BORDER, textAlign: 'center', minWidth: 52,
+                padding: '2px 10px', borderLeft: BORDER, textAlign: 'center', minWidth: 48,
               }}>
-                <div style={{ fontSize: 'clamp(18px, 4vw, 26px)', fontWeight: 900, color: Y, lineHeight: 1 }}>{n}</div>
+                <div style={{ fontSize: 'clamp(16px, 4vw, 20px)', fontWeight: 900, color: Y, lineHeight: 1 }}>{n}</div>
                 <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: '#444', marginTop: 2 }}>{l}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Filters */}
+        {/* Line 2 — single control row, scrolls horizontally on mobile */}
         <div style={{
-          display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center',
-          padding: '8px 16px', borderBottom: BORDER,
+          display: 'flex', gap: 6, alignItems: 'center',
+          padding: '8px 14px', borderBottom: BORDER,
+          overflowX: 'auto', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none',
         }}>
 
           {/* Category */}
-          <div style={{ display: 'flex', gap: 0 }}>
+          <div style={{ display: 'flex', gap: 0, flexShrink: 0 }}>
             <button style={seg(category === 'einstaklingar')} onClick={() => { setCategory('einstaklingar'); setSubcat('overall') }}>
               <User size={13} /><span>Einstaklingar</span>
             </button>
@@ -170,11 +169,11 @@ export default function App() {
           </div>
 
           {/* Gender/subcat */}
-          <div style={{ display: 'flex', gap: 0 }}>
+          <div style={{ display: 'flex', gap: 0, flexShrink: 0 }}>
             {subcats.map(({ id, label, Icon }, i) => (
               <button
                 key={id}
-                style={{ ...segWhite(subcat === id), ...(i > 0 ? { borderLeft: 'none' } : {}) }}
+                style={{ ...seg(subcat === id), ...(i > 0 ? { borderLeft: 'none' } : {}) }}
                 onClick={() => setSubcat(id)}
               >
                 {Icon && <Icon size={13} />}<span>{label}</span>
@@ -183,54 +182,34 @@ export default function App() {
           </div>
 
           {/* Division */}
-          <div style={{ display: 'flex', gap: 0 }}>
-            {[
-              { id: 'allt', label: 'Allt', Icon: null  },
-              { id: 'pro',  label: 'PRO',  Icon: Star  },
-              { id: 'open', label: 'OPEN', Icon: null  },
-            ].map(({ id, label, Icon: Ic }, i) => (
-              <button
-                key={id}
-                style={{ ...segGreen(divFilter === id), ...(i > 0 ? { borderLeft: 'none' } : {}) }}
-                onClick={() => setDivFilter(id)}
-              >
-                {Ic && <Ic size={13} />}<span>{label}</span>
-              </button>
-            ))}
-          </div>
+          <select
+            value={divFilter}
+            onChange={(e) => setDivFilter(e.target.value)}
+            style={selectStyle}
+          >
+            <option value="allt">Allt</option>
+            <option value="pro">PRO</option>
+            <option value="open">OPEN</option>
+          </select>
 
-          {/* Events — scroll on mobile */}
-          <div style={{
-            display: 'flex', gap: 4, marginLeft: 'auto',
-            overflowX: 'auto', WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none', flexShrink: 0,
-          }}>
+          {/* Events */}
+          <select
+            value={eventIdx}
+            onChange={(e) => {
+              const i = Number(e.target.value)
+              if (seriesData.events[i].status === 'lokið') setEventIdx(i)
+            }}
+            style={{ ...selectStyle, marginLeft: 'auto' }}
+          >
             {seriesData.events.map((ev, i) => {
-              const active = eventIdx === i
               const locked = ev.status !== 'lokið'
               return (
-                <button
-                  key={ev.id}
-                  onClick={() => !locked && setEventIdx(i)}
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: 5,
-                    padding: '7px 13px', minHeight: 36,
-                    border: BORDER, transition: 'all .12s',
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontSize: 11, fontWeight: 800, letterSpacing: 2,
-                    textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
-                    ...(active
-                      ? { borderColor: Y, color: Y, background: YDim }
-                      : { color: '#444' }),
-                    ...(locked ? { opacity: 0.3, cursor: 'not-allowed' } : {}),
-                  }}
-                >
-                  {locked ? <Lock size={11} /> : <Flag size={11} />}
-                  {ev.name}
-                </button>
+                <option key={ev.id} value={i} disabled={locked}>
+                  {ev.name}{locked ? ' (væntanlegt)' : ''}
+                </option>
               )
             })}
-          </div>
+          </select>
         </div>
 
         {/* Tab bar */}
@@ -243,7 +222,7 @@ export default function App() {
                 onClick={() => setActiveTab(id)}
                 style={{
                   display: 'flex', alignItems: 'center', gap: 6,
-                  padding: '11px 15px', minHeight: 44,
+                  padding: '9px 13px', minHeight: 40,
                   fontFamily: "'Barlow Condensed', sans-serif",
                   fontSize: 11, fontWeight: 700, letterSpacing: 1.5,
                   textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
