@@ -44,13 +44,17 @@ npm run verify -- --refresh # sama, en hunsar skyndiminnið og sækir upp á ný
 
 Stundum er timataka ósamkvæmt sjálfu sér. Slíkar leiðréttingar eru skráðar í `scripts/overrides.json` — aldrei handbreytt í `data.json` — og hver færsla geymir hvað timataka segir (`source_value`), hverju er breytt í (`value`), og hvers vegna. `verify` gætir þeirra: leiðrétting sem á við engan keppanda fellur, og ef timataka lagar málið sjálft eða breytir því í eitthvað annað birtist athugasemd um að endurskoða færsluna. Þannig úreldast þær ekki þegjandi.
 
-Núverandi leiðréttingar eru sjö, af tvennum toga:
+Núverandi leiðréttingar eru þrettán, af tvennum toga:
 
 **Flokkur vantar eða stangast á** (2) — nr. 163 „H&H" í 1. móti er skráð MIXED en með tvo karla eftir að timataka breytti liðsmanni, og nr. 152 „Jürgen & Guðni" í 3. móti hefur engan flokk. Hvorugt var á neinni flokkasíðu. Bæði sett í Open KK: KK-hlutinn er öruggur af kynjalistanum, en Pro/Open kemur hvergi fram og er ályktun út frá fyrri mótum.
 
-**Nafn skráð ólíkt milli móta** (5) — stytt millinöfn hjá „Skaginn2x" og „Foss Hansen", íslenskir stafir vantandi hjá „Systkinin" og hjá Aroni Frey Lúðvíkssyni. Sá síðasti var ekki bara snyrtimennska: Framför-flipinn parar keppendur eftir nafni, svo Aron taldist tveir menn og datt út úr flipanum þrátt fyrir að hafa keppt í tveimur mótum.
+**Nafn skráð ólíkt milli móta** (11) — stytt millinöfn eða vantandi íslenskir stafir hjá „Skaginn2x", „Foss Hansen", „Systkinin", Aroni Frey Lúðvíkssyni, Halldóri Karli Halldórssyni, Sigurði Jóhanni Einarssyni og Samúel K Ámundasyni. Í öllum tilvikum er fyllsta og réttritaða myndin notuð alls staðar.
 
-Þrjú tilvik eru **vísvitandi ekki leiðrétt**, því þar er ekki um sama keppanda að ræða heldur algeng íslensk nöfn í ólíkum liðum: Halldór Halldórsson / Halldor Karl Halldórsson, Sigurður Einarsson / Sigurður Jóhann Einarsson og Samúel Ámundason / Samúel K Ámundason. Sömuleiðis eru „H&H" og „Szwadron Brzęczyszczykiewicza" raunverulega ólík pör milli móta þótt liðsheitið sé það sama.
+Aron var ekki bara snyrtimennska: Framför-flipinn parar keppendur eftir nafni, svo hann taldist tveir menn og datt út úr flipanum þrátt fyrir að hafa keppt í tveimur mótum.
+
+Þrjú nafnanna — Halldór, Sigurður og Samúel — eru algeng íslensk nöfn í ólíkum liðum og verða ekki ráðin af heimildinni einni. Að um sama keppanda sé að ræða er staðfest af skipuleggjendum; Samúel keppir að auki með sama félaga í báðum mótum.
+
+Eftir standa nokkur tilvik þar sem aðeins há-/lágstafur eða broddur skilur að (t.d. „sunneva Jónsdóttir"). Þau kljúfa engan í appinu, enda er borið saman í lágstöfum, og eru látin standa eins og timataka skráir þau.
 
 Skriftirnar geyma sóttar síður í `.cache/` svo endurteknar keyrslur þurfi ekki að sækja neitt. GitHub Actions keyrir `verify` á hverri breytingu á gögnunum og einu sinni í viku — timataka leiðréttir stundum úrslit eftir á, og vikulega keyrslan er það sem lætur okkur vita.
 

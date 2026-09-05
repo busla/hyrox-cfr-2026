@@ -45,6 +45,7 @@ import {
   hmsToSeconds,
   identity,
   loadAllPages,
+  overrideId,
   overrideKey,
   parsePage,
   readData,
@@ -103,6 +104,14 @@ for (const o of overrides) {
   overriddenFields.get(o.key).add(o.field)
 }
 const overrideSeen = new Set()
+{
+  const dupes = [...counts(overrides.map(overrideId))].filter(([, n]) => n > 1).map(([k]) => k)
+  check(
+    dupes.length === 0,
+    'OVERRIDE: the same competitor and field is corrected more than once',
+    dupes.join(', '),
+  )
+}
 
 /* ── SOURCE ─────────────────────────────────────────────────────────────── */
 
@@ -322,7 +331,7 @@ if (pages) {
       const { applied } = applyOverrides(source, event.id, category, overrides)
 
       for (const { override, was } of applied) {
-        overrideSeen.add(override.key)
+        overrideSeen.add(overrideId(override))
 
         if (sameValue(was, override.value)) {
           warn(
@@ -353,7 +362,7 @@ if (pages) {
 
   for (const override of overrides) {
     check(
-      overrideSeen.has(override.key),
+      overrideSeen.has(overrideId(override)),
       `OVERRIDE ${override.key}: matches no competitor on timataka — stale entry in scripts/overrides.json`,
     )
   }

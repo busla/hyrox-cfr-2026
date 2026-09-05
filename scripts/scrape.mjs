@@ -21,6 +21,7 @@ import {
   SUBCATEGORIES,
   applyOverrides,
   identity,
+  overrideId,
   loadAllPages,
   readData,
   readOverrides,
@@ -59,7 +60,7 @@ const events = SERIES.events.map((event) => {
     // a competitor reads the same whichever tab you reach them through.
     const correct = (records) => {
       const { records: fixed, applied } = applyOverrides(records, event.id, category, overrides)
-      for (const { override } of applied) overridesApplied.add(override.key)
+      for (const { override } of applied) overridesApplied.add(overrideId(override))
       return fixed
     }
 
@@ -110,7 +111,7 @@ for (const event of events) {
 }
 
 for (const override of overrides) {
-  if (!overridesApplied.has(override.key)) {
+  if (!overridesApplied.has(overrideId(override))) {
     console.error(`  ! override matches nobody: ${override.key} — check scripts/overrides.json`)
     process.exitCode = 1
   }

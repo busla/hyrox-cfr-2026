@@ -424,6 +424,11 @@ export function overrideKey(eventId, category, record) {
   return `${eventId}/${category}/${identity(record)}`
 }
 
+/** One override. A competitor may have several, one per corrected field. */
+export function overrideId(override) {
+  return `${override.key}#${override.field}`
+}
+
 export async function readOverrides() {
   const { overrides } = JSON.parse(await readFile(OVERRIDES_PATH, 'utf8'))
   return overrides.map((o) => {

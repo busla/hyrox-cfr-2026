@@ -1742,7 +1742,7 @@
             {
               "rank": 14,
               "bib": "127",
-              "name": "Sigurður Einarsson\nAníta Jóhannesardóttir",
+              "name": "Sigurður Jóhann Einarsson\nAníta Jóhannesardóttir",
               "club": "Ein í liðveislu",
               "division": "MIXED",
               "total_time": "01:05:25",
@@ -1770,7 +1770,7 @@
                 297
               ],
               "members": [
-                "Sigurður Einarsson",
+                "Sigurður Jóhann Einarsson",
                 "Aníta Jóhannesardóttir"
               ],
               "team_name": "Ein í liðveislu",
@@ -2852,7 +2852,7 @@
             {
               "rank": 44,
               "bib": "163",
-              "name": "Hörður Örn Harðarson\nHalldór Halldórsson",
+              "name": "Hörður Örn Harðarson\nHalldór Karl Halldórsson",
               "club": "H&H",
               "division": "Open KK",
               "total_time": "01:22:57",
@@ -2881,7 +2881,7 @@
               ],
               "members": [
                 "Hörður Örn Harðarson",
-                "Halldór Halldórsson"
+                "Halldór Karl Halldórsson"
               ],
               "team_name": "H&H",
               "display_name": "H&H"
@@ -3557,7 +3557,7 @@
             {
               "rank": 15,
               "bib": "163",
-              "name": "Hörður Örn Harðarson\nHalldór Halldórsson",
+              "name": "Hörður Örn Harðarson\nHalldór Karl Halldórsson",
               "club": "H&H",
               "division": "Open KK",
               "total_time": "01:22:57",
@@ -3586,7 +3586,7 @@
               ],
               "members": [
                 "Hörður Örn Harðarson",
-                "Halldór Halldórsson"
+                "Halldór Karl Halldórsson"
               ],
               "team_name": "H&H",
               "display_name": "H&H"
@@ -4153,7 +4153,7 @@
             {
               "rank": 7,
               "bib": "127",
-              "name": "Sigurður Einarsson\nAníta Jóhannesardóttir",
+              "name": "Sigurður Jóhann Einarsson\nAníta Jóhannesardóttir",
               "club": "Ein í liðveislu",
               "division": "MIXED",
               "total_time": "01:05:25",
@@ -4181,7 +4181,7 @@
                 297
               ],
               "members": [
-                "Sigurður Einarsson",
+                "Sigurður Jóhann Einarsson",
                 "Aníta Jóhannesardóttir"
               ],
               "team_name": "Ein í liðveislu",
@@ -4922,7 +4922,7 @@
             {
               "rank": 4,
               "bib": "148",
-              "name": "Halldor Karl Halldórsson",
+              "name": "Halldór Karl Halldórsson",
               "club": "CFR",
               "division": "Open KK",
               "total_time": "01:11:02",
@@ -5651,7 +5651,7 @@
             {
               "rank": 3,
               "bib": "148",
-              "name": "Halldor Karl Halldórsson",
+              "name": "Halldór Karl Halldórsson",
               "club": "CFR",
               "division": "Open KK",
               "total_time": "01:11:02",
@@ -7759,7 +7759,7 @@
             {
               "rank": 39,
               "bib": "107",
-              "name": "Hákon Orri Stefánsson\nHalldór Halldórsson",
+              "name": "Hákon Orri Stefánsson\nHalldór Karl Halldórsson",
               "club": "Black sand strákarnir",
               "division": "Open KK",
               "total_time": "01:18:22",
@@ -7788,7 +7788,7 @@
               ],
               "members": [
                 "Hákon Orri Stefánsson",
-                "Halldór Halldórsson"
+                "Halldór Karl Halldórsson"
               ],
               "team_name": "Black sand strákarnir",
               "display_name": "Black sand strákarnir"
@@ -8521,7 +8521,7 @@
             {
               "rank": 17,
               "bib": "107",
-              "name": "Hákon Orri Stefánsson\nHalldór Halldórsson",
+              "name": "Hákon Orri Stefánsson\nHalldór Karl Halldórsson",
               "club": "Black sand strákarnir",
               "division": "Open KK",
               "total_time": "01:18:22",
@@ -8550,7 +8550,7 @@
               ],
               "members": [
                 "Hákon Orri Stefánsson",
-                "Halldór Halldórsson"
+                "Halldór Karl Halldórsson"
               ],
               "team_name": "Black sand strákarnir",
               "display_name": "Black sand strákarnir"
@@ -9579,7 +9579,7 @@
             {
               "rank": 3,
               "bib": "131",
-              "name": "Sigurður Einarsson",
+              "name": "Sigurður Jóhann Einarsson",
               "club": "Crossfit Reykjavík",
               "division": "Pro KK",
               "total_time": "01:02:47",
@@ -10384,7 +10384,7 @@
             {
               "rank": 3,
               "bib": "131",
-              "name": "Sigurður Einarsson",
+              "name": "Sigurður Jóhann Einarsson",
               "club": "Crossfit Reykjavík",
               "division": "Pro KK",
               "total_time": "01:02:47",
@@ -11575,7 +11575,7 @@
             {
               "rank": 13,
               "bib": "135",
-              "name": "Daníel Rafn Guðmundsson\nSamúel Ámundason",
+              "name": "Daníel Rafn Guðmundsson\nSamúel K Ámundason",
               "club": "Nammi",
               "division": "Open KK",
               "total_time": "01:06:31",
@@ -11604,7 +11604,7 @@
               ],
               "members": [
                 "Daníel Rafn Guðmundsson",
-                "Samúel Ámundason"
+                "Samúel K Ámundason"
               ],
               "team_name": "Nammi",
               "display_name": "Nammi"
@@ -13501,7 +13501,7 @@
             {
               "rank": 10,
               "bib": "135",
-              "name": "Daníel Rafn Guðmundsson\nSamúel Ámundason",
+              "name": "Daníel Rafn Guðmundsson\nSamúel K Ámundason",
               "club": "Nammi",
               "division": "Open KK",
               "total_time": "01:06:31",
@@ -13530,7 +13530,7 @@
               ],
               "members": [
                 "Daníel Rafn Guðmundsson",
-                "Samúel Ámundason"
+                "Samúel K Ámundason"
               ],
               "team_name": "Nammi",
               "display_name": "Nammi"

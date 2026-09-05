@@ -111,6 +111,96 @@
       "value": "Aron Freyr Lúðvíksson",
       "reason": "Íslenskir stafir vanta í skráningu 3. móts. Framför-flipinn parar keppendur eftir nafni, svo Aron taldist tveir menn og datt út úr flipanum þrátt fyrir að hafa keppt í tveimur mótum og bætt sig um 1:21.",
       "evidence": "Sami keppandi í 2. móti (nr. 189) er skráður 'Aron Freyr Lúðvíksson', sama félag (Mjölnir) og sami flokkur (Open KK)."
+    },
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "163",
+      "name": "H&H",
+      "field": "members",
+      "source_value": [
+        "Hörður Örn Harðarson",
+        "Halldór Halldórsson"
+      ],
+      "value": [
+        "Hörður Örn Harðarson",
+        "Halldór Karl Halldórsson"
+      ],
+      "reason": "Millinafn Halldórs vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Halldor Karl Halldórsson' sem einstaklingur í 2. móti (nr. 148, CFR). Fullt nafn með réttum stöfum er notað alls staðar."
+    },
+    {
+      "event": "mot2",
+      "category": "para",
+      "bib": "107",
+      "name": "Black sand strákarnir",
+      "field": "members",
+      "source_value": [
+        "Hákon Orri Stefánsson",
+        "Halldór Halldórsson"
+      ],
+      "value": [
+        "Hákon Orri Stefánsson",
+        "Halldór Karl Halldórsson"
+      ],
+      "reason": "Millinafn Halldórs vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Sjá nr. 148 í 2. móti (einstaklingar)."
+    },
+    {
+      "event": "mot2",
+      "category": "einstaklingar",
+      "bib": "148",
+      "name": "Halldor Karl Halldórsson",
+      "field": "name",
+      "source_value": "Halldor Karl Halldórsson",
+      "value": "Halldór Karl Halldórsson",
+      "reason": "Íslenskur stafur vantar í fornafnið.",
+      "evidence": "Skráður 'Halldór Halldórsson' með réttum stöfum í pörum 1. og 2. móts."
+    },
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "127",
+      "name": "Ein í liðveislu",
+      "field": "members",
+      "source_value": [
+        "Sigurður Einarsson",
+        "Aníta Jóhannesardóttir"
+      ],
+      "value": [
+        "Sigurður Jóhann Einarsson",
+        "Aníta Jóhannesardóttir"
+      ],
+      "reason": "Millinafn Sigurðar vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Sigurður Jóhann Einarsson' í pörum 2. móts (nr. 168)."
+    },
+    {
+      "event": "mot3",
+      "category": "einstaklingar",
+      "bib": "131",
+      "name": "Sigurður Einarsson",
+      "field": "name",
+      "source_value": "Sigurður Einarsson",
+      "value": "Sigurður Jóhann Einarsson",
+      "reason": "Millinafn vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Sigurður Jóhann Einarsson' í pörum 2. móts (nr. 168)."
+    },
+    {
+      "event": "mot3",
+      "category": "para",
+      "bib": "135",
+      "name": "Nammi",
+      "field": "members",
+      "source_value": [
+        "Daníel Rafn Guðmundsson",
+        "Samúel Ámundason"
+      ],
+      "value": [
+        "Daníel Rafn Guðmundsson",
+        "Samúel K Ámundason"
+      ],
+      "reason": "Millistafur Samúels vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Samúel K Ámundason' í 1. móti (nr. 186) — og með sama félaga, Daníel Rafn Guðmundssyni, í báðum mótum."
     }
   ]
 }
