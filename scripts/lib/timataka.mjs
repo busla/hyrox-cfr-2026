@@ -409,6 +409,41 @@ export function readData() {
   return readFile(DATA_PATH, 'utf8').then(JSON.parse)
 }
 
+/* ── Overrides ──────────────────────────────────────────────────────────── */
+
+export const OVERRIDES_PATH = join(HERE, '..', 'overrides.json')
+
+/** Key an override to one competitor in one race. */
+export function overrideKey(eventId, category, record) {
+  return `${eventId}/${category}/${identity(record)}`
+}
+
+export async function readOverrides() {
+  const { overrides } = JSON.parse(await readFile(OVERRIDES_PATH, 'utf8'))
+  return overrides.map((o) => ({
+    ...o,
+    key: `${o.event}/${o.category}/${o.bib}|${o.name}`,
+  }))
+}
+
+/**
+ * Apply the declared corrections to a list of parsed records.
+ *
+ * Returns the records with overrides applied plus, for each one applied, what
+ * the source actually said — so the caller can tell whether the override is
+ * still doing the job it was written for.
+ */
+export function applyOverrides(records, eventId, category, overrides) {
+  const applied = []
+  const out = records.map((record) => {
+    const match = overrides.find((o) => o.key === overrideKey(eventId, category, record))
+    if (!match) return record
+    applied.push({ override: match, was: record[match.field] })
+    return { ...record, [match.field]: match.value }
+  })
+  return { records: out, applied }
+}
+
 /** data.json is written without a trailing newline; keep it that way. */
 export function serialiseData(data) {
   return JSON.stringify(data, null, 2)

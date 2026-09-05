@@ -1,0 +1,37 @@
+{
+  "$comment": [
+    "Deliberate corrections applied on top of what timataka publishes.",
+    "",
+    "Every entry has to earn its place: `source_value` records what timataka says",
+    "today, so `npm run verify` can tell us when an override is no longer needed",
+    "(timataka fixed it — delete the entry) or no longer valid (timataka changed",
+    "it to something else — re-read it). An override matching no competitor is a",
+    "hard failure, so these cannot rot silently.",
+    "",
+    "Keep this list short. If timataka is merely unusual, prefer mirroring it."
+  ],
+  "overrides": [
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "163",
+      "name": "H&H",
+      "field": "division",
+      "source_value": "MIXED",
+      "value": "Open KK",
+      "reason": "Skráð MIXED en er á KK-listanum hjá timataka og því á engri flokkasíðu. Liðið var upphaflega Hörður Örn Harðarson og Harpa Svansdóttir; timataka hefur síðan leiðrétt liðsmanninn í Halldór Halldórsson en flokkurinn fylgdi ekki með. Tveir karlar geta ekki verið MIXED.",
+      "evidence": "Ráslisti race=1 sýnir sömu ósamkvæmni (MIXED, kyn M, Hörður Örn + Halldór). Pro/Open kemur hvergi fram; Halldór keppti í Open KK í 2. móti (nr. 107 'Black sand strákarnir'), svo Open KK er líklegasti flokkurinn."
+    },
+    {
+      "event": "mot3",
+      "category": "para",
+      "bib": "152",
+      "name": "Jürgen & Guðni",
+      "field": "division",
+      "source_value": "",
+      "value": "Open KK",
+      "reason": "Enginn flokkur skráður hjá timataka, hvorki í úrslitum né á ráslista, svo liðið er á engri flokkasíðu og lendir undir \"Annað\" í appinu. Það er á KK-listanum, svo KK-hlutinn er öruggur.",
+      "evidence": "Ráslisti race=16 sýnir auðan flokksreit. Pro/Open kemur hvergi fram; Jürgen Maier keppti í Open KK í 2. móti (nr. 120), svo Open KK er líklegasti flokkurinn."
+    }
+  ]
+}

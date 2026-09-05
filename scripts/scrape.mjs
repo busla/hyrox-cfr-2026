@@ -19,9 +19,11 @@ import {
   DATA_PATH,
   SERIES,
   SUBCATEGORIES,
+  applyOverrides,
   identity,
   loadAllPages,
   readData,
+  readOverrides,
   serialiseData,
 } from './lib/timataka.mjs'
 
@@ -41,6 +43,8 @@ function orderOverall(records) {
 }
 
 const pages = await loadAllPages({ offline, refresh })
+const overrides = await readOverrides()
+const overridesApplied = new Set()
 
 const events = SERIES.events.map((event) => {
   const built = {
@@ -51,14 +55,22 @@ const events = SERIES.events.map((event) => {
   }
 
   for (const category of CATEGORIES) {
-    const overall = pages.get(`${event.id}/${category}/overall`).records
+    // Declared corrections from overrides.json are applied to every listing, so
+    // a competitor reads the same whichever tab you reach them through.
+    const correct = (records) => {
+      const { records: fixed, applied } = applyOverrides(records, event.id, category, overrides)
+      for (const { override } of applied) overridesApplied.add(override.key)
+      return fixed
+    }
+
+    const overall = correct(pages.get(`${event.id}/${category}/overall`).records)
     const bySubcat = { overall: orderOverall(overall) }
 
     for (const subcategory of Object.keys(SUBCATEGORIES[category])) {
       if (subcategory === 'overall') continue
       const page = pages.get(`${event.id}/${category}/${subcategory}`)
       // Keep the page's own ordering and ranks for a subcategory listing.
-      bySubcat[subcategory] = page.records
+      bySubcat[subcategory] = correct(page.records)
     }
 
     // A competitor on Heildarúrslit but on no category page still needs a home,
@@ -95,6 +107,16 @@ for (const event of events) {
     return `${category} ${done}${all.length > done ? ` (+${all.length - done} án tíma)` : ''}`
   }).join(' · ')
   console.log(`${event.id}: ${line}`)
+}
+
+for (const override of overrides) {
+  if (!overridesApplied.has(override.key)) {
+    console.error(`  ! override matches nobody: ${override.key} — check scripts/overrides.json`)
+    process.exitCode = 1
+  }
+}
+if (overridesApplied.size) {
+  console.log(`\nApplied ${overridesApplied.size} override(s) from scripts/overrides.json`)
 }
 
 if (checkOnly) {

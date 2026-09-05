@@ -35,13 +35,16 @@ import {
   SERIES,
   STATION_KEYS,
   SUBCATEGORIES,
+  applyOverrides,
   divisionPageUrl,
   fetchPageHtml,
   hmsToSeconds,
   identity,
   loadAllPages,
+  overrideKey,
   parsePage,
   readData,
+  readOverrides,
 } from './lib/timataka.mjs'
 
 const args = new Set(process.argv.slice(2))
@@ -86,6 +89,11 @@ const byId = new Map(events.map((e) => [e.id, e]))
 
 /** Competitors whose own division contradicts the listing they appear in. */
 const inconsistent = new Set()
+
+/** Declared corrections, keyed "event/category/bib|name" -> overridden field. */
+const overrides = await readOverrides()
+const overriddenField = new Map(overrides.map((o) => [o.key, o.field]))
+const overrideSeen = new Set()
 
 /* ── SOURCE ─────────────────────────────────────────────────────────────── */
 
@@ -274,6 +282,59 @@ for (const event of events) {
   }
 }
 
+/* ── OVERRIDES ──────────────────────────────────────────────────────────── */
+
+/**
+ * Every declared correction must still be needed and still be accurate.
+ *
+ * An override is a standing claim that timataka is wrong about one field. That
+ * claim can go stale two ways: timataka fixes it (the override becomes a lie by
+ * omission) or timataka changes it to something else again (the override was
+ * written against a value that no longer exists). Both are reported, and an
+ * override that matches no competitor at all is a hard failure.
+ */
+if (pages) {
+  for (const event of SERIES.events) {
+    for (const category of CATEGORIES) {
+      const source = pages.get(`${event.id}/${category}/overall`).records
+      const { applied } = applyOverrides(source, event.id, category, overrides)
+
+      for (const { override, was } of applied) {
+        overrideSeen.add(override.key)
+
+        if (was === override.value) {
+          warn(
+            `override ${override.key} is no longer needed — timataka now says ` +
+              `"${was}" for ${override.field}. Remove it from scripts/overrides.json.`,
+          )
+        } else if (was !== override.source_value) {
+          warn(
+            `override ${override.key}: timataka now says "${was}" for ${override.field}, ` +
+              `not "${override.source_value}" as recorded. Re-read scripts/overrides.json.`,
+          )
+        }
+
+        // The corrected value must actually be in data.json.
+        const stored = (byId.get(event.id)?.[category]?.overall ?? []).find(
+          (r) => overrideKey(event.id, category, r) === override.key,
+        )
+        check(
+          stored && stored[override.field] === override.value,
+          `OVERRIDE ${override.key}: data.json has ${override.field} ` +
+            `"${stored?.[override.field]}", expected "${override.value}" — run npm run scrape`,
+        )
+      }
+    }
+  }
+
+  for (const override of overrides) {
+    check(
+      overrideSeen.has(override.key),
+      `OVERRIDE ${override.key}: matches no competitor on timataka — stale entry in scripts/overrides.json`,
+    )
+  }
+}
+
 /* ── DIVISIONS ──────────────────────────────────────────────────────────── */
 
 /**
@@ -314,6 +375,10 @@ if (pages && !skipDivisions) {
           // Someone already flagged as inconsistent is absent from their own
           // division page by definition; don't report the same thing twice.
           .filter((r) => !inconsistent.has(`${event.id}/${category}/${identity(r)}`))
+          // An overridden division deliberately disagrees with timataka, so the
+          // source's division page cannot be expected to list them. The override
+          // is checked against the source separately, below.
+          .filter((r) => overriddenField.get(overrideKey(event.id, category, r)) !== 'division')
           .map(identity)
 
         const absent = missingFrom(expected, onPage)
