@@ -90,6 +90,30 @@ export const SUBCATEGORIES = {
 
 export const CATEGORIES = Object.keys(SUBCATEGORIES)
 
+/**
+ * Which gender listing a division belongs to. The division filter needs both
+ * `cat` and `division`; getting the pair wrong yields an empty page rather than
+ * an error, which is exactly how timataka's own "Parakeppni KVK OPEN" link is
+ * broken (it asks for cat=f with division="Open KK" and returns nothing). We
+ * build these URLs ourselves rather than trusting the links on the index page.
+ */
+export const DIVISION_LISTING = {
+  'Pro KK': 'm',
+  'Open KK': 'm',
+  'Pro KVK': 'f',
+  'Open KVK': 'f',
+  MIXED: 'mixed',
+}
+
+/** data.json subcategory a division should be listed under. */
+export const DIVISION_SUBCATEGORY = {
+  'Pro KK': 'karlar',
+  'Open KK': 'karlar',
+  'Pro KVK': 'konur',
+  'Open KVK': 'konur',
+  MIXED: 'blandað',
+}
+
 export function pageUrl(event, category, subcategory) {
   const { endpoint, race } = event.races[category]
   const cat = SUBCATEGORIES[category][subcategory]
@@ -100,6 +124,21 @@ export function pageUrl(event, category, subcategory) {
     params.set('age_to', '99')
     params.set('division', 'MIXED')
   }
+  return `${BASE_URL}${endpoint}/?${params}`
+}
+
+/** URL of the division-filtered listing ("Einstaklingar KK PRO" and friends). */
+export function divisionPageUrl(event, category, division) {
+  const { endpoint, race } = event.races[category]
+  const cat = DIVISION_LISTING[division]
+  if (!cat) throw new Error(`No listing known for division "${division}"`)
+  const params = new URLSearchParams({
+    race: String(race),
+    cat,
+    age_from: '10',
+    age_to: '99',
+    division,
+  })
   return `${BASE_URL}${endpoint}/?${params}`
 }
 

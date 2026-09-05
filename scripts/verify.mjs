@@ -1,21 +1,29 @@
 /**
  * Integrity check for src/data.json against timataka.net.
  *
- *   npm run verify                fetch (using the cache) and check everything
- *   npm run verify -- --refresh   re-fetch every page first
- *   npm run verify -- --offline   structural checks only, no network
+ *   npm run verify                  fetch (using the cache) and check everything
+ *   npm run verify -- --refresh     re-fetch every page first
+ *   npm run verify -- --offline     work from the cache, never hit the network
+ *   npm run verify -- --no-source   skip the source comparison entirely
+ *   npm run verify -- --no-divisions   skip the division-page sweep
  *
- * Two classes of check:
+ * Three classes of check:
  *
- *   SOURCE   — is timataka internally consistent, and did we read all of it?
- *              Every row on every page must parse, and the Heildarúrslit page
- *              must contain exactly the same competitors as the category pages
- *              put together. This is the check that would have caught the four
- *              non-finishers we lost: they sit on Heildarúrslit only.
+ *   SOURCE    — is timataka internally consistent, and did we read all of it?
+ *               Every row on every page must parse, and the Heildarúrslit page
+ *               must contain exactly the same competitors as the gender
+ *               listings put together. This is the check that would have caught
+ *               the four non-finishers we lost: they sit on Heildarúrslit only.
  *
- *   DATA     — does data.json say what the source says, and is it internally
- *              sound? Ranks, sorting, split arithmetic, station keys, and the
- *              invariants the charts rely on.
+ *   DATA      — does data.json say what the source says, and is it internally
+ *               sound? Ranks, sorting, split arithmetic, station keys, and the
+ *               invariants the charts rely on.
+ *
+ *   DIVISIONS — does every competitor appear on the division listing their own
+ *               division claims, and does every division listing contain only
+ *               competitors we have? This is the only check that reads the
+ *               division field rather than just carrying it, so a mislabelled
+ *               division fails here and nowhere else.
  *
  * Exits non-zero if any check fails.
  */
@@ -23,12 +31,16 @@
 import {
   CATEGORIES,
   DIVISIONS,
+  DIVISION_SUBCATEGORY,
   SERIES,
   STATION_KEYS,
   SUBCATEGORIES,
+  divisionPageUrl,
+  fetchPageHtml,
   hmsToSeconds,
   identity,
   loadAllPages,
+  parsePage,
   readData,
 } from './lib/timataka.mjs'
 
@@ -36,6 +48,7 @@ const args = new Set(process.argv.slice(2))
 const offline = args.has('--offline')
 const refresh = args.has('--refresh')
 const skipSource = args.has('--no-source')
+const skipDivisions = args.has('--no-divisions')
 
 const failures = []
 const warnings = []
@@ -70,6 +83,9 @@ function missingFrom(expected, actual) {
 const data = await readData()
 const events = data.series.events
 const byId = new Map(events.map((e) => [e.id, e]))
+
+/** Competitors whose own division contradicts the listing they appear in. */
+const inconsistent = new Set()
 
 /* ── SOURCE ─────────────────────────────────────────────────────────────── */
 
@@ -187,12 +203,12 @@ for (const event of events) {
 
     // A division that disagrees with the listing it appears in is timataka's
     // own inconsistency, not ours — surface it rather than silently normalise.
-    const EXPECTED_SUBCATEGORY = { 'Pro KK': 'karlar', 'Open KK': 'karlar', 'Pro KVK': 'konur', 'Open KVK': 'konur', MIXED: 'blandað' }
     for (const subcategory of subcategories) {
       if (subcategory === 'overall') continue
       for (const record of group[subcategory] ?? []) {
-        const expected = EXPECTED_SUBCATEGORY[record.division]
+        const expected = DIVISION_SUBCATEGORY[record.division]
         if (expected && expected !== subcategory) {
+          inconsistent.add(`${event.id}/${category}/${identity(record)}`)
           warn(
             `${event.id}/${category} #${record.bib} ${record.display_name ?? record.name}: ` +
               `division "${record.division}" but listed under ${subcategory} on timataka`,
@@ -248,12 +264,73 @@ for (const event of events) {
         warn(`${who}: unknown division "${record.division}"`)
       }
       if (!record.division) {
-        warn(`${who}: no division on timataka — shows under "Annað"`)
+        warn(`${who}: no division on timataka — on no division page, shows under "Annað"`)
       }
       if (category === 'para') {
         check(record.team_name && record.display_name, `DATA ${who}: pair without a team name`)
         check(record.members?.length >= 1, `DATA ${who}: pair without members`)
       }
+    }
+  }
+}
+
+/* ── DIVISIONS ──────────────────────────────────────────────────────────── */
+
+/**
+ * Sweep the division-filtered listings — "Einstaklingar KK PRO", "Parakeppni
+ * KVK OPEN" and the rest — and check them against data.json in both
+ * directions.
+ *
+ * The URLs are built from the divisions in our own data rather than taken from
+ * the links on timataka's index page, because those links are not reliable: the
+ * "Parakeppni KVK OPEN" link for 3. mót asks for cat=f with division="Open KK"
+ * and quietly returns an empty page, hiding 15 pairs. A sweep driven by the
+ * index would inherit that blind spot; this one does not.
+ */
+let divisionPages = 0
+if (pages && !skipDivisions) {
+  for (const event of SERIES.events) {
+    const stored = byId.get(event.id)
+    if (!stored) continue
+
+    for (const category of CATEGORIES) {
+      const overall = stored[category]?.overall ?? []
+      const divisions = [...new Set(overall.map((r) => r.division).filter(Boolean))]
+
+      for (const division of divisions) {
+        const url = divisionPageUrl(event, category, division)
+        let records
+        try {
+          records = parsePage(await fetchPageHtml(url, { offline, refresh }), { url }).records
+          divisionPages += 1
+        } catch (err) {
+          check(false, `DIVISION ${event.id}/${category} ${division}: could not read ${url}`, err.message)
+          continue
+        }
+
+        const onPage = records.map(identity)
+        const expected = overall
+          .filter((r) => r.division === division)
+          // Someone already flagged as inconsistent is absent from their own
+          // division page by definition; don't report the same thing twice.
+          .filter((r) => !inconsistent.has(`${event.id}/${category}/${identity(r)}`))
+          .map(identity)
+
+        const absent = missingFrom(expected, onPage)
+        const unknown = missingFrom(onPage, overall.map(identity))
+
+        check(
+          absent.length === 0,
+          `DIVISION ${event.id}/${category} ${division}: in data.json but not on the division page`,
+          `${absent.join(', ')} — ${url}`,
+        )
+        check(
+          unknown.length === 0,
+          `DIVISION ${event.id}/${category} ${division}: on the division page but not in data.json`,
+          `${unknown.join(', ')} — ${url}`,
+        )
+      }
+
     }
   }
 }
@@ -270,7 +347,13 @@ const totals = events.map((e) => {
   return `  ${e.id} (${e.status}): ${parts.join(' · ')}`
 })
 
-console.log(`Checked ${events.length} events${pages ? ` against ${pages.size} timataka pages` : ' (structure only)'}`)
+console.log(
+  `Checked ${events.length} events${
+    pages
+      ? ` against ${pages.size} result pages${divisionPages ? ` and ${divisionPages} division pages` : ''}`
+      : ' (structure only)'
+  }`,
+)
 console.log(totals.join('\n'))
 
 if (warnings.length) {

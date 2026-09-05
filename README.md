@@ -34,10 +34,11 @@ npm run verify              # heilleikapróf á data.json gagnvart timataka
 npm run verify -- --refresh # sama, en hunsar skyndiminnið og sækir upp á nýtt
 ```
 
-`npm run verify` ber saman tvennt:
+`npm run verify` ber saman þrennt:
 
-- **Heimildin** — að hver einasta röð á hverri síðu hafi lesist (timataka birtir stundum aukatöflu neðst með keppendum án tíma), og að Heildarúrslit-síðan innihaldi nákvæmlega sömu keppendur og flokkasíðurnar samanlagt. Keppandi sem er aðeins á Heildarúrslit-síðunni myndi annars detta út.
+- **Heimildin** — að hver einasta röð á hverri síðu hafi lesist (timataka birtir stundum aukatöflu neðst með keppendum án tíma), og að Heildarúrslit-síðan innihaldi nákvæmlega sömu keppendur og kynjalistarnir samanlagt. Keppandi sem er aðeins á Heildarúrslit-síðunni myndi annars detta út.
 - **Gögnin** — að `data.json` segi það sama og heimildin, og standist innri kröfur: sæti 1..n í réttri röð, 8 hlaup og 8 stöðvar, að `run_total`/`station_total` stemmi við millitímana, og að keppendur án tíma beri `status` og engin millitímagögn.
+- **Flokkasíðurnar** — að hver keppandi sé á þeirri flokkasíðu sem flokkurinn hans segir til um, og að flokkasíðurnar innihaldi engan sem vantar hjá okkur. Slóðirnar eru smíðaðar út frá flokkunum í okkar eigin gögnum, ekki teknar af forsíðu timataka: „Parakeppni KVK OPEN" hlekkurinn fyrir 3. mót biður um `cat=f` með `division=Open KK` og skilar tómri síðu, sem felur 15 pör. Þetta er eina prófið sem les flokkinn sjálfan, svo rangt merktur flokkur fellur hér og hvergi annars staðar.
 
 Skriftirnar geyma sóttar síður í `.cache/` svo endurteknar keyrslur þurfi ekki að sækja neitt. GitHub Actions keyrir `verify` á hverri breytingu á gögnunum og einu sinni í viku — timataka leiðréttir stundum úrslit eftir á, og vikulega keyrslan er það sem lætur okkur vita.
 
