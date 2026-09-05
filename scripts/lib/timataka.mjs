@@ -402,7 +402,13 @@ export async function loadAllPages(options = {}) {
 
 /** Identity of a competitor within one race — bib is reused across teams. */
 export function identity(record) {
-  return `${record.bib}|${record.display_name ?? record.name}`
+  // A pair's bib is not unique — two teams shared bib 176 in 3. mót — so pairs
+  // are keyed by bib and team name. An individual's bib is unique within a
+  // race, and keying them by bib alone keeps identity stable when a misspelled
+  // name is corrected. `npm run verify` enforces both assumptions.
+  return record.team_name === undefined
+    ? String(record.bib)
+    : `${record.bib}|${record.team_name}`
 }
 
 export function readData() {
@@ -420,10 +426,13 @@ export function overrideKey(eventId, category, record) {
 
 export async function readOverrides() {
   const { overrides } = JSON.parse(await readFile(OVERRIDES_PATH, 'utf8'))
-  return overrides.map((o) => ({
-    ...o,
-    key: `${o.event}/${o.category}/${o.bib}|${o.name}`,
-  }))
+  return overrides.map((o) => {
+    // `name` identifies pairs (it is the team name) and is documentation only
+    // for individuals, whose bib is enough — so correcting a misspelled
+    // individual name does not move the override's target out from under it.
+    const who = o.category === 'para' ? `${o.bib}|${o.name}` : String(o.bib)
+    return { ...o, key: `${o.event}/${o.category}/${who}` }
+  })
 }
 
 /**

@@ -209,6 +209,19 @@ for (const event of events) {
 
     const overall = group.overall ?? []
 
+    // Identity is bib for an individual and bib+team for a pair. Everything
+    // else here matches competitors by it, so a collision would silently pair
+    // up two different people.
+    for (const subcategory of subcategories) {
+      const list = group[subcategory] ?? []
+      const dupes = [...counts(list.map(identity))].filter(([, n]) => n > 1).map(([k]) => k)
+      check(
+        dupes.length === 0,
+        `DATA ${event.id}/${category}/${subcategory}: identity is not unique`,
+        dupes.join(', '),
+      )
+    }
+
     // overall is the union of the subcategory lists — nobody added or lost.
     const union = subcategories.filter((s) => s !== 'overall').flatMap((s) => group[s] ?? [])
     check(

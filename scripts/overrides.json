@@ -28,8 +28,14 @@
       "bib": "187",
       "name": "Skaginn2x",
       "field": "members",
-      "source_value": ["Eggert Karlsson", "Magnús Helgi"],
-      "value": ["Eggert Kári Karlsson", "Magnús Helgi Sigurðsson"],
+      "source_value": [
+        "Eggert Karlsson",
+        "Magnús Helgi"
+      ],
+      "value": [
+        "Eggert Kári Karlsson",
+        "Magnús Helgi Sigurðsson"
+      ],
       "reason": "Bæði nöfnin eru stytt í skráningu 1. móts: millinafn Eggerts vantar og eftirnafn Magnúsar vantar alveg. Sama lið keppir í 3. móti með fullum nöfnum, svo sami keppandi les ólíkt milli móta.",
       "evidence": "Skaginn2x í 3. móti (nr. 158, sama félag, sami flokkur Pro KK) er skráð 'Magnús Helgi Sigurðsson' og 'Eggert Kári Karlsson'. Röð liðsmanna er látin halda sér eins og hún er í 1. móti; aðeins nöfnin eru fyllt út."
     },
@@ -43,6 +49,68 @@
       "value": "Open KK",
       "reason": "Enginn flokkur skráður hjá timataka, hvorki í úrslitum né á ráslista, svo liðið er á engri flokkasíðu og lendir undir \"Annað\" í appinu. Það er á KK-listanum, svo KK-hlutinn er öruggur.",
       "evidence": "Ráslisti race=16 sýnir auðan flokksreit. Pro/Open kemur hvergi fram; Jürgen Maier keppti í Open KK í 2. móti (nr. 120), svo Open KK er líklegasti flokkurinn."
+    },
+    {
+      "event": "mot2",
+      "category": "para",
+      "bib": "183",
+      "name": "Foss Hansen",
+      "field": "members",
+      "source_value": [
+        "Sólveig Foss",
+        "Patrick Hansen"
+      ],
+      "value": [
+        "Sólveig Heiða Foss",
+        "Patrick Örn Hansen"
+      ],
+      "reason": "Millinöfn beggja liðsmanna vantar í skráningu 2. og 3. móts. Sama lið keppti í 1. móti með fullum nöfnum, svo sömu keppendur lesa ólíkt eftir mótum.",
+      "evidence": "Foss Hansen í 1. móti (nr. 111, sama félag, sami flokkur MIXED) er skráð 'Patrick Örn Hansen' og 'Sólveig Heiða Foss'. Röð liðsmanna helst eins og hún er í 2. móti."
+    },
+    {
+      "event": "mot3",
+      "category": "para",
+      "bib": "211",
+      "name": "Foss Hansen",
+      "field": "members",
+      "source_value": [
+        "Sólveig Foss",
+        "Patrick Hansen"
+      ],
+      "value": [
+        "Sólveig Heiða Foss",
+        "Patrick Örn Hansen"
+      ],
+      "reason": "Sama og í 2. móti: millinöfn beggja liðsmanna vantar.",
+      "evidence": "Foss Hansen í 1. móti (nr. 111, sama félag, sami flokkur MIXED) er skráð með fullum nöfnum. Röð liðsmanna helst eins og hún er í 3. móti."
+    },
+    {
+      "event": "mot2",
+      "category": "para",
+      "bib": "163",
+      "name": "Systkinin",
+      "field": "members",
+      "source_value": [
+        "Margret Helga Kristjansdottir",
+        "Jóel Kristjánsson"
+      ],
+      "value": [
+        "Margrét Helga Kristjánsdóttir",
+        "Jóel Kristjánsson"
+      ],
+      "reason": "Íslenskir stafir vanta í nafn Margrétar í skráningu 2. móts.",
+      "evidence": "Systkinin í 3. móti (nr. 133, sama félag, sami flokkur MIXED) er skráð 'Margrét Helga Kristjánsdóttir'."
+    },
+    {
+      "event": "mot3",
+      "category": "einstaklingar",
+      "bib": "251",
+      "name": "Aron Freyr Ludviksson",
+      "field": "name",
+      "source_value": "Aron Freyr Ludviksson",
+      "value": "Aron Freyr Lúðvíksson",
+      "reason": "Íslenskir stafir vanta í skráningu 3. móts. Framför-flipinn parar keppendur eftir nafni, svo Aron taldist tveir menn og datt út úr flipanum þrátt fyrir að hafa keppt í tveimur mótum og bætt sig um 1:21.",
+      "evidence": "Sami keppandi í 2. móti (nr. 189) er skráður 'Aron Freyr Lúðvíksson', sama félag (Mjölnir) og sami flokkur (Open KK)."
     }
   ]
 }
