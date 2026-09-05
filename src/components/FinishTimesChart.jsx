@@ -101,7 +101,7 @@ function ColoredBar(props) {
 
 const RANK_LABEL = ['1', '2', '3', '4', '5'];
 
-export default function FinishTimesChart({ athletes = [], category = 'einstaklingar' }) {
+export default function FinishTimesChart({ athletes = [], dnf = [], category = 'einstaklingar' }) {
   const sorted = useMemo(() => {
     return (athletes || [])
       .filter((a) => Number(a.total_seconds || 0) > 0)
@@ -280,7 +280,43 @@ export default function FinishTimesChart({ athletes = [], category = 'einstaklin
         </div>
       )}
 
-      {sorted.length === 0 && (
+      {/* Non-finishers — skráðir í úrslit en án tíma (DNF/DNS) */}
+      {dnf.length > 0 && (
+        <div style={{ marginTop: 24 }}>
+          <h3 style={{ ...T.sectionTitle, fontSize: 15, marginBottom: 4 }}>
+            Lauk ekki keppni
+          </h3>
+          <p style={{ ...T.subTitle, marginTop: 0, marginBottom: 12 }}>
+            {dnf.length} {dnf.length === 1 ? 'skráning' : 'skráningar'} án lokatíma — utan við gröfin
+          </p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: 12,
+            }}
+          >
+            {dnf.map((a) => (
+              <div
+                key={`${a.bib}-${a.display_name || a.name}`}
+                style={{ ...T.rankCard, borderTop: `3px solid ${T.grayDim}` }}
+              >
+                <div style={{ color: T.white, fontWeight: 700, fontSize: 13, fontFamily: T.font }}>
+                  {a.display_name || a.name}
+                </div>
+                <div style={{ color: T.gray, fontSize: 11, marginTop: 4, fontFamily: T.font }}>
+                  #{a.bib}{a.division ? ` · ${a.division}` : ''}
+                </div>
+                <div style={{ color: T.grayDim, fontSize: 12, marginTop: 8, fontWeight: 700, letterSpacing: 1, fontFamily: T.font }}>
+                  {a.status || 'DNF'}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {sorted.length === 0 && dnf.length === 0 && (
         <div style={{ textAlign: 'center', color: T.grayDim, padding: 32, fontFamily: T.font }}>
           Engin gögn til staðar.
         </div>

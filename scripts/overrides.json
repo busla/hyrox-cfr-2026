@@ -1,0 +1,206 @@
+{
+  "$comment": [
+    "Deliberate corrections applied on top of what timataka publishes.",
+    "",
+    "Every entry has to earn its place: `source_value` records what timataka says",
+    "today, so `npm run verify` can tell us when an override is no longer needed",
+    "(timataka fixed it — delete the entry) or no longer valid (timataka changed",
+    "it to something else — re-read it). An override matching no competitor is a",
+    "hard failure, so these cannot rot silently.",
+    "",
+    "Keep this list short. If timataka is merely unusual, prefer mirroring it."
+  ],
+  "overrides": [
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "163",
+      "name": "H&H",
+      "field": "division",
+      "source_value": "MIXED",
+      "value": "Open KK",
+      "reason": "Skráð MIXED en er á KK-listanum hjá timataka og því á engri flokkasíðu. Liðið var upphaflega Hörður Örn Harðarson og Harpa Svansdóttir; timataka hefur síðan leiðrétt liðsmanninn í Halldór Halldórsson en flokkurinn fylgdi ekki með. Tveir karlar geta ekki verið MIXED.",
+      "evidence": "Ráslisti race=1 sýnir sömu ósamkvæmni (MIXED, kyn M, Hörður Örn + Halldór). Pro/Open kemur hvergi fram; Halldór keppti í Open KK í 2. móti (nr. 107 'Black sand strákarnir'), svo Open KK er líklegasti flokkurinn."
+    },
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "187",
+      "name": "Skaginn2x",
+      "field": "members",
+      "source_value": [
+        "Eggert Karlsson",
+        "Magnús Helgi"
+      ],
+      "value": [
+        "Eggert Kári Karlsson",
+        "Magnús Helgi Sigurðsson"
+      ],
+      "reason": "Bæði nöfnin eru stytt í skráningu 1. móts: millinafn Eggerts vantar og eftirnafn Magnúsar vantar alveg. Sama lið keppir í 3. móti með fullum nöfnum, svo sami keppandi les ólíkt milli móta.",
+      "evidence": "Skaginn2x í 3. móti (nr. 158, sama félag, sami flokkur Pro KK) er skráð 'Magnús Helgi Sigurðsson' og 'Eggert Kári Karlsson'. Röð liðsmanna er látin halda sér eins og hún er í 1. móti; aðeins nöfnin eru fyllt út."
+    },
+    {
+      "event": "mot3",
+      "category": "para",
+      "bib": "152",
+      "name": "Jürgen & Guðni",
+      "field": "division",
+      "source_value": "",
+      "value": "Open KK",
+      "reason": "Enginn flokkur skráður hjá timataka, hvorki í úrslitum né á ráslista, svo liðið er á engri flokkasíðu og lendir undir \"Annað\" í appinu. Það er á KK-listanum, svo KK-hlutinn er öruggur.",
+      "evidence": "Ráslisti race=16 sýnir auðan flokksreit. Pro/Open kemur hvergi fram; Jürgen Maier keppti í Open KK í 2. móti (nr. 120), svo Open KK er líklegasti flokkurinn."
+    },
+    {
+      "event": "mot2",
+      "category": "para",
+      "bib": "183",
+      "name": "Foss Hansen",
+      "field": "members",
+      "source_value": [
+        "Sólveig Foss",
+        "Patrick Hansen"
+      ],
+      "value": [
+        "Sólveig Heiða Foss",
+        "Patrick Örn Hansen"
+      ],
+      "reason": "Millinöfn beggja liðsmanna vantar í skráningu 2. og 3. móts. Sama lið keppti í 1. móti með fullum nöfnum, svo sömu keppendur lesa ólíkt eftir mótum.",
+      "evidence": "Foss Hansen í 1. móti (nr. 111, sama félag, sami flokkur MIXED) er skráð 'Patrick Örn Hansen' og 'Sólveig Heiða Foss'. Röð liðsmanna helst eins og hún er í 2. móti."
+    },
+    {
+      "event": "mot3",
+      "category": "para",
+      "bib": "211",
+      "name": "Foss Hansen",
+      "field": "members",
+      "source_value": [
+        "Sólveig Foss",
+        "Patrick Hansen"
+      ],
+      "value": [
+        "Sólveig Heiða Foss",
+        "Patrick Örn Hansen"
+      ],
+      "reason": "Sama og í 2. móti: millinöfn beggja liðsmanna vantar.",
+      "evidence": "Foss Hansen í 1. móti (nr. 111, sama félag, sami flokkur MIXED) er skráð með fullum nöfnum. Röð liðsmanna helst eins og hún er í 3. móti."
+    },
+    {
+      "event": "mot2",
+      "category": "para",
+      "bib": "163",
+      "name": "Systkinin",
+      "field": "members",
+      "source_value": [
+        "Margret Helga Kristjansdottir",
+        "Jóel Kristjánsson"
+      ],
+      "value": [
+        "Margrét Helga Kristjánsdóttir",
+        "Jóel Kristjánsson"
+      ],
+      "reason": "Íslenskir stafir vanta í nafn Margrétar í skráningu 2. móts.",
+      "evidence": "Systkinin í 3. móti (nr. 133, sama félag, sami flokkur MIXED) er skráð 'Margrét Helga Kristjánsdóttir'."
+    },
+    {
+      "event": "mot3",
+      "category": "einstaklingar",
+      "bib": "251",
+      "name": "Aron Freyr Ludviksson",
+      "field": "name",
+      "source_value": "Aron Freyr Ludviksson",
+      "value": "Aron Freyr Lúðvíksson",
+      "reason": "Íslenskir stafir vanta í skráningu 3. móts. Framför-flipinn parar keppendur eftir nafni, svo Aron taldist tveir menn og datt út úr flipanum þrátt fyrir að hafa keppt í tveimur mótum og bætt sig um 1:21.",
+      "evidence": "Sami keppandi í 2. móti (nr. 189) er skráður 'Aron Freyr Lúðvíksson', sama félag (Mjölnir) og sami flokkur (Open KK)."
+    },
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "163",
+      "name": "H&H",
+      "field": "members",
+      "source_value": [
+        "Hörður Örn Harðarson",
+        "Halldór Halldórsson"
+      ],
+      "value": [
+        "Hörður Örn Harðarson",
+        "Halldór Karl Halldórsson"
+      ],
+      "reason": "Millinafn Halldórs vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Halldor Karl Halldórsson' sem einstaklingur í 2. móti (nr. 148, CFR). Fullt nafn með réttum stöfum er notað alls staðar."
+    },
+    {
+      "event": "mot2",
+      "category": "para",
+      "bib": "107",
+      "name": "Black sand strákarnir",
+      "field": "members",
+      "source_value": [
+        "Hákon Orri Stefánsson",
+        "Halldór Halldórsson"
+      ],
+      "value": [
+        "Hákon Orri Stefánsson",
+        "Halldór Karl Halldórsson"
+      ],
+      "reason": "Millinafn Halldórs vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Sjá nr. 148 í 2. móti (einstaklingar)."
+    },
+    {
+      "event": "mot2",
+      "category": "einstaklingar",
+      "bib": "148",
+      "name": "Halldor Karl Halldórsson",
+      "field": "name",
+      "source_value": "Halldor Karl Halldórsson",
+      "value": "Halldór Karl Halldórsson",
+      "reason": "Íslenskur stafur vantar í fornafnið.",
+      "evidence": "Skráður 'Halldór Halldórsson' með réttum stöfum í pörum 1. og 2. móts."
+    },
+    {
+      "event": "mot1",
+      "category": "para",
+      "bib": "127",
+      "name": "Ein í liðveislu",
+      "field": "members",
+      "source_value": [
+        "Sigurður Einarsson",
+        "Aníta Jóhannesardóttir"
+      ],
+      "value": [
+        "Sigurður Jóhann Einarsson",
+        "Aníta Jóhannesardóttir"
+      ],
+      "reason": "Millinafn Sigurðar vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Sigurður Jóhann Einarsson' í pörum 2. móts (nr. 168)."
+    },
+    {
+      "event": "mot3",
+      "category": "einstaklingar",
+      "bib": "131",
+      "name": "Sigurður Einarsson",
+      "field": "name",
+      "source_value": "Sigurður Einarsson",
+      "value": "Sigurður Jóhann Einarsson",
+      "reason": "Millinafn vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Sigurður Jóhann Einarsson' í pörum 2. móts (nr. 168)."
+    },
+    {
+      "event": "mot3",
+      "category": "para",
+      "bib": "135",
+      "name": "Nammi",
+      "field": "members",
+      "source_value": [
+        "Daníel Rafn Guðmundsson",
+        "Samúel Ámundason"
+      ],
+      "value": [
+        "Daníel Rafn Guðmundsson",
+        "Samúel K Ámundason"
+      ],
+      "reason": "Millistafur Samúels vantar. Sami keppandi, staðfest af skipuleggjendum.",
+      "evidence": "Skráður 'Samúel K Ámundason' í 1. móti (nr. 186) — og með sama félaga, Daníel Rafn Guðmundssyni, í báðum mótum."
+    }
+  ]
+}
