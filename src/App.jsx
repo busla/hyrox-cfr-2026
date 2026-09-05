@@ -22,7 +22,7 @@ const BORDER = '1px solid #1e1e1e'
 
 const seriesData = rawData.series
 
-/* Default to the most recently completed event (currently 2. mót);
+/* Default to the most recently completed event (currently 3. mót);
    falls through to the first event if none are marked "lokið". */
 const defaultEventIdx = (() => {
   let idx = 0

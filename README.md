@@ -21,7 +21,7 @@ React app sem sýnir niðurstöður og samanburð á HYROX mótaröðinni 2026 h
 |-----|-----------|-------|
 | 1. mót | 23. maí 2026 | ✅ Lokið |
 | 2. mót | 11. júlí 2026 | ✅ Lokið |
-| 3. mót | 5. september 2026 | 🔒 Væntanlegt |
+| 3. mót | 5. september 2026 | ✅ Lokið |
 
 ## Tækni
 
