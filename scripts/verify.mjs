@@ -25,6 +25,10 @@
  *               division field rather than just carrying it, so a mislabelled
  *               division fails here and nowhere else.
  *
+ * Plus OVERRIDES: the corrections declared in overrides.json must each still
+ * match a real competitor, still be reflected in data.json, and still be needed
+ * — see the OVERRIDES section below.
+ *
  * Exits non-zero if any check fails.
  */
 
@@ -45,6 +49,7 @@ import {
   parsePage,
   readData,
   readOverrides,
+  sameValue,
 } from './lib/timataka.mjs'
 
 const args = new Set(process.argv.slice(2))
@@ -90,9 +95,13 @@ const byId = new Map(events.map((e) => [e.id, e]))
 /** Competitors whose own division contradicts the listing they appear in. */
 const inconsistent = new Set()
 
-/** Declared corrections, keyed "event/category/bib|name" -> overridden field. */
+/** Declared corrections, keyed "event/category/bib|name" -> overridden fields. */
 const overrides = await readOverrides()
-const overriddenField = new Map(overrides.map((o) => [o.key, o.field]))
+const overriddenFields = new Map()
+for (const o of overrides) {
+  if (!overriddenFields.has(o.key)) overriddenFields.set(o.key, new Set())
+  overriddenFields.get(o.key).add(o.field)
+}
 const overrideSeen = new Set()
 
 /* ── SOURCE ─────────────────────────────────────────────────────────────── */
@@ -302,15 +311,16 @@ if (pages) {
       for (const { override, was } of applied) {
         overrideSeen.add(override.key)
 
-        if (was === override.value) {
+        if (sameValue(was, override.value)) {
           warn(
             `override ${override.key} is no longer needed — timataka now says ` +
-              `"${was}" for ${override.field}. Remove it from scripts/overrides.json.`,
+              `${JSON.stringify(was)} for ${override.field}. Remove it from scripts/overrides.json.`,
           )
-        } else if (was !== override.source_value) {
+        } else if (!sameValue(was, override.source_value)) {
           warn(
-            `override ${override.key}: timataka now says "${was}" for ${override.field}, ` +
-              `not "${override.source_value}" as recorded. Re-read scripts/overrides.json.`,
+            `override ${override.key}: timataka now says ${JSON.stringify(was)} for ` +
+              `${override.field}, not ${JSON.stringify(override.source_value)} as recorded. ` +
+              `Re-read scripts/overrides.json.`,
           )
         }
 
@@ -319,9 +329,10 @@ if (pages) {
           (r) => overrideKey(event.id, category, r) === override.key,
         )
         check(
-          stored && stored[override.field] === override.value,
+          stored && sameValue(stored[override.field], override.value),
           `OVERRIDE ${override.key}: data.json has ${override.field} ` +
-            `"${stored?.[override.field]}", expected "${override.value}" — run npm run scrape`,
+            `${JSON.stringify(stored?.[override.field])}, expected ` +
+            `${JSON.stringify(override.value)} — run npm run scrape`,
         )
       }
     }
@@ -378,7 +389,7 @@ if (pages && !skipDivisions) {
           // An overridden division deliberately disagrees with timataka, so the
           // source's division page cannot be expected to list them. The override
           // is checked against the source separately, below.
-          .filter((r) => overriddenField.get(overrideKey(event.id, category, r)) !== 'division')
+          .filter((r) => !overriddenFields.get(overrideKey(event.id, category, r))?.has('division'))
           .map(identity)
 
         const absent = missingFrom(expected, onPage)

@@ -44,7 +44,13 @@ npm run verify -- --refresh # sama, en hunsar skyndiminnið og sækir upp á ný
 
 Stundum er timataka ósamkvæmt sjálfu sér. Slíkar leiðréttingar eru skráðar í `scripts/overrides.json` — aldrei handbreytt í `data.json` — og hver færsla geymir hvað timataka segir (`source_value`), hverju er breytt í (`value`), og hvers vegna. `verify` gætir þeirra: leiðrétting sem á við engan keppanda fellur, og ef timataka lagar málið sjálft eða breytir því í eitthvað annað birtist athugasemd um að endurskoða færsluna. Þannig úreldast þær ekki þegjandi.
 
-Núverandi leiðréttingar eru tvær, báðar paralið sem lentu á engri flokkasíðu: nr. 163 „H&H" í 1. móti (skráð MIXED en með tvo karla eftir að liðsmanni var breytt) og nr. 152 „Jürgen & Guðni" í 3. móti (enginn flokkur skráður). Bæði eru sett í Open KK; KK-hlutinn er öruggur af kynjalistanum, en Pro/Open er ályktun út frá fyrri mótum og er rökstudd í skránni.
+Núverandi leiðréttingar eru þrjár:
+
+- **nr. 163 „H&H" í 1. móti** — skráð MIXED en með tvo karla eftir að timataka breytti liðsmanni, og því á engri flokkasíðu. Sett í Open KK.
+- **nr. 152 „Jürgen & Guðni" í 3. móti** — enginn flokkur skráður, lenti undir „Annað". Sett í Open KK.
+- **nr. 187 „Skaginn2x" í 1. móti** — bæði nöfnin stytt í skráningu (millinafn Eggerts Kára og eftirnafn Magnúsar Helga vantaði), svo sömu keppendur lásu ólíkt milli móta. Fyllt út eftir skráningu 3. móts.
+
+Í fyrstu tveimur er KK-hlutinn öruggur af kynjalistanum, en Pro/Open kemur hvergi fram í heimildinni og er ályktun út frá fyrri mótum — rökstudd í skránni.
 
 Skriftirnar geyma sóttar síður í `.cache/` svo endurteknar keyrslur þurfi ekki að sækja neitt. GitHub Actions keyrir `verify` á hverri breytingu á gögnunum og einu sinni í viku — timataka leiðréttir stundum úrslit eftir á, og vikulega keyrslan er það sem lætur okkur vita.
 

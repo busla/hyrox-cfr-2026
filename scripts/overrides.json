@@ -23,6 +23,17 @@
       "evidence": "Ráslisti race=1 sýnir sömu ósamkvæmni (MIXED, kyn M, Hörður Örn + Halldór). Pro/Open kemur hvergi fram; Halldór keppti í Open KK í 2. móti (nr. 107 'Black sand strákarnir'), svo Open KK er líklegasti flokkurinn."
     },
     {
+      "event": "mot1",
+      "category": "para",
+      "bib": "187",
+      "name": "Skaginn2x",
+      "field": "members",
+      "source_value": ["Eggert Karlsson", "Magnús Helgi"],
+      "value": ["Eggert Kári Karlsson", "Magnús Helgi Sigurðsson"],
+      "reason": "Bæði nöfnin eru stytt í skráningu 1. móts: millinafn Eggerts vantar og eftirnafn Magnúsar vantar alveg. Sama lið keppir í 3. móti með fullum nöfnum, svo sami keppandi les ólíkt milli móta.",
+      "evidence": "Skaginn2x í 3. móti (nr. 158, sama félag, sami flokkur Pro KK) er skráð 'Magnús Helgi Sigurðsson' og 'Eggert Kári Karlsson'. Röð liðsmanna er látin halda sér eins og hún er í 1. móti; aðeins nöfnin eru fyllt út."
+    },
+    {
       "event": "mot3",
       "category": "para",
       "bib": "152",

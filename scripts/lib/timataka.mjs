@@ -436,12 +436,25 @@ export async function readOverrides() {
 export function applyOverrides(records, eventId, category, overrides) {
   const applied = []
   const out = records.map((record) => {
-    const match = overrides.find((o) => o.key === overrideKey(eventId, category, record))
-    if (!match) return record
-    applied.push({ override: match, was: record[match.field] })
-    return { ...record, [match.field]: match.value }
+    const matches = overrides.filter((o) => o.key === overrideKey(eventId, category, record))
+    if (!matches.length) return record
+
+    let fixed = { ...record }
+    for (const override of matches) {
+      applied.push({ override, was: record[override.field] })
+      fixed[override.field] = override.value
+      // `name` for a pair is just the members cell verbatim, so correcting the
+      // roster has to carry through to it or the two disagree.
+      if (override.field === 'members') fixed.name = override.value.join('\n')
+    }
+    return fixed
   })
   return { records: out, applied }
+}
+
+/** Overridable fields hold strings or string arrays; compare either safely. */
+export function sameValue(a, b) {
+  return JSON.stringify(a ?? null) === JSON.stringify(b ?? null)
 }
 
 /** data.json is written without a trailing newline; keep it that way. */
