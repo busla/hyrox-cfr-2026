@@ -74,20 +74,23 @@ export default function App() {
 
   const currentEvent = seriesData.events[eventIdx]
 
-  const applyDivFilter = (list) => {
-    if (!list) return []
-    return list.filter(a => {
-      if (!a.total_seconds) return false
-      if (divFilter === 'pro')  return a.division?.toLowerCase().includes('pro')
-      if (divFilter === 'open') return a.division?.toLowerCase().includes('open')
-        || a.division?.toLowerCase().includes('mixed')
-        || a.division?.toLowerCase().includes('blandað')
-      return true
-    })
+  const matchesDiv = (a) => {
+    if (divFilter === 'pro')  return a.division?.toLowerCase().includes('pro')
+    if (divFilter === 'open') return a.division?.toLowerCase().includes('open')
+      || a.division?.toLowerCase().includes('mixed')
+      || a.division?.toLowerCase().includes('blandað')
+    return true
   }
+
+  /* Charts only ever see finishers — keppendur án tíma (DNF/DNS) have no
+     splits and would skew every average. They are listed separately instead. */
+  const applyDivFilter = (list) =>
+    (list || []).filter(a => a.total_seconds && matchesDiv(a))
 
   const athletes    = applyDivFilter(currentEvent[category]?.[subcat])
   const allAthletes = applyDivFilter(currentEvent[category]?.overall)
+  const dnfAthletes = (currentEvent[category]?.[subcat] || [])
+    .filter(a => !a.total_seconds && matchesDiv(a))
 
   const subcats = category === 'einstaklingar'
     ? [
@@ -277,7 +280,7 @@ export default function App() {
           </div>
         ) : (
           <>
-            {activeTab === 'finish'     && <FinishTimesChart athletes={athletes} category={category} />}
+            {activeTab === 'finish'     && <FinishTimesChart athletes={athletes} dnf={dnfAthletes} category={category} />}
             {activeTab === 'series'     && <EventComparison seriesData={seriesData} category={category} />}
             {activeTab === 'progress'   && <ProgressionChart seriesData={seriesData} category={category} />}
             {activeTab === 'heatmap'    && <SplitsHeatmap athletes={athletes} />}

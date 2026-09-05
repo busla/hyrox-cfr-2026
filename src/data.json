@@ -5569,6 +5569,20 @@
                 354,
                 381
               ]
+            },
+            {
+              "rank": null,
+              "bib": "157",
+              "name": "Sigþór Snorrason",
+              "club": "Stöðin Ísafirði",
+              "division": "Open KK",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": []
             }
           ],
           "karlar": [
@@ -6129,6 +6143,20 @@
                 346,
                 364
               ]
+            },
+            {
+              "rank": null,
+              "bib": "157",
+              "name": "Sigþór Snorrason",
+              "club": "Stöðin Ísafirði",
+              "division": "Open KK",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": []
             }
           ],
           "konur": [
@@ -7949,6 +7977,26 @@
               ],
               "team_name": "Trenbolone parið",
               "display_name": "Trenbolone parið"
+            },
+            {
+              "rank": null,
+              "bib": "179",
+              "name": "Eduards Zarkevics\nLaima Zarkevica",
+              "club": "Bogatyr",
+              "division": "MIXED",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": [],
+              "members": [
+                "Eduards Zarkevics",
+                "Laima Zarkevica"
+              ],
+              "team_name": "Bogatyr",
+              "display_name": "Bogatyr"
             }
           ],
           "karlar": [
@@ -9583,6 +9631,26 @@
               ],
               "team_name": "Trenbolone parið",
               "display_name": "Trenbolone parið"
+            },
+            {
+              "rank": null,
+              "bib": "179",
+              "name": "Eduards Zarkevics\nLaima Zarkevica",
+              "club": "Bogatyr",
+              "division": "MIXED",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": [],
+              "members": [
+                "Eduards Zarkevics",
+                "Laima Zarkevica"
+              ],
+              "team_name": "Bogatyr",
+              "display_name": "Bogatyr"
             }
           ]
         }
@@ -10368,6 +10436,34 @@
                 382,
                 428
               ]
+            },
+            {
+              "rank": null,
+              "bib": "118",
+              "name": "Thomas Valtyr Eyjolfsson Valtysson",
+              "club": "",
+              "division": "Open KK",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": []
+            },
+            {
+              "rank": null,
+              "bib": "129",
+              "name": "Sturla Freyr Gislason",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": []
             }
           ],
           "karlar": [
@@ -10959,6 +11055,34 @@
                 357,
                 436
               ]
+            },
+            {
+              "rank": null,
+              "bib": "118",
+              "name": "Thomas Valtyr Eyjolfsson Valtysson",
+              "club": "",
+              "division": "Open KK",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": []
+            },
+            {
+              "rank": null,
+              "bib": "129",
+              "name": "Sturla Freyr Gislason",
+              "club": "CFR",
+              "division": "Open KK",
+              "total_time": null,
+              "total_seconds": 0,
+              "status": "DNF",
+              "run_total": 0,
+              "station_total": 0,
+              "splits": {},
+              "run_times": []
             }
           ],
           "konur": [
