@@ -2852,7 +2852,7 @@
             {
               "rank": 44,
               "bib": "163",
-              "name": "Hörður Örn Harðarson\nHarpa Svansdóttir",
+              "name": "Hörður Örn Harðarson\nHalldór Halldórsson",
               "club": "H&H",
               "division": "MIXED",
               "total_time": "01:22:57",
@@ -2881,7 +2881,7 @@
               ],
               "members": [
                 "Hörður Örn Harðarson",
-                "Harpa Svansdóttir"
+                "Halldór Halldórsson"
               ],
               "team_name": "H&H",
               "display_name": "H&H"
@@ -3553,6 +3553,43 @@
               ],
               "team_name": "DV",
               "display_name": "DV"
+            },
+            {
+              "rank": 15,
+              "bib": "163",
+              "name": "Hörður Örn Harðarson\nHalldór Halldórsson",
+              "club": "H&H",
+              "division": "MIXED",
+              "total_time": "01:22:57",
+              "total_seconds": 4977,
+              "run_total": 2982,
+              "station_total": 2004,
+              "splits": {
+                "1. Ski-Erg": 280,
+                "2 .Ýta sleða": 122,
+                "3. Draga sleða": 235,
+                "4. Burpee langstökk": 292,
+                "5. Róður": 326,
+                "6. Bændaganga": 185,
+                "7. Lunges": 269,
+                "8. Wall Balls": 295
+              },
+              "run_times": [
+                320,
+                342,
+                462,
+                372,
+                375,
+                352,
+                382,
+                377
+              ],
+              "members": [
+                "Hörður Örn Harðarson",
+                "Halldór Halldórsson"
+              ],
+              "team_name": "H&H",
+              "display_name": "H&H"
             }
           ],
           "konur": [
@@ -3892,7 +3929,7 @@
           ],
           "blandað": [
             {
-              "rank": 4,
+              "rank": 1,
               "bib": "174",
               "name": "Frederik aegidius\nAnnie thorisdottie",
               "club": "Annie and Frederik",
@@ -3929,7 +3966,7 @@
               "display_name": "Annie and Frederik"
             },
             {
-              "rank": 5,
+              "rank": 2,
               "bib": "118",
               "name": "Alma Hrönn Káradóttir\nRagnar Ingi Klemezson",
               "club": "Hrafnista",
@@ -3966,7 +4003,7 @@
               "display_name": "Hrafnista"
             },
             {
-              "rank": 8,
+              "rank": 3,
               "bib": "170",
               "name": "Glódís Guðgeirsdóttir\nEinar Kristinn",
               "club": "æðisleg.is",
@@ -4003,7 +4040,7 @@
               "display_name": "æðisleg.is"
             },
             {
-              "rank": 9,
+              "rank": 4,
               "bib": "111",
               "name": "Patrick Örn Hansen\nSólveig Heiða Foss",
               "club": "Foss Hansen",
@@ -4040,7 +4077,7 @@
               "display_name": "Foss Hansen"
             },
             {
-              "rank": 10,
+              "rank": 5,
               "bib": "126",
               "name": "Andrea Ingibjörg Orradóttir\nViktor Ólafsson",
               "club": "Andrea & Viktor",
@@ -4077,7 +4114,7 @@
               "display_name": "Andrea & Viktor"
             },
             {
-              "rank": 13,
+              "rank": 6,
               "bib": "172",
               "name": "Hrafnhildur Sigurjónsdóttir\nGunnsteinn Sigurjónsson",
               "club": "Two of a kind",
@@ -4114,7 +4151,7 @@
               "display_name": "Two of a kind"
             },
             {
-              "rank": 14,
+              "rank": 7,
               "bib": "127",
               "name": "Sigurður Einarsson\nAníta Jóhannesardóttir",
               "club": "Ein í liðveislu",
@@ -4151,7 +4188,7 @@
               "display_name": "Ein í liðveislu"
             },
             {
-              "rank": 15,
+              "rank": 8,
               "bib": "211",
               "name": "Sigríður Ómarsdóttir\nKristján Freyr Þrastarson",
               "club": "Sigga&Krissi",
@@ -4188,7 +4225,7 @@
               "display_name": "Sigga&Krissi"
             },
             {
-              "rank": 18,
+              "rank": 9,
               "bib": "199",
               "name": "Örn Ingi Bergsson\nHildur Birna Helgadóttir",
               "club": "Non-bloods",
@@ -4225,7 +4262,7 @@
               "display_name": "Non-bloods"
             },
             {
-              "rank": 19,
+              "rank": 10,
               "bib": "128",
               "name": "Steinar B. Hafberg\nSólrún Sæmundsdóttir",
               "club": "Sunny & Stones",
@@ -4262,7 +4299,7 @@
               "display_name": "Sunny & Stones"
             },
             {
-              "rank": 20,
+              "rank": 11,
               "bib": "164",
               "name": "ragnheidur Halldorsdottir\nKári Helgason",
               "club": "RaGu-sósan",
@@ -4299,7 +4336,7 @@
               "display_name": "RaGu-sósan"
             },
             {
-              "rank": 24,
+              "rank": 12,
               "bib": "173",
               "name": "Breki Þórðarson\nEmilíana Ocares Kristjánsdóttir",
               "club": "Team Mexico",
@@ -4336,7 +4373,7 @@
               "display_name": "Team Mexico"
             },
             {
-              "rank": 25,
+              "rank": 13,
               "bib": "129",
               "name": "Victor Gauti Jóhannsson\nAndrea Rán",
               "club": "Team Miami",
@@ -4373,7 +4410,7 @@
               "display_name": "Team Miami"
             },
             {
-              "rank": 28,
+              "rank": 14,
               "bib": "196",
               "name": "Olga Unnarsdóttir\nBroddi Ottesen",
               "club": "Ballers",
@@ -4410,7 +4447,7 @@
               "display_name": "Ballers"
             },
             {
-              "rank": 29,
+              "rank": 15,
               "bib": "107",
               "name": "Ingibjörg Ásta Halldórsdóttir\nSigurður Ólafur Kjartansson",
               "club": "Rólegt & Rómantískt",
@@ -4447,7 +4484,7 @@
               "display_name": "Rólegt & Rómantískt"
             },
             {
-              "rank": 30,
+              "rank": 16,
               "bib": "133",
               "name": "Óskar Marinó Jónsson\nIngibjörg RósaJónsdóttir",
               "club": "Still better together",
@@ -4484,7 +4521,7 @@
               "display_name": "Still better together"
             },
             {
-              "rank": 32,
+              "rank": 17,
               "bib": "202",
               "name": "Arnar Freyr Stefánsson\nAnna Margrét Kristinsdóttir",
               "club": "5lota",
@@ -4521,7 +4558,7 @@
               "display_name": "5lota"
             },
             {
-              "rank": 33,
+              "rank": 18,
               "bib": "175",
               "name": "Steinar Sig\nElma Rut",
               "club": "SaxUp!",
@@ -4558,7 +4595,7 @@
               "display_name": "SaxUp!"
             },
             {
-              "rank": 37,
+              "rank": 19,
               "bib": "134",
               "name": "Þórir Arnar Jónsson\nAuður Karlsdóttir",
               "club": "Team ballena",
@@ -4595,7 +4632,7 @@
               "display_name": "Team ballena"
             },
             {
-              "rank": 38,
+              "rank": 20,
               "bib": "178",
               "name": "Viðar Pálsson\nJónína Helga Ólafsdóttir",
               "club": "Viðar & Jónína",
@@ -4632,7 +4669,7 @@
               "display_name": "Viðar & Jónína"
             },
             {
-              "rank": 39,
+              "rank": 21,
               "bib": "201",
               "name": "Þórður Þórðarson\nBjörk Gunnarsdóttir",
               "club": "Þórk",
@@ -4669,7 +4706,7 @@
               "display_name": "Þórk"
             },
             {
-              "rank": 42,
+              "rank": 22,
               "bib": "179",
               "name": "Valeria Rodríguez\nJoel Fjalarsson",
               "club": "Valeria Joel",
@@ -4706,7 +4743,7 @@
               "display_name": "Valeria Joel"
             },
             {
-              "rank": 43,
+              "rank": 23,
               "bib": "207",
               "name": "Kristinn Guðmundsson\nAleksandra Hawrylewicz",
               "club": "Næturvaktin",
@@ -4743,44 +4780,7 @@
               "display_name": "Næturvaktin"
             },
             {
-              "rank": 44,
-              "bib": "163",
-              "name": "Hörður Örn Harðarson\nHarpa Svansdóttir",
-              "club": "H&H",
-              "division": "MIXED",
-              "total_time": "01:22:57",
-              "total_seconds": 4977,
-              "run_total": 2982,
-              "station_total": 2004,
-              "splits": {
-                "1. Ski-Erg": 280,
-                "2 .Ýta sleða": 122,
-                "3. Draga sleða": 235,
-                "4. Burpee langstökk": 292,
-                "5. Róður": 326,
-                "6. Bændaganga": 185,
-                "7. Lunges": 269,
-                "8. Wall Balls": 295
-              },
-              "run_times": [
-                320,
-                342,
-                462,
-                372,
-                375,
-                352,
-                382,
-                377
-              ],
-              "members": [
-                "Hörður Örn Harðarson",
-                "Harpa Svansdóttir"
-              ],
-              "team_name": "H&H",
-              "display_name": "H&H"
-            },
-            {
-              "rank": 48,
+              "rank": 24,
               "bib": "113",
               "name": "Þórdís Birna Lúthersdóttir\nJón Óðinn Reynisson",
               "club": "I'm with stupid!",
@@ -7018,43 +7018,6 @@
             },
             {
               "rank": 19,
-              "bib": "154",
-              "name": "Hildigunnur Magnúsdóttir\nAnna Björg Björnsdóttir",
-              "club": "HA",
-              "division": "Open KVK",
-              "total_time": "01:07:19",
-              "total_seconds": 4039,
-              "run_total": 2380,
-              "station_total": 1665,
-              "splits": {
-                "1. Ski-Erg": 282,
-                "2 .Ýta sleða": 115,
-                "3. Draga sleða": 183,
-                "4. Burpee langstökk": 190,
-                "5. Róður": 304,
-                "6. Bændaganga": 161,
-                "7. Lunges": 197,
-                "8. Wall Balls": 233
-              },
-              "run_times": [
-                262,
-                279,
-                322,
-                307,
-                318,
-                294,
-                305,
-                293
-              ],
-              "members": [
-                "Hildigunnur Magnúsdóttir",
-                "Anna Björg Björnsdóttir"
-              ],
-              "team_name": "HA",
-              "display_name": "HA"
-            },
-            {
-              "rank": 20,
               "bib": "169",
               "name": "Þorsteinn Þór Jóhannesson\nKristján Haukur Flosason",
               "club": "Surtla",
@@ -7091,7 +7054,7 @@
               "display_name": "Surtla"
             },
             {
-              "rank": 21,
+              "rank": 20,
               "bib": "121",
               "name": "Tinna Birgisdóttir\nSunna Magnúsdóttir",
               "club": "Frænkurnar",
@@ -7128,7 +7091,7 @@
               "display_name": "Frænkurnar"
             },
             {
-              "rank": 22,
+              "rank": 21,
               "bib": "212",
               "name": "Tinna Rut Þórarinsdóttir\nRut Ragnarsdóttir",
               "club": "Rut&TinnaRut",
@@ -7165,7 +7128,7 @@
               "display_name": "Rut&TinnaRut"
             },
             {
-              "rank": 23,
+              "rank": 22,
               "bib": "210",
               "name": "Emil Már Diatlovic\nTómas Davidsson",
               "club": "Eye of the tiger",
@@ -7202,7 +7165,7 @@
               "display_name": "Eye of the tiger"
             },
             {
-              "rank": 24,
+              "rank": 23,
               "bib": "167",
               "name": "Oddur Benediktsson\nSilja Runólfsdóttir",
               "club": "Fjóla og Co.",
@@ -7239,7 +7202,7 @@
               "display_name": "Fjóla og Co."
             },
             {
-              "rank": 25,
+              "rank": 24,
               "bib": "149",
               "name": "Brynja Björg Halldórsdóttir\nBerglind Sigmarsdóttir",
               "club": "Queen Bees",
@@ -7276,7 +7239,7 @@
               "display_name": "Queen Bees"
             },
             {
-              "rank": 26,
+              "rank": 25,
               "bib": "146",
               "name": "Kristinn Guðmundsson\nElmar Sveinn Einarsson",
               "club": "Dagvaktin",
@@ -7313,7 +7276,7 @@
               "display_name": "Dagvaktin"
             },
             {
-              "rank": 27,
+              "rank": 26,
               "bib": "113",
               "name": "Sigurður Halldór Bjarnason\nSergio Herrero Mira",
               "club": "Siggi & Sergio",
@@ -7350,7 +7313,7 @@
               "display_name": "Siggi & Sergio"
             },
             {
-              "rank": 28,
+              "rank": 27,
               "bib": "111",
               "name": "Filip Ługowski\nPatryk Frątczak",
               "club": "Galactic Patrol",
@@ -7387,7 +7350,7 @@
               "display_name": "Galactic Patrol"
             },
             {
-              "rank": 29,
+              "rank": 28,
               "bib": "124",
               "name": "Birgir Hlynur Guðmundsson\nValgeir Þórðarson",
               "club": "Guinness brósar",
@@ -7424,7 +7387,7 @@
               "display_name": "Guinness brósar"
             },
             {
-              "rank": 30,
+              "rank": 29,
               "bib": "153",
               "name": "Anna Cecilia Inghammar\nNataliia Bilova",
               "club": "HaHaJá að þessu sinni",
@@ -7461,7 +7424,7 @@
               "display_name": "HaHaJá að þessu sinni"
             },
             {
-              "rank": 31,
+              "rank": 30,
               "bib": "140",
               "name": "Aníta Jóhannesardóttir\nMaría Mjöll Björnsdóttir",
               "club": "HrönnBirgis",
@@ -7498,7 +7461,7 @@
               "display_name": "HrönnBirgis"
             },
             {
-              "rank": 32,
+              "rank": 31,
               "bib": "118",
               "name": "Guðlaug Jónsdóttir\nThomas Valtyr Eyjolfsson Valtysson",
               "club": "Gin & Tonic",
@@ -7535,7 +7498,7 @@
               "display_name": "Gin & Tonic"
             },
             {
-              "rank": 33,
+              "rank": 32,
               "bib": "141",
               "name": "Lilja Ósk Guðmundsdóttir\nEinar Ernir Magnússon",
               "club": "Guggurnar úr hfj",
@@ -7572,7 +7535,7 @@
               "display_name": "Guggurnar úr hfj"
             },
             {
-              "rank": 34,
+              "rank": 33,
               "bib": "211",
               "name": "Steinar B. Hafberg\nEysteinn B. Hafberg",
               "club": "Feðgar",
@@ -7609,7 +7572,7 @@
               "display_name": "Feðgar"
             },
             {
-              "rank": 35,
+              "rank": 34,
               "bib": "180",
               "name": "Harpa Ingólfsdóttir Gígja\nRakel Ragnarsdóttir",
               "club": "HyRox - því við hötum hlaup",
@@ -7646,7 +7609,7 @@
               "display_name": "HyRox - því við hötum hlaup"
             },
             {
-              "rank": 36,
+              "rank": 35,
               "bib": "163",
               "name": "Margret Helga Kristjansdottir\nJóel Kristjánsson",
               "club": "Systkinin",
@@ -7683,44 +7646,7 @@
               "display_name": "Systkinin"
             },
             {
-              "rank": 37,
-              "bib": "181",
-              "name": "Hörður Örn Harðarson\nHarpa Svansdóttir",
-              "club": "H&H",
-              "division": "MIXED",
-              "total_time": "01:16:00",
-              "total_seconds": 4560,
-              "run_total": 2657,
-              "station_total": 1911,
-              "splits": {
-                "1. Ski-Erg": 277,
-                "2 .Ýta sleða": 133,
-                "3. Draga sleða": 232,
-                "4. Burpee langstökk": 278,
-                "5. Róður": 326,
-                "6. Bændaganga": 160,
-                "7. Lunges": 243,
-                "8. Wall Balls": 262
-              },
-              "run_times": [
-                301,
-                307,
-                350,
-                327,
-                359,
-                341,
-                323,
-                349
-              ],
-              "members": [
-                "Hörður Örn Harðarson",
-                "Harpa Svansdóttir"
-              ],
-              "team_name": "H&H",
-              "display_name": "H&H"
-            },
-            {
-              "rank": 38,
+              "rank": 36,
               "bib": "165",
               "name": "Helga Siemsen Guðmundsdóttir\nTinna Maren Ölversdóttir",
               "club": "Tiny Terrors",
@@ -7757,7 +7683,7 @@
               "display_name": "Tiny Terrors"
             },
             {
-              "rank": 39,
+              "rank": 37,
               "bib": "152",
               "name": "Guðrún Ósk\nDagný",
               "club": "Pink power",
@@ -7794,7 +7720,7 @@
               "display_name": "Pink power"
             },
             {
-              "rank": 40,
+              "rank": 38,
               "bib": "129",
               "name": "Rósa Ómarsdóttir\nAuður Karlsdóttir",
               "club": "Double trouble",
@@ -7831,7 +7757,7 @@
               "display_name": "Double trouble"
             },
             {
-              "rank": 41,
+              "rank": 39,
               "bib": "107",
               "name": "Hákon Orri Stefánsson\nHalldór Halldórsson",
               "club": "Black sand strákarnir",
@@ -7868,7 +7794,7 @@
               "display_name": "Black sand strákarnir"
             },
             {
-              "rank": 42,
+              "rank": 40,
               "bib": "126",
               "name": "María Björk Hauksdóttir\nÓlöf Hafþórsdóttir",
               "club": "MÓmentum",
@@ -7905,7 +7831,7 @@
               "display_name": "MÓmentum"
             },
             {
-              "rank": 43,
+              "rank": 41,
               "bib": "130",
               "name": "Valeria Rodríguez\nSigrún Helga Hannesdóttir",
               "club": "Valeria and Sigrún",
@@ -7942,7 +7868,7 @@
               "display_name": "Valeria and Sigrún"
             },
             {
-              "rank": 44,
+              "rank": 42,
               "bib": "164",
               "name": "Sasini Hansika Inga Amarajeewa\nArnar Páll Pálsson",
               "club": "Trenbolone parið",
@@ -8670,43 +8596,6 @@
             },
             {
               "rank": 2,
-              "bib": "154",
-              "name": "Hildigunnur Magnúsdóttir\nAnna Björg Björnsdóttir",
-              "club": "HA",
-              "division": "Open KVK",
-              "total_time": "01:07:19",
-              "total_seconds": 4039,
-              "run_total": 2380,
-              "station_total": 1665,
-              "splits": {
-                "1. Ski-Erg": 282,
-                "2 .Ýta sleða": 115,
-                "3. Draga sleða": 183,
-                "4. Burpee langstökk": 190,
-                "5. Róður": 304,
-                "6. Bændaganga": 161,
-                "7. Lunges": 197,
-                "8. Wall Balls": 233
-              },
-              "run_times": [
-                262,
-                279,
-                322,
-                307,
-                318,
-                294,
-                305,
-                293
-              ],
-              "members": [
-                "Hildigunnur Magnúsdóttir",
-                "Anna Björg Björnsdóttir"
-              ],
-              "team_name": "HA",
-              "display_name": "HA"
-            },
-            {
-              "rank": 3,
               "bib": "121",
               "name": "Tinna Birgisdóttir\nSunna Magnúsdóttir",
               "club": "Frænkurnar",
@@ -8743,7 +8632,7 @@
               "display_name": "Frænkurnar"
             },
             {
-              "rank": 4,
+              "rank": 3,
               "bib": "212",
               "name": "Tinna Rut Þórarinsdóttir\nRut Ragnarsdóttir",
               "club": "Rut&TinnaRut",
@@ -8780,7 +8669,7 @@
               "display_name": "Rut&TinnaRut"
             },
             {
-              "rank": 5,
+              "rank": 4,
               "bib": "149",
               "name": "Brynja Björg Halldórsdóttir\nBerglind Sigmarsdóttir",
               "club": "Queen Bees",
@@ -8817,7 +8706,7 @@
               "display_name": "Queen Bees"
             },
             {
-              "rank": 6,
+              "rank": 5,
               "bib": "153",
               "name": "Anna Cecilia Inghammar\nNataliia Bilova",
               "club": "HaHaJá að þessu sinni",
@@ -8854,7 +8743,7 @@
               "display_name": "HaHaJá að þessu sinni"
             },
             {
-              "rank": 7,
+              "rank": 6,
               "bib": "140",
               "name": "Aníta Jóhannesardóttir\nMaría Mjöll Björnsdóttir",
               "club": "HrönnBirgis",
@@ -8891,7 +8780,7 @@
               "display_name": "HrönnBirgis"
             },
             {
-              "rank": 8,
+              "rank": 7,
               "bib": "180",
               "name": "Harpa Ingólfsdóttir Gígja\nRakel Ragnarsdóttir",
               "club": "HyRox - því við hötum hlaup",
@@ -8928,7 +8817,7 @@
               "display_name": "HyRox - því við hötum hlaup"
             },
             {
-              "rank": 9,
+              "rank": 8,
               "bib": "165",
               "name": "Helga Siemsen Guðmundsdóttir\nTinna Maren Ölversdóttir",
               "club": "Tiny Terrors",
@@ -8965,7 +8854,7 @@
               "display_name": "Tiny Terrors"
             },
             {
-              "rank": 10,
+              "rank": 9,
               "bib": "152",
               "name": "Guðrún Ósk\nDagný",
               "club": "Pink power",
@@ -9002,7 +8891,7 @@
               "display_name": "Pink power"
             },
             {
-              "rank": 11,
+              "rank": 10,
               "bib": "129",
               "name": "Rósa Ómarsdóttir\nAuður Karlsdóttir",
               "club": "Double trouble",
@@ -9039,7 +8928,7 @@
               "display_name": "Double trouble"
             },
             {
-              "rank": 12,
+              "rank": 11,
               "bib": "126",
               "name": "María Björk Hauksdóttir\nÓlöf Hafþórsdóttir",
               "club": "MÓmentum",
@@ -9076,7 +8965,7 @@
               "display_name": "MÓmentum"
             },
             {
-              "rank": 13,
+              "rank": 12,
               "bib": "130",
               "name": "Valeria Rodríguez\nSigrún Helga Hannesdóttir",
               "club": "Valeria and Sigrún",
@@ -9560,43 +9449,6 @@
             },
             {
               "rank": 13,
-              "bib": "181",
-              "name": "Hörður Örn Harðarson\nHarpa Svansdóttir",
-              "club": "H&H",
-              "division": "MIXED",
-              "total_time": "01:16:00",
-              "total_seconds": 4560,
-              "run_total": 2657,
-              "station_total": 1911,
-              "splits": {
-                "1. Ski-Erg": 277,
-                "2 .Ýta sleða": 133,
-                "3. Draga sleða": 232,
-                "4. Burpee langstökk": 278,
-                "5. Róður": 326,
-                "6. Bændaganga": 160,
-                "7. Lunges": 243,
-                "8. Wall Balls": 262
-              },
-              "run_times": [
-                301,
-                307,
-                350,
-                327,
-                359,
-                341,
-                323,
-                349
-              ],
-              "members": [
-                "Hörður Örn Harðarson",
-                "Harpa Svansdóttir"
-              ],
-              "team_name": "H&H",
-              "display_name": "H&H"
-            },
-            {
-              "rank": 14,
               "bib": "164",
               "name": "Sasini Hansika Inga Amarajeewa\nArnar Páll Pálsson",
               "club": "Trenbolone parið",

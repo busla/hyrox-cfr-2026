@@ -1,0 +1,39 @@
+name: Verify data
+
+# Checks src/data.json against timataka.net: that every row on every results
+# page was read, that the Heildarúrslit pages and the category pages agree, and
+# that the data the app ships is internally sound.
+#
+# The weekly run is not busywork — timataka amends results after the fact
+# (teams reclassified, entries withdrawn), and this is how we find out.
+
+on:
+  pull_request:
+    paths:
+      - 'src/data.json'
+      - 'scripts/**'
+      - '.github/workflows/verify-data.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/data.json'
+      - 'scripts/**'
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Verify data.json against timataka
+        run: npm run verify -- --refresh
